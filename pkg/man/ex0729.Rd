@@ -1,6 +1,7 @@
 \name{ex0729}
 \alias{ex0729}
 \docType{data}
+\encoding{latin1}
 \title{Male Displays}
 \description{
   Black wheatears are small birds in Spain and Morocco.  Males of the
@@ -26,8 +27,9 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
-  Soler, M. et al. (1999). Weight lifting and health status in the black
-  wheatears, \emph{Behavioral Ecology} \bold{10}(3): 281--286.
+  Soler, M., Martín-Vivaldi, M., Marín J. and Møller, A. (1999). Weight
+  lifting and health status in the black wheatears, \emph{Behavioral
+  Ecology} \bold{10}(3): 281--286.
 }
 \examples{
 str(ex0729)

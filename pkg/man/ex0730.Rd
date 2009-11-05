@@ -30,9 +30,9 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
-  Elbert et al. (1995).  Increased cortical representation of the
-  fingers of the left hand in string players, \emph{Science} \bold{13}:
-  305--307. 
+  Elbert, T., Pantev, C., Wienbruch, C., Rockstroh, B. and Taub E.
+  (1995).  Increased cortical representation of the fingers of the left
+  hand in string players, \emph{Science} \bold{270}(5234): 305--307.
 }
 \examples{
 str(ex0730)

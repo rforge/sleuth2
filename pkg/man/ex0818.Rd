@@ -24,8 +24,10 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
-  Borio, R. et al. (1991).  Uptake of Radiocesium by Mushrooms,
-  \emph{Science of the Total Environment} \bold{106}: 183--190.
+  Borio, R., Chiocchini, S., Cicioni, R., Degli Esposti, P., Rongoni,
+  A.,  Sabatini, P., Scampoli, P., Antonini, A. and Salvadori,
+  P. (1991).  Uptake of Radiocesium by Mushrooms, \emph{Science of the
+    Total Environment} \bold{106}(3): 183--190. 
 }
 \examples{
 str(ex0818)

@@ -24,9 +24,10 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
-  Suddath, R.L. et al. (1990).  Anatomical Abnormalities in the Brains
-  of Monozygotic Twins Discordant for Schizophrenia, \emph{New England
-    Journal of Medicine} \bold{322}(12): 789--793.
+  Suddath, R.L., Christison, G.W., Torrey, E.F., Casanova, M.F. and
+  Weinberger, D.R. (1990).  Anatomical Abnormalities in the Brains of
+  Monozygotic Twins Discordant for Schizophrenia, \emph{New England
+  Journal of Medicine} \bold{322}(12): 789--794.
 }
 \examples{
 str(case0202)

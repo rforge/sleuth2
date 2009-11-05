@@ -1,6 +1,7 @@
 \name{ex2117}
 \alias{ex2117}
 \docType{data}
+\encoding{latin1}
 \title{Effect of Stress During Conception on Odds of a Male Birth}
 \description{
   The probability of a male birth in humans is about .51.  It has
@@ -37,9 +38,10 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
-  Hansen, D. et al. Severe Periconceptional Life Events and the Sex
-  Ratio in Offspring: Follow Up Study based on Five National Registers,
-  \emph{British Medical Journal} \bold{319}: 548--549.
+  Hansen, D., Møller, H. and Olsen, J. (1999).  Severe
+  Periconceptional Life Events and the Sex Ratio in Offspring: Follow Up
+  Study based on Five National Registers, \emph{British Medical Journal}
+  \bold{319}(7209): 548--549.
 }
 \examples{
 str(ex2117)

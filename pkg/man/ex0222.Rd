@@ -20,9 +20,9 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
-  Tejada, M.D. et al. (1964). The Blood Viscosity of Various
-  Socioeconomic Groups in Guatemala, \emph{American Journal of Clinical
-    Nutrition}: 303--307.
+  Tejada, C., Charm, S., Guzman, M., Mendez, J. and Kurland,
+  G. (1964). The Blood Viscosity of Various Socioeconomic Groups in
+  Guatemala, \emph{American Journal of Clinical Nutrition}: 303--308.
 }
 \examples{
 str(ex0222)

@@ -34,9 +34,11 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
-  Cameron, D.W. et al. (1999). Female to Male Transmission of Human
-  Immunodeficiency Virus Type I: Risk Factors for Seroconversion in Men,
-  \emph{The Lancet}: 403--407.
+  Cameron, D.W., D'Costa, L.J., Maitha, G.M., Cheang, M., Piot, P.,
+  Simonsen, J.N., Ronald, A.R., Gakinya, M.N., Ndinya-Achola, J.O.,
+  Brunham, R.C. and Plummer, F. A. (1989). Female to Male Transmission
+  of Human Immunodeficiency Virus Type I: Risk Factors for
+  Seroconversion in Men, \emph{The Lancet} \bold{334}(8660): 403--407.
 }
 \examples{
 str(ex2118)

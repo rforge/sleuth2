@@ -25,9 +25,12 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
-  Davis et al. (1998).  Reduced ratio of male to female births in
-  several industrial countries, \emph{Journal of the American Medical
-    Association} \bold{279}: 1018--1023.
+  
+  Davis, D.L., Gottlieb, M.B. and Stampnitzky, J.R. (1998).  Reduced
+  ratio of male to female births in several industrial countries,
+  \emph{Journal of the American Medical Association} \bold{279}(13):
+  1018--1023.
+  
 }
 \examples{
 str(ex0726)

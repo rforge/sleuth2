@@ -37,9 +37,9 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
-  Ripple, W.J. et al. Old--growth and Mature Forests Near Spotted Owl
-  Nests in Western Oregon, \emph{Journal of Wildlife Management}
-  \bold{55}: 316--318.
+  Ripple W.J., Johnson, D.H., Thershey, K.T. and Meslow E.C. (1991).
+  Old--growth and Mature Forests Near Spotted Owl Nests in Western
+  Oregon, \emph{Journal of Wildlife Management} \bold{55}(2): 316--318.
 }
 \examples{
 str(ex2015)
