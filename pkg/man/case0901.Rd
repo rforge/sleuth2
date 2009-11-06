@@ -16,7 +16,7 @@
   \describe{
     \item{\code{Flowers}}{average number of flowers per meadowfoam plant}
     \item{\code{Time}}{time light intensity regiments started}
-    \item{\code{Intens}}{light intensity (in \eqn{\mu}{mu}mol/m\eqn{^2}{^2}/sec)}
+    \item{\code{Intens}}{light intensity (in \eqn{\mu}{mu}mol/m\eqn{^2}/sec)}
   }
 }
 \source{

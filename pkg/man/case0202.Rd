@@ -15,8 +15,8 @@
 \format{
   A data frame with 15 observations on the following 2 variables.
   \describe{
-    \item{\code{Unaffect}}{volume of left hippocampus of unaffected twin (in cm\eqn{^3}{^3})}
-    \item{\code{Affected}}{volume of left hippocampus of affected twin (in cm\eqn{^3}{^3})}
+    \item{\code{Unaffect}}{volume of left hippocampus of unaffected twin (in cm\eqn{^3})}
+    \item{\code{Affected}}{volume of left hippocampus of affected twin (in cm\eqn{^3})}
   }
 }
 \source{

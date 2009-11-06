@@ -33,9 +33,9 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
- Zeisel, H. and Kalven, H. Jr. (1972).  Parking Tickets and Missing
- Women: Statistics and the Law in Tanur, J.M. et al. (eds.) \emph{Statistics: A
- Guide to the Unknown}, Holden-Day. 
+  Zeisel, H. and Kalven, H. Jr. (1972).  Parking Tickets and Missing
+  Women: Statistics and the Law \emph{in} Tanur, J.M. et al. (eds.)
+  \emph{Statistics: A Guide to the Unknown}, Holden-Day. 
 }
 \examples{
 str(case0502)

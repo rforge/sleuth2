@@ -25,12 +25,10 @@
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
 \references{
-  
   Blaustein, A.R., Hoffman, P.D., Hokit, D.G., Kiesecker, J.M., Walls,
   S.C. and Hays, J.B. (1994).  UV Repair and Resistance to Solar UV-B in
   Amphibian Eggs: A Link to Population Declines?  \emph{Proceedings of
   the National Academy of Science, USA} \bold{91}: 1791--1795.
-  
 }
 \examples{
 str(ex2414)

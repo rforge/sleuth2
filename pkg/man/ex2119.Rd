@@ -19,14 +19,14 @@
 }
 \details{
   Meta--analysis refers to the analysis of analyses.  When the main
-  results of studies can be cast into 2x2 tables of counts, it is
-  natural to combine individual odds ratios with a logistic regression
-  model that includes a factor to account for different odds from the
-  different studies.  In addition, the odds ratio itself might differ
-  slightly among studies because of different effects on different
-  populations or different research techniques.  One approach for
-  dealing with this is to suppose an underlying common odds ratio and to
-  model between--study variability as extra--binomial variation.
+  results of studies can be cast into 2\eqn{\times}{x}2 tables of counts,
+  it is natural to combine individual odds ratios with a logistic
+  regression model that includes a factor to account for different odds
+  from the different studies.  In addition, the odds ratio itself might
+  differ slightly among studies because of different effects on
+  different populations or different research techniques.  One approach
+  for dealing with this is to suppose an underlying common odds ratio
+  and to model between--study variability as extra--binomial variation.
 }
 \source{
   Ramsey, F.L. and Schafer, D.W. (2002). \emph{The Statistical Sleuth: A
