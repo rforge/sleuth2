@@ -36,6 +36,9 @@
   Ramsey, F.L. and Schafer, D.W. (2002). \emph{The Statistical Sleuth: A
     Course in Methods of Data Analysis (2nd ed)}, Duxbury.
 }
+\seealso{
+  \code{\link{ex1115}}
+}
 \examples{
 str(ex0820)
 }

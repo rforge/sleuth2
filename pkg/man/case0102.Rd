@@ -11,7 +11,7 @@
 \format{
   A data frame with 93 observations on the following 2 variables.
   \describe{
-    \item{\code{Salary}}{starting salaries (in US\$)}
+    \item{\code{Salary}}{starting salaries (in US\eqn{\$}{$})}
     \item{\code{Sex}}{sex of the clerical employee}
   }
 }
