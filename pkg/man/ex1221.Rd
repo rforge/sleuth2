@@ -18,16 +18,16 @@
     \item{\code{Discharge}}{the estimated annual average discharge of
       the river into an ocean (m\eqn{^3} per second)} 
     \item{\code{Runoff}}{estimated annual average runoff from the
-      watershed (liters/(sec\eqn{\times}{ x } k\eqn{\times}{ x }m\eqn{^2})}
+      watershed (liters/(sec\eqn{\times}{ x } km\eqn{^2}))}
     \item{\code{Area}}{watershed area (km\eqn{^2})}
     \item{\code{Density}}{density of people (people/km\eqn{^2})}
     \item{\code{NO3}}{nitrate concentration (\eqn{\mu}{mu}M/l)}    
     \item{\code{Export}}{nitrate export (product of runoff times nitrate
       concentration)} 
-    \item{\code{Dep}}{deposition (product of precipitation times nitrate
-      concentration)}
-    \item{\code{NPrec}}{NPREC nitrate precipitation (\eqn{\mu}{mu}mol
-      NO\eqn{_3}/(sec\eqn{\times}{ x }km\eqn{^2})} 
+    \item{\code{Dep}}{deposition (proportional to product of nitratrate
+      precipitation times precipitation)}
+    \item{\code{NPrec}}{nitrate precipitation (\eqn{\mu}{mu}mol
+      NO\eqn{_3}/(sec\eqn{\times}{ x }km\eqn{^2}))} 
     \item{\code{Prec}}{precipitation (cm/year)}
   }
 }

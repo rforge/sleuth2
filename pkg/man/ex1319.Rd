@@ -28,6 +28,9 @@
   Biological and Adoptive Parents in a Balanced Cross-fostering Study,
   \emph{European Bulletin of Cognitive Psychology} \bold{11}(3): 323--348.
 }
+\seealso{
+  \code{\link{ex1605}}
+}
 \examples{
 str(ex1319)
 }

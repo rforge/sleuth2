@@ -36,6 +36,9 @@
   Grayson, D.K. (1990). Donner Party Deaths: A Demographic Assessment,
   \emph{Journal of Anthropological Research} \bold{46}: 223--242.
 }
+\seealso{
+  \code{\link{ex1918}}
+}
 \examples{
 str(case2001)
 }
