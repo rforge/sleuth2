@@ -1,0 +1,40 @@
+\name{ex1320}
+\alias{ex1320}
+\docType{data}
+\title{Gender Differences in Performance on Mathematics Achievement Tests}
+\description{
+  Data set on 861 ACT Assessment Mathematics Usage Test scores from
+  1987.  The test was given to a sample of high school seniors who met
+  one of three profiles of high school mathematics course work: (a)
+  Algebra I only; (b) two Algebra courses and Geometry; and (c) two
+  Algebra courses, Geometry, Trigonometry, Advanced Mathematics and
+  Beginning Calculus.
+}
+\usage{ex1320}
+\format{
+  A data frame with 861 observations on the following 3 variables.
+  \describe{
+    \item{\code{Sex}}{a factor with levels \code{"female"} and
+      \code{"male"}} 
+    \item{\code{Background}}{a factor with levels \code{"a"}, \code{"b"}
+      and \code{"c"}}
+    \item{\code{Score}}{ACT mathematics test score}
+  }
+}
+\source{
+  Ramsey, F.L. and Schafer, D.W. (2002). \emph{The Statistical Sleuth: A
+    Course in Methods of Data Analysis (2nd ed)}, Duxbury.
+}
+\references{
+  
+  Doolittle, A.E. (1987).  Gender differences in performance on
+  mathematics achievement items, \emph{ACT Research Report Series
+  87--16}.  
+
+  \url{http://www.act.org/research/reports/pdf/ACT_RR87-16.pdf}
+  
+}
+\examples{
+str(ex1320)
+}
+\keyword{datasets}
