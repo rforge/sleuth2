@@ -9,6 +9,9 @@
   Algebra I only; (b) two Algebra courses and Geometry; and (c) two
   Algebra courses, Geometry, Trigonometry, Advanced Mathematics and
   Beginning Calculus.
+
+  These data were generated from summary statistics for one particular
+  form of the test as reported by Doolittle (1989).
 }
 \usage{ex1320}
 \format{
@@ -27,9 +30,9 @@
 }
 \references{
   
-  Doolittle, A.E. (1987).  Gender differences in performance on
-  mathematics achievement items, \emph{ACT Research Report Series
-  87--16}.  
+  Doolittle, A.E. (1989).  Gender Differences in Performance on
+  Mathematics Achievement Items, \emph{Applied Measurement in Education}
+  \bold{2}(2): 161--177.
 
   \url{http://www.act.org/research/reports/pdf/ACT_RR87-16.pdf}
   
