@@ -1,12 +1,12 @@
 Package: Sleuth2
 Title: Data sets from Ramsey and Schafer's "Statistical Sleuth (2nd ed)"
-Version: 1.0-5
-Date: 2012-04-25
+Version: 1.0-6
+Date: 2012-06-22
 Author:  Original by F.L. Ramsey and D.W. Schafer,
     modifications by Daniel W. Schafer, Jeannie Sifneos and Berwin A. Turlach
 Description: Data sets from Ramsey, F.L. and Schafer, D.W. (2002), "The
-    Statistical Sleuth: A Course in Methods of Data Analysis (2nd ed)"
-    Duxbury. 
+    Statistical Sleuth: A Course in Methods of Data Analysis (2nd
+    ed)", Duxbury. 
 Maintainer: Berwin A Turlach <Berwin.Turlach@gmail.com>
 LazyData: yes
 Depends: R (>= 2.12.0)
