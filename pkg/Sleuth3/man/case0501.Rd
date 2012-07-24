@@ -46,51 +46,36 @@
 str(case0501)
 attach(case0501)
 
-myDiet  <- factor(Diet, levels=c("NP","N/N85","N/R50","R/R50","lopro","N/R40") )  # Re-order levels to a more more natural progression (for boxplots). 
-myNames <- c("NP(49)","N/N85(57)","N/R50(71)","R/R50(56)","lopro(56)","N/R40(60)")# Specify boxplot label names (to include sample sizes).
-boxplot(Lifetime ~ myDiet,                                                        # Draw box plot of Lifetime for each level of myDiet, with
-  ylab= "Lifetime (months)",                                                      # ...y-axis label, 
-  names=myNames,                                                                  # ...names to go under the boxplots, and
-  xlab="Treatment (and sample size)")                                             # ...x-axis label.
-myAov1   <- aov(Lifetime ~ Diet)                                                  # Perform analysis of variance calculations. Note syntax: numerical response variable ~ factor (with any number of levels).
-plot(myAov1, which=1)                                                             # Plot residuals versus fitted values.
-summary(myAov1)                                                                   # Show analysis of variance table and F-test p-value.
-pairwise.t.test(Lifetime,Diet,                                                    # Perform t-tests for all possible pairs of means,
-  pool.SD=TRUE,                                                                   # ...using the equal variance (i.e. equal SD) version of the t-test, and
-  p.adj="none")                                                                   # ...with no multiple comparison adjustment.
+myDiet  <- factor(Diet, levels=c("NP","N/N85","N/R50","R/R50","lopro","N/R40") )  # Re-order levels for better boxplot ordering 
+myNames <- c("NP(49)","N/N85(57)","N/R50(71)","R/R50(56)","lopro(56)","N/R40(60)")
+boxplot(Lifetime ~ myDiet, ylab= "Lifetime (months)", names=myNames, xlab="Treatment (and sample size)") 
+myAov1   <- aov(Lifetime ~ Diet)
+plot(myAov1, which=1) 
+summary(myAov1) 
+pairwise.t.test(Lifetime,Diet, pool.SD=TRUE, p.adj="none") 
 
 ## p-VALUES AND CONFIDENCE INTERVALS FOR SPECIFIED COMPARISONS OF MEANS, USING GLHT IN MULTCOMP PACKAGE
-diet    <- factor(Diet,labels=c("lopro", "NN85", "NR40", "NR50", "NP", "RR50"))   # Rename levels to omit "/" (necessary for glht below).
-myAov2  <- aov(Lifetime ~ diet - 1)                                               # Perform analysis of variance calculations, with group mean parameterization ("-1", necessary for glht next).
-library(multcomp)                                                                 # Attach multcomp library (after installing the package once).
-myComparisons <- glht(myAov2,                                                     # Perform multiple comparisons on myAov3 results, with
-        linfct=c("dietNR50 - dietNN85 = 0",                                       # ...on the specified contrasts
-        "dietNR40  - dietNR50 = 0",
-        "dietRR50  - dietNR50 = 0",
-        "dietlopro - dietNR50 = 0",
-        "dietNN85  - dietNP   = 0")   ) 
-summary(myComparisons,test=adjusted("none"))                                      # Show the p-values, without adjustments for multiple comparisons. 
-confint(myComparisons, calpha = univariate_calpha())                              # Show confidence intervals, without adjustments for multiple comparisons. 
+if(require(multcomp)){
+  diet    <- factor(Diet,labels=c("lopro", "NN85", "NR40", "NR50", "NP", "RR50")) 
+  myAov2  <- aov(Lifetime ~ diet - 1) 
+  myComparisons <- glht(myAov2,
+          linfct=c("dietNR50 - dietNN85 = 0", 
+          "dietNR40  - dietNR50 = 0",
+          "dietRR50  - dietNR50 = 0",
+          "dietlopro - dietNR50 = 0",
+          "dietNN85  - dietNP   = 0")   ) 
+  summary(myComparisons,test=adjusted("none"))      # No multiple comparison adjustment (for these planned comparisons)
+  confint(myComparisons, calpha = univariate_calpha()) # No multiple comparison adjustment
+}
 
 ## EXAMPLE 5: BOXPLOTS FOR PRESENTATION  
-boxplot(Lifetime ~ myDiet,                                                        # Draw boxplots of Lifetime for each level of myDiet, with
-	ylab= "Lifetime (months)",                                                      # ...y-axis label,
-  names=myNames,                                                                  # ...names under the  boxplots,
-  main= "Lifetimes of Mice on 6 Diet Regimens",                                   # ...main title,
-  xlab="Diet (and sample size)",
-	col="green",                                                                    # ...green fill color,
-  boxlwd=2,                                                                       # ...line widths in box equal to twice their default value,
-	medlwd=2,                                                                       # ...line widths of horizontal lines at medians equal twice their default value,
-	whisklty=1,                                                                     # ...solid (=1) (not dashed =2) whiskers (lines extending from boxes),
-	whisklwd=2,                                                                     # ...line width of whiskers equal to twice their default value,
-	staplewex=.2,                                                                   # ...length of staple (horizontal line at end of whisker) 0.2 times its default value, 
-	staplelwd=2,                                                                    # ...line width of staple equal to twice its default value,
-	outlwd=2,                                                                       # ...line width of outliers (plotted points beyond whiskers) equal to twice their default value.
-	outpch=21,                                                                      # ...plotting character for outlier set to be a circle (21 is the code for circle),
-	outbg="green",                                                                  # ...background (fill) color for the outlier set to green, and
-	outcex=1.5	)	                                                                  # ...outlier size set to be 1.5 times the default value.
-		
-detach(case0501)	                                                                # Detach data frame from R search path.
+boxplot(Lifetime ~ myDiet, ylab= "Lifetime (months)", names=myNames,
+        main= "Lifetimes of Mice on 6 Diet Regimens",
+        xlab="Diet (and sample size)", col="green", boxlwd=2, medlwd=2,
+        whisklty=1, whisklwd=2, staplewex=.2, staplelwd=2, outlwd=2,
+        outpch=21, outbg="green", outcex=1.5)   
+                
+detach(case0501)
 
 }
 \keyword{datasets}

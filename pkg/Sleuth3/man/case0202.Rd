@@ -15,8 +15,10 @@
 \format{
   A data frame with 15 observations on the following 2 variables.
   \describe{
-    \item{\code{Unaffected}}{volume of left hippocampus of unaffected twin (in cm\eqn{^3})}
-    \item{\code{Affected}}{volume of left hippocampus of affected twin (in cm\eqn{^3})}
+    \item{\code{Unaffected}}{volume of left hippocampus of unaffected
+      twin (in cm\eqn{^3})} 
+    \item{\code{Affected}}{volume of left hippocampus of affected twin
+      (in cm\eqn{^3})} 
   }
 }
 \source{
@@ -30,42 +32,38 @@
   Journal of Medicine} \bold{322}(12): 789--794.
 }
 \examples{
-attach(case0202)                                                      # Attach the data frame case0201 to the R search path.
-str(case0202)                                                         # Show the structure of the data frame case0202. 
+attach(case0202) 
+str(case0202)  
 
-diff <- Unaffected-Affected                                           # Calculate the difference from each pair.
-summary(diff)                                                         # Show summary statistics for the variable "diff".
-boxplot(diff)                                                         # Draw a boxplot of diff. (Note syntax: boxplot(oneVariable) draws a single boxplot of oneVariable.)
-abline(h=0)                                                           # Draw a horizontal line at 0 on the plot.                       
+diff <- Unaffected-Affected    
+summary(diff)
+t.test(diff) # Paired t-test is a one-sample t-test on differnces 
+t.test(Unaffected,Affected,pair=TRUE)   # same thing 
 
-t.test(diff)                                                          # Perform a one-sample t-test on differences (Syntax: t.test(oneVariable) performs a one-sample t-test).
-t.test(Unaffected,Affected,pair=TRUE)                                 # Perform a paired t-test on Unaffected and Affected (equivalent to t.test(diff)).
-
-boxplot(diff,                                                         # Draw a boxplot of diff, with 
-	ylab="Difference in Hippocampus Volume (cubic cm)",                 # ...y-axis label,
-	xlab="15 Sets of Twins, One Affected with Schizophrenia",           # ...x-axis label, and
-	main="Hippocampus Difference: Unaffected Twin Minus Affected Twin") # ...main title. 
-abline(h=0,                                                           # Draw a horizontal line at 0, with
-  lty=2)                                                              # ...line type 2 (a dashed line).
+boxplot(diff,       
+        ylab="Difference in Hippocampus Volume (cubic cm)", 
+        xlab="15 Sets of Twins, One Affected with Schizophrenia", 
+        main="Hippocampus Difference: Unaffected Twin Minus Affected Twin") 
+abline(h=0,lty=2)   # Draw a dashed (lty=2) horizontal line at 0    
   
-## Example of a polished boxplot for presentation:
-boxplot(diff,                                                         # Draw a boxplot of diff, with
-	ylab="Difference in Hippocampus Volume (cubic cm)",                 # ...y-axis label,
-	xlab="15 Sets of Twins, One Affected with Schizophrenia",           # ...x-axis label,
-	main="Hippocampus Difference: Unaffected Minus Affected Twin",      # ...main title,
-	col="green",                                                        # ...green fill color,
-  boxlwd=2,                                                           # ...line widths in box equal to twice their default value,
-	medlwd=2,                                                           # ...line widths of horizontal lines at medians equal twice their default value,
-	whisklty=1,                                                         # ...solid (=1) (not dashed =2) whiskers (lines extending from boxes),
-	whisklwd=2,                                                         # ...line width of whiskers equal to twice their default value,
-	staplewex=.2,                                                       # ...length of staple (horizontal line at end of whisker) 0.2 times its default value, 
-	staplelwd=2,                                                        # ...line width of staple equal to twice its default value,
-	outlwd=2,                                                           # ...line width of outliers (plotted points beyond whiskers) equal to twice their default value.
-	outpch=21,                                                          # ...plotting character for outlier set to be a circle (21 is the code for circle),
-	outbg="green",                                                      # ...background (fill) color for the outlier set to green, and
-	outcex=1.5	)	                                                      # ...outlier size set to be 1.5 times the default value.
-abline(h=0,lty=2)                                                     # Draw a dashed (lty=2) horizontal line (h=...) at 0 for reference
+## BOXPLOT FOR PRESENTATION:
+boxplot(diff, 
+        ylab="Difference in Hippocampus Volume (cubic cm)", 
+        xlab="15 Sets of Twins, One Affected with Schizophrenia",
+        main="Hippocampus Difference: Unaffected Minus Affected Twin",  
+        col="green",  
+        boxlwd=2, 
+        medlwd=2, 
+        whisklty=1,
+        whisklwd=2,  
+        staplewex=.2, 
+        staplelwd=2, 
+        outlwd=2, 
+        outpch=21,
+        outbg="green",
+        outcex=1.5)      
+abline(h=0,lty=2) 
 
-detach(case0202)                                                      # Detach the data frame from the R search path.
+detach(case0202)  
 }
 \keyword{datasets}

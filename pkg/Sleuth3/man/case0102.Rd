@@ -12,7 +12,8 @@
   A data frame with 93 observations on the following 2 variables.
   \describe{
     \item{\code{Salary}}{starting salaries (in US\eqn{\$}{$})}
-    \item{\code{Sex}}{sex of the clerical employee, with levels "Female" and "Male"}
+    \item{\code{Sex}}{sex of the clerical employee, with levels "Female"
+      and "Male"} 
   }
 }
 \source{
@@ -29,26 +30,23 @@
   \code{\link{case1202}}
 }
 \examples{
-attach(case0102)                                                                # Attach the data frame case0102 to the R search path.
-str(case0102)                                                                   # Show the structure of the data frame case0102.
+attach(case0102)
+str(case0102)
 
-boxplot(Salary ~ Sex)                                                           # Draw boxplots of Salary for each level of Sex. 
+boxplot(Salary ~ Sex, 
+  ylab= "Starting Salary (U.S. Dollars)", 
+  names=c("61 Females","32 Males"),
+  main= "Harris Bank Entry Level Clerical Workers, 1969-1971")
 
-boxplot(Salary ~ Sex,                                                           # Draw boxplots, with...
-  ylab= "Starting Salary (U.S. Dollars)",                                       # ...y-axis label,
-  names=c("61 Females","32 Males"),                                             # ...names below the boxplots, and
-  main= "Harris Bank Entry Level Clerical Workers, 1969-1971")                  # ...main title.
+hist(Salary[Sex=="Female"]) 
+dev.new()
+hist(Salary[Sex=="Male"])
 
-hist(Salary[Sex=="Female"])                                                     # Draw a histogram of Salary for females only.
-if(interactive()) dev.new()                                                     # Open a new graphic window.
-hist(Salary[Sex=="Male"])                                                       # Draw a histogram of Salary for males only
-
-t.test(Salary ~ Sex,                                                            # Perform the two-sample t-test...
-  var.equal=TRUE)                                                                  # ...using the equal variance version.
-t.test(Salary ~ Sex,                                                            # Perform the two-sample t-test...
-  var.equal=TRUE,                                                                  # ...using the equal variance version...
-  alternative = "less")                                                         # ...and with alternative hypothesis that Group 1 mean (female) is less than Group 2 mean.
-detach(case0102)                                                                # Detach the data frame from the R search path.
+t.test(Salary ~ Sex, var.equal=TRUE) # Equal var. version; 2-sided by default  
+t.test(Salary ~ Sex, var.equal=TRUE, 
+  alternative = "less")  # 1-sided; that group 1 (females) mean is less 
+  
+detach(case0102)  
 }
 
 \keyword{datasets}
