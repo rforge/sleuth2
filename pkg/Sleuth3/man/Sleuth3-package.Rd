@@ -6,7 +6,7 @@
 The R Sleuth3 package
 }
 \description{
-Data sets from Ramsey and Schafer's "Statistical Sleuth (2nd ed)"
+Data sets from Ramsey and Schafer's "Statistical Sleuth (3rd ed)"
 }
 \details{This package contains a variety of datasets.  For a complete
   list, use \code{library(help="Sleuth3")} or

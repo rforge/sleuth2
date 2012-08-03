@@ -8,7 +8,7 @@
   controlled for genetic and socioeconomic differences by examining 15
   pairs of monozygotic twins, where one of the twins was schizophrenic
   and the other was not.  The researchers used magnetic resonance
-  imaging to measure the volumes (in cm$^3$) of several regions and
+  imaging to measure the volumes (in cm\eqn{^3}) of several regions and
   subregions of the twins' brains.
 }
 \usage{case0202}
@@ -22,8 +22,8 @@
   }
 }
 \source{
-  Ramsey, F.L. and Schafer, D.W. (2012). \emph{The Statistical Sleuth: A
-    Course in Methods of Data Analysis (3rd ed)}, Duxbury.
+  Ramsey, F.L. and Schafer, D.W. (2013). \emph{The Statistical Sleuth: A
+    Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \references{
   Suddath, R.L., Christison, G.W., Torrey, E.F., Casanova, M.F. and
@@ -38,30 +38,22 @@ str(case0202)
 diff <- Unaffected-Affected    
 summary(diff)
 t.test(diff) # Paired t-test is a one-sample t-test on differnces 
-t.test(Unaffected,Affected,pair=TRUE)   # same thing 
+t.test(Unaffected,Affected,pair=TRUE)  # Alternative coding for the same test 
 
 boxplot(diff,       
-        ylab="Difference in Hippocampus Volume (cubic cm)", 
-        xlab="15 Sets of Twins, One Affected with Schizophrenia", 
-        main="Hippocampus Difference: Unaffected Twin Minus Affected Twin") 
+  ylab="Difference in Hippocampus Volume (cubic cm)", 
+  xlab="15 Sets of Twins, One Affected with Schizophrenia", 
+  main="Hippocampus Difference: Unaffected Twin Minus Affected Twin") 
 abline(h=0,lty=2)   # Draw a dashed (lty=2) horizontal line at 0    
   
 ## BOXPLOT FOR PRESENTATION:
 boxplot(diff, 
-        ylab="Difference in Hippocampus Volume (cubic cm)", 
-        xlab="15 Sets of Twins, One Affected with Schizophrenia",
-        main="Hippocampus Difference: Unaffected Minus Affected Twin",  
-        col="green",  
-        boxlwd=2, 
-        medlwd=2, 
-        whisklty=1,
-        whisklwd=2,  
-        staplewex=.2, 
-        staplelwd=2, 
-        outlwd=2, 
-        outpch=21,
-        outbg="green",
-        outcex=1.5)      
+  ylab="Difference in Hippocampus Volume (cubic cm)", 
+  xlab="15 Sets of Twins, One Affected with Schizophrenia",
+  main="Hippocampus Difference: Unaffected Minus Affected Twin",  
+  col="green", boxlwd=2, medlwd=2, whisklty=1, whisklwd=2, 
+  staplewex=.2, staplelwd=2, outlwd=2, outpch=21, outbg="green",
+  outcex=1.5)      
 abline(h=0,lty=2) 
 
 detach(case0202)  

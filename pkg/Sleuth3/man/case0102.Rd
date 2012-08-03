@@ -17,8 +17,8 @@
   }
 }
 \source{
-  Ramsey, F.L. and Schafer, D.W. (2012). \emph{The Statistical Sleuth: A
-    Course in Methods of Data Analysis (3rd ed)}, Duxbury.
+  Ramsey, F.L. and Schafer, D.W. (2013). \emph{The Statistical Sleuth: A
+    Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \references{
   Roberts, H.V. (1979). Harris Trust and Savings Bank: An Analysis of
@@ -31,7 +31,7 @@
 }
 \examples{
 attach(case0102)
-str(case0102)
+str(case0102)   
 
 boxplot(Salary ~ Sex, 
   ylab= "Starting Salary (U.S. Dollars)", 

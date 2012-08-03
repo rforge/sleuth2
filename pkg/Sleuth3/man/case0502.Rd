@@ -24,13 +24,13 @@
   \describe{
     \item{\code{Percent}}{is the percent of women on the venire's of the Spock
       trial judge and 6 other Boston area judges} 
-    \item{\code{Judge}}{a factor with levels \code{"Spock's"}, \code{"A"},
+    \item{\code{Judge}}{is a factor with levels \code{"Spock's"}, \code{"A"},
       \code{"B"}, \code{"C"}, \code{"D"}, \code{"E"} and \code{"F"}} 
   }
 }
 \source{
-  Ramsey, F.L. and Schafer, D.W. (2012). \emph{The Statistical Sleuth: A
-    Course in Methods of Data Analysis (3rd ed)}, Duxbury.
+  Ramsey, F.L. and Schafer, D.W. (2013). \emph{The Statistical Sleuth: A
+    Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \references{
   Zeisel, H. and Kalven, H. Jr. (1972).  Parking Tickets and Missing
@@ -41,27 +41,29 @@
 str(case0502)  
 attach(case0502) 
 
-myNames  <- c("A (5)", "B (6)", "C (9)", "D (2)", "E (6)", "F (9)", "Spock's (9)" )  # Factor level names (with sample sizes) for boxplots
+# Make new factor level names (with sample sizes) for boxplots
+myNames <- c("A (5)", "B (6)", "C (9)", "D (2)", "E (6)", "F (9)", "Spock's (9)")
+  
 boxplot(Percent ~ Judge, ylab = "Percent of Women on Judges' Venires",
-        names = myNames, xlab = "Judge (and number of venires)",
-        main = "Percent Women on Venires of 7 Massachusetts Judges") 
+  names = myNames, xlab = "Judge (and number of venires)",
+  main = "Percent Women on Venires of 7 Massachusetts Judges") 
 myAov1  <- aov(Percent ~ Judge)  
 plot(myAov1, which=1)   # Residual plot
-summary(myAov1) # Initial screening--is there evidence that any means differ from any others?  (Yes)
+summary(myAov1) # Initial screening. Any evidence of judge differences? (yes)
    
 ## ANALYSIS 1. TWO-SAMPLE t-TEST (ASSUMING NON-SPOCK JUDGES HAVE A COMMON MEAN)
-SpockOrOther <- factor(ifelse(Judge=="Spock's","Spock","Other"))   # Indicator for Spock's judge                                 
+SpockOrOther <- factor(ifelse(Judge=="Spock's","Spock","Other"))                                   
 aovFull      <- aov(Percent ~ Judge) 
 aovReduced   <- aov(Percent ~ SpockOrOther) 
-anova(aovReduced,aovFull)  # Is there evidence that the 7 mean model fits better than the 2 mean model? (No)     
-t.test(Percent ~ SpockOrOther, var.equal=TRUE) # Is there evidence in the 2 mean model that the means differ? (Yes)
+anova(aovReduced,aovFull) #Any evidence that 7 mean fits better than the 2 mean?       
+t.test(Percent ~ SpockOrOther, var.equal=TRUE) # Evidence that 2 means differ?  
 
-## ANALYSIS 2. COMPARE SPOCK MEAN TO AVERAGE OF OTHER MEANS (NOT ASSUMING NON-SPOCK JUDGES HAVE A COMMON MEAN)
-if(require(multcomp)){
+## ANALYSIS 2. COMPARE SPOCK MEAN TO AVERAGE OF OTHER MEANS 
   myAov3        <- aov(Percent ~ Judge - 1) 
-  myContrast    <- rbind(c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6, - 1)) 
+  myContrast    <- rbind(c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6, - 1))
+if(require(multcomp)){  # use multcomp library
   myComparison  <- glht(myAov3, linfct=myContrast) 
-  summary(myComparison, test=adjusted("none"))   # Is there evidence that Spock mean differs from average of other 6? (Yes)
+  summary(myComparison, test=adjusted("none"))   
   confint(myComparison) 
 }
 

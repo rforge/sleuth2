@@ -33,8 +33,8 @@
   }
 }
 \source{
-  Ramsey, F.L. and Schafer, D.W. (2012). \emph{The Statistical Sleuth: A
-    Course in Methods of Data Analysis (3rd ed)}, Duxbury.
+  Ramsey, F.L. and Schafer, D.W. (2013). \emph{The Statistical Sleuth: A
+    Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \references{
    Weindruch, R., Walford, R.L., Fligiel, S. and Guthrie D. (1986). The
@@ -46,15 +46,19 @@
 str(case0501)
 attach(case0501)
 
-myDiet  <- factor(Diet, levels=c("NP","N/N85","N/R50","R/R50","lopro","N/R40") )  # Re-order levels for better boxplot ordering 
-myNames <- c("NP(49)","N/N85(57)","N/R50(71)","R/R50(56)","lopro(56)","N/R40(60)")
-boxplot(Lifetime ~ myDiet, ylab= "Lifetime (months)", names=myNames, xlab="Treatment (and sample size)") 
-myAov1   <- aov(Lifetime ~ Diet)
-plot(myAov1, which=1) 
+# Re-order levels for better boxplot organization: 
+myDiet  <- factor(Diet, levels=c("NP","N/N85","N/R50","R/R50","lopro","N/R40") ) 
+ 
+myNames <- c("NP(49)","N/N85(57)","N/R50(71)","R/R50(56)","lopro(56)",
+  "N/R40(60)")   # Make these for boxplot labeling.
+boxplot(Lifetime ~ myDiet, ylab= "Lifetime (months)", names=myNames, 
+  xlab="Treatment (and sample size)") 
+myAov1   <- aov(Lifetime ~ Diet) # One-way analysis of variance
+plot(myAov1, which=1) # Plot residuals versus estimated means.
 summary(myAov1) 
-pairwise.t.test(Lifetime,Diet, pool.SD=TRUE, p.adj="none") 
+pairwise.t.test(Lifetime,Diet, pool.SD=TRUE, p.adj="none") # All t-tests
 
-## p-VALUES AND CONFIDENCE INTERVALS FOR SPECIFIED COMPARISONS OF MEANS, USING GLHT IN MULTCOMP PACKAGE
+## p-VALUES AND CONFIDENCE INTERVALS FOR SPECIFIED COMPARISONS OF MEANS
 if(require(multcomp)){
   diet    <- factor(Diet,labels=c("lopro", "NN85", "NR40", "NR50", "NP", "RR50")) 
   myAov2  <- aov(Lifetime ~ diet - 1) 
@@ -64,16 +68,16 @@ if(require(multcomp)){
           "dietRR50  - dietNR50 = 0",
           "dietlopro - dietNR50 = 0",
           "dietNN85  - dietNP   = 0")   ) 
-  summary(myComparisons,test=adjusted("none"))      # No multiple comparison adjustment (for these planned comparisons)
-  confint(myComparisons, calpha = univariate_calpha()) # No multiple comparison adjustment
-}
+  summary(myComparisons,test=adjusted("none")) # No multiple comparison adjust.
+  confint(myComparisons, calpha = univariate_calpha()) # No adjustment
+ }
 
 ## EXAMPLE 5: BOXPLOTS FOR PRESENTATION  
 boxplot(Lifetime ~ myDiet, ylab= "Lifetime (months)", names=myNames,
-        main= "Lifetimes of Mice on 6 Diet Regimens",
-        xlab="Diet (and sample size)", col="green", boxlwd=2, medlwd=2,
-        whisklty=1, whisklwd=2, staplewex=.2, staplelwd=2, outlwd=2,
-        outpch=21, outbg="green", outcex=1.5)   
+  main= "Lifetimes of Mice on 6 Diet Regimens",
+  xlab="Diet (and sample size)", col="green", boxlwd=2, medlwd=2, whisklty=1, 
+  whisklwd=2, staplewex=.2, staplelwd=2, outlwd=2, outpch=21, outbg="green", 
+  outcex=1.5)   
                 
 detach(case0501)
 

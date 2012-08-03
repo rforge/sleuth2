@@ -26,12 +26,12 @@
 }
 
 \source{
-  Ramsey, F.L. and Schafer, D.W. (2012). \emph{The Statistical Sleuth: A
-    Course in Methods of Data Analysis (3rd ed)}, Duxbury.
+  Ramsey, F.L. and Schafer, D.W. (2013). \emph{The Statistical Sleuth: A
+    Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 
 \references{
-  Grant, P. (1986). \bold{Ecology and Evolution of Darwin's Finches},
+  Grant, P. (1986). \emph{Ecology and Evolution of Darwin's Finches},
   Princeton University Press, Princeton, N.J. 
 }
 
@@ -45,9 +45,11 @@ str(case0201)
                                          
 mean(Depth[Year==1978]) - mean(Depth[Year==1976])  
 
-yearFactor <- factor(Year) 
-t.test(Depth ~ yearFactor, var.equal=TRUE)  
-t.test(Depth ~ yearFactor, var.equal=TRUE, alternative = "less") 
+yearFactor <- factor(Year) # Convert the numerical variable Year into a factor
+# with 2 levels. 1976 is "group 1" (it comes first alphanumerically)
+t.test(Depth ~ yearFactor, var.equal=TRUE) # 2-sample t-test; 2-sided by default 
+t.test(Depth ~ yearFactor, var.equal=TRUE, 
+  alternative = "less") # 1-sided; alternative: group 1 mean is less 
 
 boxplot(Depth ~ Year,  
   ylab= "Beak Depth (mm)",   
@@ -56,20 +58,10 @@ boxplot(Depth ~ Year,
 
 ## BOXPLOTS FOR PRESENTATION
 boxplot(Depth ~ Year,             
-        ylab="Beak Depth (mm)",  
-        names=c("89 Finches in 1976","89 Finches in 1978"),  
-        main="Beak Depths of Darwin Finches in 1976 and 1978",
-        col="green", 
-        boxlwd=2,   
-        medlwd=2, 
-        whisklty=1, 
-        whisklwd=2, 
-        staplewex=.2, 
-        staplelwd=2,  
-        outlwd=2, 
-        outpch=21,
-        outbg="green", 
-        outcex=1.5)       
+  ylab="Beak Depth (mm)", names=c("89 Finches in 1976","89 Finches in 1978"),  
+  main="Beak Depths of Darwin Finches in 1976 and 1978", col="green", 
+  boxlwd=2, medlwd=2, whisklty=1, whisklwd=2, staplewex=.2, staplelwd=2,  
+  outlwd=2, outpch=21, outbg="green", outcex=1.5)       
         
 detach(case0201)  
 }
