@@ -39,7 +39,7 @@ attach(case1201)
 logTakers  <- log(Takers)
 myMatrix   <- cbind(SAT, logTakers,Income, Years, Public, Expend, Rank)
 if(require(car)){   # Use the car library   
-scatterplotMatrix(myMatrix, diagonal="histogram", smooth=F)  
+scatterplotMatrix(myMatrix, diagonal="histogram", smooth=FALSE)  
   }                  
 State[Public < 50] # Identify state with low Public (Louisiana)
 State[Expend > 40] # Alaska

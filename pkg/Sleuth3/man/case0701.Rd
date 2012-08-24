@@ -23,7 +23,7 @@
     of Science} \bold{15}: 168--173.
 }
 \seealso{
-  \code{\link{ex0727}}
+  \code{\link{ex0725}}
 }
 \examples{
 str(case0701) 

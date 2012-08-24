@@ -68,9 +68,9 @@ if(require(multcomp)){
           "dietRR50  - dietNR50 = 0",
           "dietlopro - dietNR50 = 0",
           "dietNN85  - dietNP   = 0")   ) 
+ }
   summary(myComparisons,test=adjusted("none")) # No multiple comparison adjust.
   confint(myComparisons, calpha = univariate_calpha()) # No adjustment
- }
 
 ## EXAMPLE 5: BOXPLOTS FOR PRESENTATION  
 boxplot(Lifetime ~ myDiet, ylab= "Lifetime (months)", names=myNames,

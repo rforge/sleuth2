@@ -23,7 +23,7 @@
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \seealso{
-  \code{\link{case0902}}
+  \code{\link{ex0912}}, \code{\link{ex0913}}
 }
 \examples{
 str(case0902)
@@ -33,7 +33,7 @@ attach(case0902)
 myMatrix      <- cbind(Brain, Body, Litter, Gestation)  
 if(require(car)){   # Use the car library
 scatterplotMatrix(myMatrix,   # Matrix of scatterplots
-  smooth=F,    # Omit scatterplot smoother on plots
+  smooth=FALSE,    # Omit scatterplot smoother on plots
   diagonal="histogram") # Draw histograms on diagonals
   } 
 myLm <- lm(Brain ~ Body + Litter + Gestation)
@@ -43,7 +43,7 @@ logBody <- log(Body)
 logGestation  <- log(Gestation)
 myMatrix2 <- cbind(logBrain,logBody,Litter, logGestation) 
 if(require(car)){   # Use the car library
-  scatterplotMatrix(myMatrix2, smooth=F, diagonal="histogram")  
+  scatterplotMatrix(myMatrix2, smooth=FALSE, diagonal="histogram")  
 }
 myLm2 <- lm(logBrain ~ logBody + Litter + logGestation)
 plot(myLm2,which=1)  # Residual plot.

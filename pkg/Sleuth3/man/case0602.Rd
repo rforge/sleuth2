@@ -34,6 +34,9 @@
   Basolo, A.L. (1990).  Female Preference Predates the Evolution of the
   Sword in Swordtail Fish, \emph{Science} \bold{250}: 808--810.  
 }
+\seealso{
+  \code{\link{ex0821}}
+}
 \examples{
 str(case0602)  
 attach(case0602)   
@@ -53,8 +56,8 @@ myAov2        <- aov(Proportion ~ Pair - 1)  # Show the estimated means.
 myContrast    <- rbind(c(5, -3, 1, 3, -9, 3))  
 if(require(multcomp)){   # Use the multcomp library  
   myComparison  <- glht(myAov2, linfct=myContrast)    
-  summary(myComparison, test=adjusted("none")) 
 }
+summary(myComparison, test=adjusted("none")) 
 
 
 # Simpler exploration of linear effect, via regression (Ch. 7)

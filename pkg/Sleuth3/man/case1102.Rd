@@ -28,6 +28,9 @@
   Ramsey, F.L. and Schafer, D.W. (2013). \emph{The Statistical Sleuth: A
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
+\seealso{
+  \code{\link{ex1117}}, \code{\link{ex1118}}, \code{\link{ex1119}}, \code{\link{ex1214}}, \code{\link{ex1215}}
+}
 \examples{
 str(case1102)
 attach(case1102)
@@ -38,7 +41,7 @@ logTime <- log(Time)
 myMatrix <- cbind (logRatio, Days, Weight, Loss, Tumor, logTime)
 if(require(car)){   # Use the car library
 scatterplotMatrix(myMatrix,groups=Treatment,
-  smooth=F, diagonal="histogram", col=c("green","blue"),pch=c(16,17),cex=1.5)
+  smooth=FALSE, diagonal="histogram", col=c("green","blue"), pch=c(16,17), cex=1.5)
 }
  
 myLm1 <- lm(logRatio ~ Treatment + logTime + Days + Sex + Weight + Loss + Tumor)

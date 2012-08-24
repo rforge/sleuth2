@@ -49,29 +49,29 @@ summary(myAov)
 ## COMPARE MEAN QUALIFICATION SCORE OF EVERY HANDICAP GROUP TO "NONE"  
 if(require(multcomp)){     # Use the multcomp library
   myDunnett  <- glht(myAov, linfct = mcp(myHandicap = "Dunnett"))  
-  summary(myDunnett) 
-  confint(myDunnett,level=.95) 
-  opar <- par(no.readonly=TRUE)  # Save current graphics parameter settings
-  par(mar=c(4.1,8.1,4.1,1.1)) # Change margins 
-  plot(myDunnett, 
-    xlab="Difference in Mean Qualification Score (and Dunnet-adjusted CIs)") 
-  par(opar)  # Restore original graphics parameter settings
-}
+} 
+summary(myDunnett) 
+confint(myDunnett,level=.95) 
+opar <- par(no.readonly=TRUE)  # Save current graphics parameter settings
+par(mar=c(4.1,8.1,4.1,1.1)) # Change margins 
+plot(myDunnett, 
+  xlab="Difference in Mean Qualification Score (and Dunnet-adjusted CIs)") 
+par(opar)  # Restore original graphics parameter settings
 
 ## COMPARE EVERY MEAN TO EVERY OTHER MEAN
 if(require(multcomp)){   # Use the multcomp library
   myTukey   <- glht(myAov, linfct = mcp(myHandicap = "Tukey"))  
-summary(myTukey) 
 }
+summary(myTukey) 
 
 ## TEST THE CONTRAST OF DISPLAY 6.4
 myAov2        <- aov(Score ~ myHandicap - 1)    
 myContrast    <- rbind(c(0, -1/2, 1/2, -1/2, 1/2)) 
 if(require(multcomp)){   # Use the multcomp library
   myComparison  <- glht(myAov2, linfct=myContrast)
-  summary(myComparison, test=adjusted("none"))  
-  confint(myComparison)  
-}  
+  }  
+summary(myComparison, test=adjusted("none"))  
+confint(myComparison)  
 
 
 # BOXPLOTS FOR PRESENTATION   

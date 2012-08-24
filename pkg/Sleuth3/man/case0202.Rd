@@ -37,7 +37,7 @@ str(case0202)
 
 diff <- Unaffected-Affected    
 summary(diff)
-t.test(diff) # Paired t-test is a one-sample t-test on differnces 
+t.test(diff) # Paired t-test is a one-sample t-test on differences 
 t.test(Unaffected,Affected,pair=TRUE)  # Alternative coding for the same test 
 
 boxplot(diff,       

@@ -27,7 +27,7 @@
   School of Business.
 }
 \seealso{
-  \code{\link{case1202}}
+  \code{\link{case1202}}, \code{\link{ex1216}}
 }
 \examples{
 attach(case0102)

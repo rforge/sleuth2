@@ -31,7 +31,7 @@
   School of Business.
 }
 \seealso{
-  \code{\link{case0102}}
+  \code{\link{case0102}}, \code{\link{ex1216}}
 }
 \examples{
 str(case1202)
@@ -41,7 +41,7 @@ attach(case1202)
 logSal <- log(Bsal)    
 myMatrix <- cbind (logSal, Senior,Age, Educ, Exper)   
 if(require(car)){   # Use the car library
-  scatterplotMatrix(myMatrix, smooth=F, diagonal="histogram",
+  scatterplotMatrix(myMatrix, smooth=FALSE, diagonal="histogram",
                     groups=Sex, col=c("red","blue") )   
 }                                
 myLm1 <- lm(logSal ~ Senior + Age + Educ + Exper + Sex)
