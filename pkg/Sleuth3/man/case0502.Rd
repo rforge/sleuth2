@@ -66,9 +66,9 @@ t.test(Percent ~ SpockOrOther, var.equal=TRUE) # Evidence that 2 means differ?
   myContrast    <- rbind(c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6, - 1))
 if(require(multcomp)){  # use multcomp library
   myComparison  <- glht(myAov3, linfct=myContrast) 
-}
   summary(myComparison, test=adjusted("none"))   
   confint(myComparison) 
+}
 
 ## BOXPLOTS FOR PRESENTATION   
 boxplot(Percent ~ Judge,  ylab= "Percent of Women on Judges' Venires",

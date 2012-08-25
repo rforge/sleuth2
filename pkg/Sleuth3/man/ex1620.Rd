@@ -10,7 +10,7 @@
   in the two groups were performed for each gene individually. The data are the 
   p-values from all these tests. The goal is to use a identify a set of genes
   that differentially express in the two groups, subject to some specified value
-  for expected false discovery rate, such as 5%.
+  for expected false discovery rate, such as 5\%.
 }
 \usage{ex1620}
 \format{

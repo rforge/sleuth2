@@ -62,7 +62,7 @@ seHighMinusLow <- 3.527 # Standard error, read from summary(myLm3)
 n <- length(highMinusBase)  # 20: sample size
 multiplier <-    sqrt(2*((n-1)/(n-2))*qf(.95,2,n-2))   # See Sleuth, page 495 
 HighMinusBase + c(-1,1)*multiplier*seHighMinusBase # 95% CI for High - Base
-HighMinusLow + c(-1,2)*multiplier*seHighMinusLow   # 95% CI for High - Low)
+HighMinusLow + c(-1,2)*multiplier*seHighMinusLow   # 95% CI for High - Low
 
 
 ## GRAPHICAL DISPLAY FOR PRESENTATION

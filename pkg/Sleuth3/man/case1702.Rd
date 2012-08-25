@@ -56,7 +56,6 @@ if(require(CCA)){     # Use the CCA library
   myCCA   <- cc(x,y)  # Store canonical correlation computations 
   canCor   <- myCCA$cor  # Extract the canonical correlations
   canCor  #[1] 0.9506990 0.8665601 0.5571876 0.1106555
-}
 
 # Make a function to test the number of canonical correlations (advanced).
 # Bartlett modification of likelihood ratio test
@@ -176,8 +175,7 @@ text(3,3,"p-value < 0.0001",adj=0)
 abline(myLm2)
 
 par(opar) # Restore previous graphics parameter settings
-           
-
+}
 detach(case1702)
 }
 \keyword{datasets}

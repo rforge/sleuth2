@@ -56,8 +56,8 @@ myAov2        <- aov(Proportion ~ Pair - 1)  # Show the estimated means.
 myContrast    <- rbind(c(5, -3, 1, 3, -9, 3))  
 if(require(multcomp)){   # Use the multcomp library  
   myComparison  <- glht(myAov2, linfct=myContrast)    
+  summary(myComparison, test=adjusted("none")) 
 }
-summary(myComparison, test=adjusted("none")) 
 
 
 # Simpler exploration of linear effect, via regression (Ch. 7)
