@@ -1,4 +1,4 @@
-\name{ex125}
+\name{ex1125}
 \alias{ex1125}
 \docType{data}
 \title{Ingestion Rates of Deposit Feeders}

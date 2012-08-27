@@ -1,5 +1,5 @@
 \name{ex1033}
-\alias{ex0033}
+\alias{ex1033}
 \docType{data}
 \title{IQ Score and Income}
 \description{
