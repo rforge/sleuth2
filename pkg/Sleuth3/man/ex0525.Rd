@@ -20,6 +20,7 @@
     \item{\code{Subject}}{subject identification number}
     \item{\code{Educ}}{a factor for years of education category with levels 
       \code{"<12"}, \code{"12"}, \code{"13-15"}, \code{"16"} and \code{">16"}}
+    \item{\code{Income2005}}{Annual income in 2005, in U.S. dollars}
   }
 }
 \source{
@@ -33,9 +34,7 @@
 \seealso{
   \code{\link{ex0222}}, \code{\link{ex0330}}, \code{\link{ex0331}},
   \code{\link{ex0524}}, \code{\link{ex0828}}, \code{\link{ex0923}},
-  \code{\link{ex1033}}, \code{\link{ex1223}}, \code{\link{ex1616}},
-  \code{\link{ex1617}}, \code{\link{ex1717}}, \code{\link{ex1718}},
-  \code{\link{ex2020}}
+  \code{\link{ex1033}}, \code{\link{ex1223}}
 }
 \examples{
 str(ex0525)

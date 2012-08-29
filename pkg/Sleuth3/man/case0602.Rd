@@ -34,9 +34,6 @@
   Basolo, A.L. (1990).  Female Preference Predates the Evolution of the
   Sword in Swordtail Fish, \emph{Science} \bold{250}: 808--810.  
 }
-\seealso{
-  \code{\link{ex0821}}
-}
 \examples{
 str(case0602)  
 attach(case0602)   

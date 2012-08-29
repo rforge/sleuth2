@@ -20,7 +20,7 @@
     \code{Configur} \tab a factor identifying the configuration, with
       two levels \code{"0"} and \code{"1"}\cr
     \code{Material}\tab a factor identifying the type of metal from
-      which the rod was made, with four levels  \code{"1"}, \code{"2"},
+      which the rod was made, with four levels \code{"1"}, \code{"2"},
       \code{"3"} and \code{"4"}\cr 
   }
 }

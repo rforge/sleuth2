@@ -37,7 +37,7 @@
   \emph{Journal of Anthropological Research} \bold{46}: 223--242.
 }
 \seealso{
-  \code{\link{ex1918}}, \code{\link{ex213}}, \code{\link{ex2014}}
+  \code{\link{ex1918}}
 }
 \examples{
 str(case2001)

@@ -31,7 +31,7 @@
    August 10, 2011
 }
 \seealso{
-  \code{\link{ex0721}}, \code{\link{ex0818}}
+  \code{\link{ex0721}}
 }
 \examples{
 str(ex2226)

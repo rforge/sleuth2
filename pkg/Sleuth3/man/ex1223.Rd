@@ -25,6 +25,7 @@
     \item{\code{FatherEd}}{father's years of education}
     \item{\code{FamilyIncome78}}{family's total net income in 1978}
     \item{\code{Race}}{1 = Hispanic, 2 = Black, 3 = Not Hispanic or Black}
+    \item{\code{Gender}}{a factor with levels \code{"female"} and \code{"male"}}
     \item{\code{Educ}}{years of education completed by 2006}
     \item{\code{Science}}{score on the General Science test in 1981}    
     \item{\code{Arith}}{score on the Arithmetic Reasoning test in 1981}
@@ -61,9 +62,7 @@
 \seealso{
   \code{\link{ex0222}}, \code{\link{ex0330}}, \code{\link{ex0331}},
   \code{\link{ex0524}}, \code{\link{ex0525}}, \code{\link{ex0828}},
-  \code{\link{ex0923}}, \code{\link{ex1033}}, \code{\link{ex1224}},
-  \code{\link{ex1616}}, \code{\link{ex1617}}, \code{\link{ex1717}},
-  \code{\link{ex1718}}, \code{\link{ex2020}}
+  \code{\link{ex0923}}, \code{\link{ex1033}}
 }
 \examples{
 str(ex1033)

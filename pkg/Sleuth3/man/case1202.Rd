@@ -31,7 +31,7 @@
   School of Business.
 }
 \seealso{
-  \code{\link{case0102}}, \code{\link{ex1216}}
+  \code{\link{case0102}}
 }
 \examples{
 str(case1202)

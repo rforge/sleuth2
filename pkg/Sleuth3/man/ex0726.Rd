@@ -26,9 +26,6 @@
   Among Extra--calactic Nebulae, \emph{Astrophysics Journal} \bold{74}:
   43--50. 
 }
-\seealso{
-  \code{\link{ex1032}} and \code{\link{ex1618}}
-}
 \examples{
 str(ex0725)
 }

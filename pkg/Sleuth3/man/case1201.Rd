@@ -66,7 +66,7 @@ State[myOrder]
 ## DISPLAY FOR PRESENTATION
 dotchart(myResiduals[myOrder], labels=State[myOrder],
   xlab="SAT Scores, Adjusted for Percent Takers and HS Ranks (Deviation From Average)",
-  main="States Ranked by SAT Scores Adjusted for Percent of HS Students That Took the SAT and Average High School Rank of the Takers",
+  main="States Ranked by Adjusted SAT Scores",
   bg="green", cex=.8)
 abline(v=0, col="gray")
 
@@ -89,7 +89,7 @@ if(require(leaps)){   # Use the leaps library
   newState <- State[State != "Alaska"]
   newState[myOrder2] 
   dotchart(myResiduals2[myOrder2], labels=State[myOrder2],
-    xlab="SAT Scores, Adjusted for Demographic and Expenditure Variables (Deviation From Average)",
+    xlab="Adjusted SAT Scores (Deviation From Average Adjusted Value)",
     main="States Ranked by SAT Scores Adjusted for Demographics of Takers and Education Expenditure",  
     bg="green", cex = .8)
   abline(v=0, col="gray")

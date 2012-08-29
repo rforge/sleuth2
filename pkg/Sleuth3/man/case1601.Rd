@@ -97,10 +97,10 @@ for (rep in 1:numRep) {  # Do the following commands in parenthese num.rep times
   randomGroup[sample(1:18,7)]  <- "Group2" # Change 7 at random to "Group2"
   randomGroup <- factor(randomGroup)  # Make the character variable a factor
   myLmFull <- lm(cbind(short,long) ~ randomGroup)  # Fit full model
-  myAnova2  <- anova(myLmReduced, myLmFull, test="Hotelling") # Hotelling's T-Squared test 
+  myAnova2  <- anova(myLmReduced, myLmFull, test="Hotelling") # Hotelling's test 
   FStats[rep] <- myAnova2$approx[2]   # Store the F-statistic 
 }  # If numRep = 50,000, go get a cup of coffee while you wait for this.
-hist(FStats, main="Approx. Randomizatin Dist of F-stat if No Treatment Effect")          # Histogram of F-statistics from random regroupings 
+hist(FStats, main="Approx. Randomizatin Dist of F-stat if No Treatment Effect")  
 abline(v=12.32109)    # Show actually observed Hotelling F-statistic
 pValue <- sum(FStats >= 12.32109)/numRep
 pValue  # Approximate randomization test p-value (no distributional assumptions)

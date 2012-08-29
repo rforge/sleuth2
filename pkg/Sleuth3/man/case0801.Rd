@@ -21,9 +21,6 @@
 \references{
   Wilson, E.O., 1992, \bold{The Diversity of Life}, W. W. norton, N.Y.
 }
-\seealso{
-  \code{\link{ex0815}}
-}
 \examples{
 str(case0801)
 attach(case0801)

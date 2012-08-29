@@ -11,8 +11,8 @@
 \format{
   A data frame with 62 observations on the following 6 variables.
   \describe{
-    \item{\code{AMED}}{adoptive mother's years of education}
-    \item{\code{BMIQ}}{biological mother's score on IQ test}
+    \item{\code{FMED}}{adoptive (foster) mother's years of education}
+    \item{\code{TMIQ}}{biological mother's score on IQ test}
     \item{\code{Age2IQ}}{IQ of child at age 2}
     \item{\code{Age4IQ}}{IQ of child at age 4}
     \item{\code{Age8IQ}}{IQ of child at age 8}

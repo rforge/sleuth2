@@ -4,7 +4,7 @@
 \title{Diet Wars III}
 \description{
   For the study of different diets for losing weight
-  (\code{\link{ex0623}},  \code{link{ex1920}}, and
+  (\code{\link{ex0623}} and
   \code{\link{ex1921}}), it is desired to see whether women were more or
   less likely to 
   drop out of the study than men (after accounting for the apparent differential
@@ -27,7 +27,7 @@
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \seealso{
-  \code{\link{ex0623}}, \code{\link{ex1920}}, \code{\link{ex1921}}
+  \code{\link{ex0623}}, \code{\link{ex1921}}
 }
 \examples{
 str(ex1922)

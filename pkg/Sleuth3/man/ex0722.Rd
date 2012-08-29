@@ -25,9 +25,6 @@
   and Foraging Efficiency in Generalist and Specialist Shell-Breaking Crabs.
   \emph{Journal of Experimental Marine Biology and Ecolog}, \bold{220} 191--211.
 }
-\seealso{
-  \code{\link{ex0917}}
-}
 \examples{
 str(ex0722)
 }

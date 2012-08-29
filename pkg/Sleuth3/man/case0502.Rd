@@ -37,9 +37,6 @@
   Women: Statistics and the Law \emph{in} Tanur, J.M. et al. (eds.)
   \emph{Statistics: A Guide to the Unknown}, Holden-Day. 
 }
-\seealso{
-  \code{\link{ex2214}}
-}
 \examples{
 str(case0502)  
 attach(case0502) 

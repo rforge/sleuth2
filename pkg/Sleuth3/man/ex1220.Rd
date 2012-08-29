@@ -31,9 +31,6 @@
   Galapagos Archipelago Revisited, \emph{Science} \bold{179}(4076):
   893--895.
 }
-\seealso{
-  \code{\link{ex2218}}, \code{\link{ex2219}}
-}
 \examples{
 str(ex1220)
 }

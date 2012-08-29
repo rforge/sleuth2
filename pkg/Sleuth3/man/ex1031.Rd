@@ -38,7 +38,7 @@
   \bold{322}: 1826--1828
 }
 \seealso{
-  \code{\link{ex1713}}, \code{\link{ex1923}}
+ \code{\link{ex1923}}
 }
 \examples{
 str(ex1031)

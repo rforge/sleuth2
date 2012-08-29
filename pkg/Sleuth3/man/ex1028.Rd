@@ -35,9 +35,6 @@
   reported on USA Today weather page:
   \url{http://www.usatoday.com/weather/whurnum.htm}
 }
-\seealso{
-  \code{\link{ex2221}}
-}
 \examples{
 str(ex1028)
 }

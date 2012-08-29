@@ -53,9 +53,7 @@
   Economics, Princeton University. See also Simon Jackman (2011). pscl: Classes 
   and Methods for R Developed in the Political Science Computational Laboratory,
   Stanford University. Department of Political Science, Stanford University. 
-  Stanford, California. R package version 1.03.10. URL http://pscl.stanford.edu/}
-\seealso{
-  \code{\link{ex1115}}
+  Stanford, California. R package version 1.03.10. URL http://pscl.stanford.edu/
 }
 \examples{
 str(ex0820)

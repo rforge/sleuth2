@@ -31,7 +31,7 @@
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \seealso{
-  \code{\link{ex1031}}, \code{\link{ex1713}}
+  \code{\link{ex1031}}
 }
 \examples{
 str(ex1923)

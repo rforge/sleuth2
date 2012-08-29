@@ -37,9 +37,6 @@
   Expectation and Pupil's Intellectual Development}, Holt, Rinehart, and Winston, 
   Inc.
 }
-\seealso{
-  \code{\link{ex1322}}
-}
 \examples{
 str(ex1321)
 }

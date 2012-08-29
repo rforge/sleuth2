@@ -4,7 +4,7 @@
 \title{Diet Wars II}
 \description{
   In the study of different diets for losing weight
-  (\code{\link{ex0623}} and \code{link{ex1920}}),  
+  (\code{\link{ex0623}} and \code{\link{ex1922}}),  
   there appear to have been many more experimental subjects that dropped out 
   from the low carbohydrate diet group than from the other two diet groups. This 
   data set contains the numbers who did and didn't drop out in each diet group. 
@@ -25,7 +25,7 @@
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \seealso{
-  \code{\link{ex0623}}, \code{\link{ex1920}}
+  \code{\link{ex0623}}, \code{\link{ex1922}}
 }
 \examples{
 str(ex1921)

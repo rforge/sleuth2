@@ -34,7 +34,7 @@
       \code{"DoctorateDegree"}, \code{"TwelthButNoDiploma"},
       \code{"LessThanFirstGrade"}, \code{"EleventhGrade"}, 
       \code{"ProfSchoolDegree"}, \code{"FifthorSixthGrade"},
-      \code{"SeventhOrEighthGrade"},\code{"FirstSecondThirdOrFourthGrade"}}
+      \code{"SeventhOrEighthGrade"}, \code{"FirstSecondThirdOrFourthGrade"}}
     \item{\code{EducationCode}}{a numerical variable indicating the approximate
       ordering of EducationCategory, with higher numbers indicating more 
       education}

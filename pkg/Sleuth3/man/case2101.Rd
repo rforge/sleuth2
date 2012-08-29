@@ -40,9 +40,6 @@
   Protected Bird Communities in a Finnish Archipelago, \emph{Journal of
     Animal Ecology} \bold{46}: 891--908.
 }
-\seealso{
-  \code{\link{ex2109}}
-}
 \examples{
 str(case2101)
 attach(case2101)

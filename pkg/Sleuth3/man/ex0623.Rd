@@ -26,7 +26,7 @@
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \seealso{
-  \code{\link{ex1420}}, \code{\link{ex1920}}, \code{\link{ex1921}},
+  \code{\link{ex1420}}, \code{\link{ex1921}},
   \code{\link{ex1922}}
 }
 \examples{

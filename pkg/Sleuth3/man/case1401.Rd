@@ -10,12 +10,13 @@
 }
 \usage{case1401}
 \format{
-  A data frame with 40 observations on the following 3 variables.
+  A data frame with 40 observations on the following 4 variables.
   \describe{
     \item{\code{Minutes}}{learning time in minutes}
     \item{\code{Chimp}}{a factor indicating chimp, with four levels
       \code{"Booee"}, \code{"Cindy"},  \code{"Bruno"} and \code{"Thelma"}}
     \item{\code{Sign}}{a factor indicating word taught, with 10 levels}
+    \item{\code{Order}}{the order in which the sign was taught}
   }
 }
 \source{

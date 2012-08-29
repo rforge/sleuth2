@@ -27,9 +27,6 @@
   Maximizing Pollen Dispersal of Animal-pollinated Plants, \emph{American
   Naturalist} \bold{133}: 323--344. 
 }
-\seealso{
-  \code{\link{ex0819}}, \code{\link{ex0916}}, \code{\link{ex1110}}
-}
 \examples{
 str(ex0327)
 }

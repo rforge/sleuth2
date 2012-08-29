@@ -26,7 +26,7 @@
   Extended to Nonlinear Models, \emph{Biometrics} \bold{47}(2): 563--574.
 }
 \seealso{
-  \code{\link{ex0816}}, \code{\link{ex0913}}
+  \code{\link{ex0816}}
 }
 \examples{
 str(case0702)

@@ -33,9 +33,7 @@
 \seealso{
   \code{\link{ex0222}}, \code{\link{ex0330}}, \code{\link{ex0331}},
   \code{\link{ex0525}}, \code{\link{ex0828}}, \code{\link{ex0923}},
-  \code{\link{ex1033}}, \code{\link{ex1223}}, \code{\link{ex1616}},
-  \code{\link{ex1617}}, \code{\link{ex1717}}, \code{\link{ex1718}},
-  \code{\link{ex2020}}
+  \code{\link{ex1033}}, \code{\link{ex1223}}
 }
 \examples{
 str(ex0524)

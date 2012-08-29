@@ -50,7 +50,7 @@
    183--189. 
 }
 \seealso{
-  \code{\link{ex1619}}, \code{\link{ex2120}}
+  \code{\link{ex2120}}
 }
 \examples{                 
 str(ex1419)

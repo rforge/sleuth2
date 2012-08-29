@@ -24,9 +24,6 @@
   Ezekiel, M. and Fox, K.A. (1959). \emph{Methods of Correlation and
     Regression Analysis}, John Wiley \& Sons, New York.
 }
-\seealso{
-  \code{\link{ex1114}}
-}
 \examples{
 str(ex0915)
 }

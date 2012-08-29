@@ -34,9 +34,6 @@
   Woodworth, G.C. (1989). Statistics and the Death Penalty, \emph{Stats}
   \bold{2}: 9--12. 
 }
-\seealso{
-  \code{\link{ex2110}}, \code{\link{ex2111}}
-}
 \examples{
 str(case1902)
 attach(case1902)
