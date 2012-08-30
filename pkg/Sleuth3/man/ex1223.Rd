@@ -57,7 +57,7 @@
 }
 \references{
   National Longitudinal Survey of Youth, U.S. Bureau of Labor Statistics, 
-  http://www.bls.gov/nls/home.htm (May 8, 2008).
+  \url{http://www.bls.gov/nls/home.htm} (May 8, 2008).
 }
 \seealso{
   \code{\link{ex0222}}, \code{\link{ex0330}}, \code{\link{ex0331}},
@@ -65,6 +65,6 @@
   \code{\link{ex0923}}, \code{\link{ex1033}}
 }
 \examples{
-str(ex1033)
+str(ex1223)
 }
 \keyword{datasets}

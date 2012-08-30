@@ -25,16 +25,16 @@
     \item{\code{Region}}{a factor with levels \code{"Midwest"}, 
       \code{"Northeast"}, \code{"South"} and \code{"West"}}
     \item{\code{MetropolitanStatus}}{a factor with levels 
-      \code{"Metopolitan"}, \code{"Not Metropolitan "} and \code{"Not Identified"}}
+      \code{"Metopolitan"}, \code{"Not Metropolitan "} and 
+      \code{"Not Identified"}}
     \item{\code{Age}}{age in years}
     \item{\code{EducationCategory}}{a factor with 16 levels: 
       \code{"SomeCollegeButNoDegree"}, \code{"AssocDegAcadem"}, 
       \code{"NinthGrade"}, \code{"BachelorsDegree"}, \code{"TenthGrade"},
-      \code{"HighSchoolDiploma"}, \code{"AssocDegOccupVocat"}, 
-      \code{"DoctorateDegree"}, \code{"TwelthButNoDiploma"},
-      \code{"LessThanFirstGrade"}, \code{"EleventhGrade"}, 
-      \code{"ProfSchoolDegree"}, \code{"FifthorSixthGrade"},
-      \code{"SeventhOrEighthGrade"}, \code{"FirstSecondThirdOrFourthGrade"}}
+      \code{"HighSchoolDiploma"}, 
+      \code{"AssocDegOccupVocat"}, \code{"DoctorateDegree"}, \code{"TwelthButNoDiploma"},
+      \code{"LessThanFirstGrade"}, \code{"EleventhGrade"}, \code{"ProfSchoolDegree"}, 
+      \code{"FifthorSixthGrade"},\code{"SeventhOrEighthGrade"}, \code{"FirstSecondThirdOrFourthGrade"}}
     \item{\code{EducationCode}}{a numerical variable indicating the approximate
       ordering of EducationCategory, with higher numbers indicating more 
       education}

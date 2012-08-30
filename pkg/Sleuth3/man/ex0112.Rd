@@ -14,7 +14,7 @@
   \describe{
     \item{\code{BP}}{reduction in diastolic blood pressure (in mm of mercury)}
     \item{\code{Diet}}{factor variable indicating the diet that the subject 
-        followed, with levels "FishOil" and "RegularOil}
+        followed, with levels "FishOil" and "RegularOil"}
   }
 }
 \source{

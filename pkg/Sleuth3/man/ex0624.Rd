@@ -10,7 +10,7 @@
 }
 \usage{ex0624}
 \format{
-  A data frame with 41 observations on the following 2 variables.
+  A data frame with 41 observations on the following 5 variables.
   \describe{
     \item{\code{Volume}}{volumes of INAH3 (1000 \eqn{\times}{x}
       mm\eqn{^3}) cell clusters from 41 humans} 

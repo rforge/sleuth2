@@ -13,7 +13,8 @@
     \item{\code{Dose}}{the daily dose of vitamin C, in g}
     \item{\code{Number}}{the number of subjects given that dose of vitamin C}
     \item{\code{WithoutIllness}}{the number of subjects who did not become ill}
-    \item{\code{ProportionWithout}}{the proportion of subjects who did not become ill}
+    \item{\code{ProportionWithout}}{the proportion of subjects who did not become
+      ill}
   }
 }
 \source{
@@ -22,8 +23,8 @@
 }
 \references{
   Anderson, T.W., Suranyi,G., and Beaton, G.H. (1974) The Effect on Winter 
-  Illness of Large Doses of Vitamin C \emph{Canadian Medical Association
-    Journal} \bold{111} 31--36.
+  Illness of Large Doses of Vitamin C \emph{Canadian Medical Association Journal} 
+  \bold{111} 31--36.
 }
 \examples{
 str(ex2113)

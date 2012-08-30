@@ -4,7 +4,7 @@
 \title{Who Looks After the Kids?}
 \description{
   One issue concerning the validity of the clutch volume and parental care study 
-  of \code{\link{ex1031}} and \code{\link{ex1713}} is the selection of the bird species in the 
+  of \code{\link{ex1031}} is the selection of the bird species in the 
   set of currently living animals. Was the selection just as good as a random
   sample of species from each of the groups?  One way to study this for birds, at
   least, is to compare the numbers of species from each of the 29 orders of birds

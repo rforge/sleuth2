@@ -49,8 +49,8 @@ str(case1702)
 attach(case1702)
       
 ## EXPLORATION   
-x <- cbind(HP,WP,HC,WC)     # Four components of level of love you feel 
-y <- cbind(PW,PH,CW,CH)     # Four components of level of love you perceive your spouse feels for you
+x <- cbind(HP,WP,HC,WC) # 4 components of level of love you feel for spouse
+y <- cbind(PW,PH,CW,CH) # 4 components of level of love you perceive from spouse 
 
 if(require(CCA)){     # Use the CCA library         
   myCCA   <- cc(x,y)  # Store canonical correlation computations 

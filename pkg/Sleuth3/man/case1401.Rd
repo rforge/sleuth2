@@ -25,7 +25,7 @@
 }
 \references{
   Fouts, R.S. (1973). Acquisition and Testing of Gestural Signs in Four
-  Young Chimpanzees, \emph{Science} \bold{180}: 978-980. 
+  Young Chimpanzees, \emph{Science} \bold{180}: 978--980. 
 }
 \examples{
 str(case1401)

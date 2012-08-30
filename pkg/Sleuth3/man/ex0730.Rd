@@ -9,7 +9,7 @@
   data provide that the mean refusal rate decreased with incrasing age of 
   interviewer?
 }
-\usage{ex0729}
+\usage{ex0730}
 \format{
   A data frame with 6 observations on the following 2 variables.
   \describe{
@@ -26,7 +26,7 @@
   Evaluation of Edison/Mitofsky Election System 2004 prepared by Edison Media
   Research and Mitofsky International for the National Election Pool (NEP), 
   January 15, 2005.
-  http://abcnews.go.com/images/Politics/EvaluationofEdisonMitofskyElectionSystem.pdf
+  \url{http://abcnews.go.com/images/Politics/EvaluationofEdisonMitofskyElectionSystem.pdf}
 }
 \seealso{
   \code{\link{ex0729}}

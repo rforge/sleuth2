@@ -24,7 +24,7 @@
 }
 \references{
   Anderson, T.W., Reid, D.B.W. and Beaton, G. H. (1972). Vitamin C and the 
-  Common Cold, \emph{Canadian Medial Association Journal} \bold{107}: 503-08. 
+  Common Cold, \emph{Canadian Medial Association Journal} \bold{107}: 503--508. 
 }
 \examples{
 str(case1803)

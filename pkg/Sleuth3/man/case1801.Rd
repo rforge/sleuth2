@@ -26,7 +26,7 @@
 }
 \references{
   Crews, D.E. (1988). Cardiovascular Mortality in American Samoa, \emph{Human
-    Biology} \bold{60}: 417-33. 
+    Biology} \bold{60}: 417--433. 
 }
 \examples{
 str(case1801)
