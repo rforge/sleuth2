@@ -16,7 +16,7 @@
     \item{\code{Region}}{a factor with levels \code{"Midwest"}, \code{"Northeast"}, 
       \code{"South"}, and \code{"West"}}
     \item{\code{MetropolitanStatus}}{a a factor with levels \code{"Metropolitan"}, 
-      \code{"Not Identified"}, and 
+      \code{"Not Identified"}, and \cr
       \code{"Not Metropolitan"}}
     \item{\code{Age}}{age in years}
     \item{\code{Sex}}{a factor with levels \code{"Female"} and \code{"Male"}}

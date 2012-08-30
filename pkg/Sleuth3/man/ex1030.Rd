@@ -31,9 +31,9 @@
     \item{\code{EducationCategory}}{a factor with 16 levels: 
       \code{"SomeCollegeButNoDegree"}, \code{"AssocDegAcadem"}, 
       \code{"NinthGrade"}, \code{"BachelorsDegree"}, \code{"TenthGrade"},
-      \code{"HighSchoolDiploma"}, 
-      \code{"AssocDegOccupVocat"}, \code{"DoctorateDegree"}, \code{"TwelthButNoDiploma"},
-      \code{"LessThanFirstGrade"}, \code{"EleventhGrade"}, \code{"ProfSchoolDegree"}, 
+      \code{"HighSchoolDiploma"}, \cr
+      \code{"AssocDegOccupVocat"}, \code{"DoctorateDegree"}, \code{"TwelthButNoDiploma"},\cr
+      \code{"LessThanFirstGrade"}, \code{"EleventhGrade"}, \code{"ProfSchoolDegree"},\cr 
       \code{"FifthorSixthGrade"},\code{"SeventhOrEighthGrade"}, \code{"FirstSecondThirdOrFourthGrade"}}
     \item{\code{EducationCode}}{a numerical variable indicating the approximate
       ordering of EducationCategory, with higher numbers indicating more 

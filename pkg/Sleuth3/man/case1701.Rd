@@ -16,12 +16,13 @@
       each of the equally-spaces positions 1, 2, \dots, 11 on the
       printer rod\cr 
     \code{Current} \tab electric current passing through the rod, with
-      three levels \code{"0"}, \code{"250"} and \code{"500"} (milliamperes)\cr 
+      three levels \code{"0"}, \code{"250"} and \code{"500"}\cr
+      (milliamperes) 
     \code{Configur} \tab a factor identifying the configuration, with
       two levels \code{"0"} and \code{"1"}\cr
     \code{Material}\tab a factor identifying the type of metal from
-      which the rod was made, with four levels
-      \code{"1"}, \code{"2"}, \code{"3"} and \code{"4"}\cr 
+      which the rod was made, with four levels\cr
+      \code{"1"}, \code{"2"}, \code{"3"} and \code{"4"} 
   }
 }
 \source{
@@ -49,7 +50,7 @@ round(mfCoefs[,1],1)  # Show coefficients of 1st pc, rounded to 1 digit
 # Coefficients are all very similar, suggesting a constant coefficient; use 1/11 
 mfAve     <- (L1 + L2 + L3 + L4 + L5 + L6 + L7 + L8 + L9 + L10 + L11)/11
 mfScores  <- mfPca$x
-pc1       <- mfScores[,1]  # Values for first principal component of MagneticForces
+pc1       <- mfScores[,1] #Values for first principal component of MagneticForces
 cor(mfAve,pc1) # correlation of the average and the first PC (=0.999567)
 plot(pc1 ~ mfAve)
 
@@ -59,12 +60,12 @@ round(mfCoefs[,2],1) # Show coefficients of 2nd pc, rounded to 1 digit
 # positive on the right end. Try Ave(L9 + L10 + L11) - Ave(L1 + L2 + L3). 
 mfEnds    <- (L9 + L10 + L11)/3 - (L1 + L2 + L3)/3    
 pc2       <- mfScores[,2]
-residualEnds  <- lm(mfEnds ~ mfAve)$residual   # Ends with average effect removed
+residualEnds  <- lm(mfEnds ~ mfAve)$residual # Ends with average effect removed
 plot(pc2 ~ residualEnds)
 cor(residualEnds, pc2)                 # 0.973
  
 # Explore a possible meaningful linear combination suggested by third PC
-round(mfCoefs[,3],1)                   # Show doefficients of 3rd pc, rounded to 1 digit
+round(mfCoefs[,3],1)  # Show doefficients of 3rd pc, rounded to 1 digit
 # Try a contrast between the first 4 positions and the 6th position
 mfPeak    <- (L1 + L2 + L3 + L4)/4 - L6
 pc3       <- mfScores[,3]

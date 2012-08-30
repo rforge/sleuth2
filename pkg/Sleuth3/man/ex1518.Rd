@@ -23,7 +23,7 @@
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \references{
-  Center for Disease Control,
+  Center for Disease Control,\cr
   \url{http://www.cdc.gov/vaccines/pubs/pinkbook/downloads/appendices/G/cases& deaths.PDF} 
   retrieved on July 23, 2009
 }
