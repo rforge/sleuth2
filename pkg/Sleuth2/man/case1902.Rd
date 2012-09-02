@@ -1,4 +1,4 @@
-\name{case1902}
+n\name{case1902}
 \alias{case1902}
 \docType{data}
 \title{Death Penalty and Race}
@@ -6,7 +6,7 @@
   Lawyers collected data on convicted black murderers in the state of Georgia
   to see whether convicted black murderers whose victim was white were
   more likely to 
-  receive the death penalty than those whose victim  were black,
+  receive the death penalty than those whose victim  was black,
   after accounting for aggravation level of the murder. They categorized
   murders into 6 progressively more serious types. Category 1 comprises
   barroom brawls, liquor-induced arguments lovers' quarrels, and
