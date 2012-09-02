@@ -11,15 +11,15 @@
 \format{
   A data frame with 30 observations on the following 4 variables.
   \describe{
-    \item{\code{Protein}}{levels of protein (x 10) found in rat livers}    
-    \item{\code{Treatment}}{a factor with levels \code{"Control"},
+    \item{Protein}{levels of protein (x 10) found in rat livers}    
+    \item{Treatment}{a factor with levels \code{"Control"},
       \code{"CPFA50"}, \code{"CPFA150"}, \code{"CPFA300"},
       \code{"CPFA450"} and \code{"CPFA600"}}
-    \item{\code{Day}}{a factor with levels \code{"Day1"}, \code{"Day2"},
+    \item{Day}{a factor with levels \code{"Day1"}, \code{"Day2"},
       \code{"Day3"}, \code{"Day4"} and \code{"Day5"}}
-    \item{\code{TrtDayGroup}}{a factor with levels \code{"Group1"},
+    \item{TrtDayGroup}{a factor with levels \code{"Group1"},
       \code{"Group2"}, \dots, \code{"Group10"}; the observed levels of the
-      \code{Treatment} and \code{Day} interaction} 
+      Treatment and Day interaction} 
   }
 }
 \source{

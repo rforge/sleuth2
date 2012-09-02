@@ -18,11 +18,11 @@
 \format{
   A data frame with 96 observations on the following 3 variables.
   \describe{
-    \item{\code{Cover}}{percent of regenerated seaweed cover}
-    \item{\code{Block}}{a factor with levels \code{"B1"}, \code{"B2"},
+    \item{Cover}{percent of regenerated seaweed cover}
+    \item{Block}{a factor with levels \code{"B1"}, \code{"B2"},
       \code{"B3"}, \code{"B4"}, \code{"B5"}, \code{"B6"}, \code{"B7"}
       and \code{"B8"}} 
-    \item{\code{Treat}}{a factor indicating treatment, with levels
+    \item{Treat}{a factor indicating treatment, with levels
       \code{"C"}, \code{"f"}, \code{"fF"}, \code{"L"}, \code{"Lf"} and
       \code{"LfF"}} 
   }

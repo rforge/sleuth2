@@ -11,11 +11,11 @@
 \format{
   A data frame with 20 observations on the following 4 variables.
   \describe{
-    \item{\code{Mass}}{mass (in grams)}
-    \item{\code{Type}}{a factor with 3 levels indicating the type of flying
+    \item{Mass}{mass (in grams)}
+    \item{Type}{a factor with 3 levels indicating the type of flying
       vertebrate: non-echolocating bats, non-echolocating birds,   
       echolocating bats} 
-    \item{\code{Energy}}{in--flight energy expenditure (in W)}
+    \item{Energy}{in--flight energy expenditure (in W)}
   }
 }
 \source{

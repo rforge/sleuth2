@@ -17,11 +17,11 @@
 \format{
   A data frame with 861 observations on the following 3 variables.
   \describe{
-    \item{\code{Sex}}{a factor with levels \code{"female"} and
+    \item{Sex}{a factor with levels \code{"female"} and
       \code{"male"}} 
-    \item{\code{Background}}{a factor with levels \code{"a"}, \code{"b"}
+    \item{Background}{a factor with levels \code{"a"}, \code{"b"}
       and \code{"c"}}
-    \item{\code{Score}}{ACT mathematics test score}
+    \item{Score}{ACT mathematics test score}
   }
 }
 \source{

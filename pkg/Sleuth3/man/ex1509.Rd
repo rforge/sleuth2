@@ -9,9 +9,9 @@
 \format{
    A data frame with 311 observations on the following 2 variables.
   \describe{
-    \item{\code{Year}}{year in which sunspots were counted,
+    \item{Year}{year in which sunspots were counted,
       from 1700 to 2010} 
-    \item{\code{Sunspots}}{the number of sunspots observed in a year} 
+    \item{Sunspots}{the number of sunspots observed in a year} 
   }
 }
 \source{

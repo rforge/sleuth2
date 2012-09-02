@@ -12,10 +12,10 @@
 \format{
   A data frame with 58 observations on the following 3 variables.
   \describe{
-    \item{\code{Survival}}{months of survival after beginning of study}
-    \item{\code{Group}}{a factor with levels \code{"Control"} and
+    \item{Survival}{months of survival after beginning of study}
+    \item{Group}{a factor with levels \code{"Control"} and
       \code{"Therapy"}} 
-    \item{\code{Censor}}{0 if entire lifetime observed, 1 if patient
+    \item{Censor}{0 if entire lifetime observed, 1 if patient
       known to have lived at least 122 months} 
   }
 }

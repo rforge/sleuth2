@@ -13,15 +13,15 @@
 \format{
   A data frame with 34 observations on the following 9 variables.
   \describe{
-    \item{\code{Brain}}{Brain tumor count (per gm)}
-    \item{\code{Liver}}{Liver count (per gm)}
-    \item{\code{Time}}{Sacrifice time (in hours)}
-    \item{\code{Treatment}}{Treatment received}
-    \item{\code{Days}}{Days post inoculation}
-    \item{\code{Sex}}{Sex of the rat}
-    \item{\code{Weight}}{Initial weight (in grams)}
-    \item{\code{Loss}}{Weight loss (in grams)}
-    \item{\code{Tumor}}{Tumor weight (in 10\eqn{^{-4}}{^(-4)} grams)}
+    \item{Brain}{Brain tumor count (per gm)}
+    \item{Liver}{Liver count (per gm)}
+    \item{Time}{Sacrifice time (in hours)}
+    \item{Treatment}{Treatment received}
+    \item{Days}{Days post inoculation}
+    \item{Sex}{Sex of the rat}
+    \item{Weight}{Initial weight (in grams)}
+    \item{Loss}{Weight loss (in grams)}
+    \item{Tumor}{Tumor weight (in 10\eqn{^{-4}}{^(-4)} grams)}
   }
 }
 \source{

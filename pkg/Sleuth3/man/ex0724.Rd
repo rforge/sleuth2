@@ -13,11 +13,11 @@
 \format{
   A data frame with 45 observations on the following 5 variables.
   \describe{
-    \item{\code{Year}}{year of observation}
-    \item{\code{Denmark}}{male birth rate of Denmark for given year}
-    \item{\code{Netherlands}}{male birth rate of The Netherlands for given year}
-    \item{\code{Canada}}{male birth rate of Canada for given year}
-    \item{\code{USA}}{male birth rate of the United States for given year}
+    \item{Year}{year of observation}
+    \item{Denmark}{male birth rate of Denmark for given year}
+    \item{Netherlands}{male birth rate of The Netherlands for given year}
+    \item{Canada}{male birth rate of Canada for given year}
+    \item{USA}{male birth rate of the United States for given year}
   }
 }
 \source{

@@ -12,14 +12,14 @@
 }
 \usage{ex2226}
 \format{
-  A data frame with 38 observations on the following 2 variables.
+  A data frame with 13 observations on the following 5 variables.
   \describe{
-    \item{\code{Name}}{a character variable with the name of the planet, gas
+    \item{Name}{a character variable with the name of the planet, gas
       giant, or dwarf planet)}
-    \item{\code{Distance}}{distance from sun, relative to earth's}
-    \item{\code{Diameter}}{diameter of the planet, relative to earth's}
-    \item{\code{Mass}}{mass, relative to earth's}
-    \item{\code{Moons}}{number of moons}
+    \item{Distance}{distance from sun, relative to earth's}
+    \item{Diameter}{diameter of the planet, relative to earth's}
+    \item{Mass}{mass, relative to earth's}
+    \item{Moons}{number of moons}
   }
 }
 \source{

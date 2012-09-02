@@ -9,10 +9,10 @@
 \format{
   A data frame with 36 observations on the following 4 variables.
   \describe{
-    \item{\code{Specimen}}{specimen identification number}
-    \item{\code{Jnt1}}{measurement of first joint in micrometers}
-    \item{\code{Jnt2}}{measurement of second joint in micrometers}
-    \item{\code{Species}}{a factor with levels \code{"conc"} and
+    \item{Specimen}{specimen identification number}
+    \item{Jnt1}{measurement of first joint in micrometers}
+    \item{Jnt2}{measurement of second joint in micrometers}
+    \item{Species}{a factor with levels \code{"conc"} and
       \code{"heik"}} 
   }
 }

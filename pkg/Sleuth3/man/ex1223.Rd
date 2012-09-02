@@ -14,41 +14,41 @@
 \format{
   A data frame with 2,584 observations on the following 32 variables.
   \describe{
-    \item{\code{Subject}}{the subject identification number}
-    \item{\code{Imagazine}}{a variable taking on the value 1 if anyone in the
+    \item{Subject}{the subject identification number}
+    \item{Imagazine}{a variable taking on the value 1 if anyone in the
        respondent's household regularly read magazines in 1979, otherwise 0}
-    \item{\code{Inewspaper}}{a variable taking on the value 1 if anyone in the
+    \item{Inewspaper}{a variable taking on the value 1 if anyone in the
        respondent's household regularly read newspapers in 1979, otherwise 0}
-    \item{\code{Ilibrary}}{a variable taking on the value 1 if anyone in the
+    \item{Ilibrary}{a variable taking on the value 1 if anyone in the
        respondent's household had a library card in 1979, otherwise 0}
-    \item{\code{MotherEd}}{mother's years of education}
-    \item{\code{FatherEd}}{father's years of education}
-    \item{\code{FamilyIncome78}}{family's total net income in 1978}
-    \item{\code{Race}}{1 = Hispanic, 2 = Black, 3 = Not Hispanic or Black}
-    \item{\code{Gender}}{a factor with levels \code{"female"} and \code{"male"}}
-    \item{\code{Educ}}{years of education completed by 2006}
-    \item{\code{Science}}{score on the General Science test in 1981}    
-    \item{\code{Arith}}{score on the Arithmetic Reasoning test in 1981}
-    \item{\code{Word}}{score on the Word Knowledge Test in 1981}
-    \item{\code{Parag}}{score on the Paragraph Comprehension test in 1981}
-    \item{\code{Numer}}{score on the Numerical Operations test in 1981}
-    \item{\code{Coding}}{score on the Coding Speed test in 1981}
-    \item{\code{Auto}}{score on the Automotive and Shop test in 1981}
-    \item{\code{Math}}{score on the Mathematics Knowledge test in 1981}
-    \item{\code{Mechanic}}{score on the Electronics Information test in 1981}
-    \item{\code{Elec}}{score on the Paragraph Comprehension test in 1981}
-    \item{\code{AFQT}}{percentile score on the AFQT intelligence test in 1981}
-    \item{\code{Income2005}}{total annual income in 2005}
-    \item{\code{Esteem1}}{self reported answer to 1st self esteem question, 2005}
-    \item{\code{Esteem2}}{self reported answer to 2md self esteem question, 2005}
-    \item{\code{Esteem3}}{self reported answer to 3rd self esteem question, 2005}
-    \item{\code{Esteem4}}{self reported answer to 4th self esteem question, 2005}
-    \item{\code{Esteem5}}{self reported answer to 5th self esteem question, 2005}
-    \item{\code{Esteem6}}{self reported answer to 6th self esteem question, 2005}
-    \item{\code{Esteem7}}{self reported answer to 7th self esteem question, 2005}
-    \item{\code{Esteem8}}{self reported answer to 8th self esteem question, 2005}
-    \item{\code{Esteem9}}{self reported answer to 9th self esteem question, 2005}
-    \item{\code{Esteem10}}{self reported answer to 10th self esteem question, 2005}
+    \item{MotherEd}{mother's years of education}
+    \item{FatherEd}{father's years of education}
+    \item{FamilyIncome78}{family's total net income in 1978}
+    \item{Race}{1 = Hispanic, 2 = Black, 3 = Not Hispanic or Black}
+    \item{Gender}{a factor with levels \code{"female"} and \code{"male"}}
+    \item{Educ}{years of education completed by 2006}
+    \item{Science}{score on the General Science test in 1981}    
+    \item{Arith}{score on the Arithmetic Reasoning test in 1981}
+    \item{Word}{score on the Word Knowledge Test in 1981}
+    \item{Parag}{score on the Paragraph Comprehension test in 1981}
+    \item{Numer}{score on the Numerical Operations test in 1981}
+    \item{Coding}{score on the Coding Speed test in 1981}
+    \item{Auto}{score on the Automotive and Shop test in 1981}
+    \item{Math}{score on the Mathematics Knowledge test in 1981}
+    \item{Mechanic}{score on the Electronics Information test in 1981}
+    \item{Elec}{score on the Paragraph Comprehension test in 1981}
+    \item{AFQT}{percentile score on the AFQT intelligence test in 1981}
+    \item{Income2005}{total annual income in 2005}
+    \item{Esteem1}{self reported answer to 1st self esteem question, 2005}
+    \item{Esteem2}{self reported answer to 2md self esteem question, 2005}
+    \item{Esteem3}{self reported answer to 3rd self esteem question, 2005}
+    \item{Esteem4}{self reported answer to 4th self esteem question, 2005}
+    \item{Esteem5}{self reported answer to 5th self esteem question, 2005}
+    \item{Esteem6}{self reported answer to 6th self esteem question, 2005}
+    \item{Esteem7}{self reported answer to 7th self esteem question, 2005}
+    \item{Esteem8}{self reported answer to 8th self esteem question, 2005}
+    \item{Esteem9}{self reported answer to 9th self esteem question, 2005}
+    \item{Esteem10}{self reported answer to 10th self esteem question, 2005}
   }
 }
 \source{

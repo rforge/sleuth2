@@ -20,10 +20,10 @@
 \format{
   A data frame with 120 observations on the following 3 variables.
   \describe{
-    \item{\code{Group}}{Indicator whether the woman has DMD (\code{"Case"}) or
+    \item{Group}{Indicator whether the woman has DMD (\code{"Case"}) or
       not (\code{"Control"})}
-    \item{\code{CK}}{Creatine kinase reading}
-    \item{\code{H}}{Hemopexin reading}
+    \item{CK}{Creatine kinase reading}
+    \item{H}{Hemopexin reading}
   }
 }
 \source{

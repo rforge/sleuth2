@@ -20,10 +20,10 @@
 \format{
   A data frame with 47 observations on the following 4 variables.
   \describe{
-    \item{\code{Site}}{Investigated site}
-    \item{\code{Salamanders}}{Number of salamanders found in 49 m$^2$ area}
-    \item{\code{PctCover}}{Percentage of canopy cover}
-    \item{\code{ForestAge}}{Forest age}
+    \item{Site}{Investigated site}
+    \item{Salamanders}{Number of salamanders found in 49 m\eqn{^2} area}
+    \item{PctCover}{Percentage of canopy cover}
+    \item{ForestAge}{Forest age}
   }
 }
 \source{

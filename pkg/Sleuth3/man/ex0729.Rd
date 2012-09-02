@@ -16,10 +16,10 @@
 \format{
   A data frame with 6 observations on the following 2 variables.
   \describe{
-    \item{\code{OverEstimate}}{number of percentage points by which the
+    \item{OverEstimate}{number of percentage points by which the
        exit poll estimate exceeded the actual percentage voting for Kerry
        (in all precincts  with a similar distance of interviewer from the door }
-    \item{\code{Distance}}{distance of the interviewer from the door of the
+    \item{Distance}{distance of the interviewer from the door of the
       polling location, in feet}
   }
 }

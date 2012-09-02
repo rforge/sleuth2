@@ -11,10 +11,10 @@
 \format{
   A data frame with 20 observations on the following 4 variables.
   \describe{
-    \item{\code{Study}}{Factor indicating the study from which data was taken}
-    \item{\code{Lactate}}{Whether women had breast--fed children (lactated)}
-    \item{\code{Cancer}}{Number of women with breast cancer}
-    \item{\code{NoCancer}}{Number of women without breast cancer}
+    \item{Study}{Factor indicating the study from which data was taken}
+    \item{Lactate}{Whether women had breast--fed children (lactated)}
+    \item{Cancer}{Number of women with breast cancer}
+    \item{NoCancer}{Number of women without breast cancer}
   }
 }
 \details{

@@ -19,8 +19,8 @@
 \format{
    A data frame with 840 observations on the following 2 variables.
   \describe{
-    \item{\code{Year}}{Year the finch was caught, 1976 or 1978}
-    \item{\code{Depth}}{Beak depth of the finch (mm)}
+    \item{Year}{Year the finch was caught, 1976 or 1978}
+    \item{Depth}{Beak depth of the finch (mm)}
   }
 }
 \source{

@@ -12,10 +12,10 @@
 \format{
   A data frame with 2 observations on the following 3 variables.
   \describe{
-    \item{\code{Smoking}}{a factor with levels \code{"NonSmokers"} and 
+    \item{Smoking}{a factor with levels \code{"NonSmokers"} and 
       \code{"Smokers"}} 
-    \item{\code{Cancer}}{the number of who were lung cancer patients}
-    \item{\code{Control}}{the number who were controls} 
+    \item{Cancer}{the number of who were lung cancer patients}
+    \item{Control}{the number who were controls} 
   }
 }
 \source{

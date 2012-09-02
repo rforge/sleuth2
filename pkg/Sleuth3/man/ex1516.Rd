@@ -11,10 +11,10 @@
 \format{
   A data frame with 26 observations on the following 3 variables.
   \describe{
-    \item{\code{Year}}{year}
-    \item{\code{FirearmDeaths}}{deaths due to firearms (in thousands per
+    \item{Year}{year}
+    \item{FirearmDeaths}{deaths due to firearms (in thousands per
       year)} 
-    \item{\code{MotorVehicleDeaths}}{deaths due to motor vehicles (in
+    \item{MotorVehicleDeaths}{deaths due to motor vehicles (in
       thousands per year)} 
   }
 }

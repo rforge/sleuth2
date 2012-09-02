@@ -11,20 +11,20 @@
 \format{
   A data frame with 21 observations on the following 8 variables.
   \describe{
-    \item{\code{Continent}}{a factor with levels \code{"NA"} and
+    \item{Continent}{a factor with levels \code{"NA"} and
       \code{"EU"}} 
-    \item{\code{Latitude}}{latitude (degrees)}
-    \item{\code{Females}}{average wing size (10\eqn{^3\times}{^3 x }log
+    \item{Latitude}{latitude (degrees)}
+    \item{Females}{average wing size (10\eqn{^3\times}{^3 x }log
       mm) of female flies on log scale} 
-    \item{\code{SE_Females}}{standard error of wing size (10\eqn{^3\times}{^3
+    \item{SE_Females}{standard error of wing size (10\eqn{^3\times}{^3
         x }log mm) of female flies on log scale}  
-    \item{\code{Males}}{average wing size (10\eqn{^3\times}{^3 x }log
+    \item{Males}{average wing size (10\eqn{^3\times}{^3 x }log
       mm) of male flies on log scale}  
-    \item{\code{SE_Males}}{standard error of wing size (10\eqn{^3\times}{^3
+    \item{SE_Males}{standard error of wing size (10\eqn{^3\times}{^3
         x }log mm) of male flies on log scale}  
-    \item{\code{Ratio}}{average basal length to wing size ratios of
+    \item{Ratio}{average basal length to wing size ratios of
       female flies} 
-    \item{\code{SE_Ratio}}{standard error of average basal length to wing
+    \item{SE_Ratio}{standard error of average basal length to wing
       size ratio of female flies} 
   }
 }

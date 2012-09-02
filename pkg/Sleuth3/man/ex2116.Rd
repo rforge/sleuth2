@@ -16,9 +16,9 @@
 \format{
   A data frame with 20 observations on the following 3 variables.
   \describe{
-    \item{\code{Dose}}{Dose (in ppm)}
-    \item{\code{Tumor}}{Number of trout with liver tumours}
-    \item{\code{Total}}{Number of trout in tank}
+    \item{Dose}{Dose (in ppm)}
+    \item{Tumor}{Number of trout with liver tumours}
+    \item{Total}{Number of trout in tank}
   }
 }
 \source{

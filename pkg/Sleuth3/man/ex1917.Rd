@@ -14,12 +14,12 @@
 \format{
   A data frame with 6 observations on the following 4 variables.
   \describe{
-    \item{\code{BodyMass}}{a factor with levels \code{"high"},
+    \item{BodyMass}{a factor with levels \code{"high"},
       \code{"low"} and \code{"medium"}}
-    \item{\code{Drinking}}{a factor with levels \code{"high"} and
+    \item{Drinking}{a factor with levels \code{"high"} and
       \code{"low"}} 
-    \item{\code{Cases}}{number of women with breast cancer}
-    \item{\code{Controls}}{number of women without breast cancer}
+    \item{Cases}{number of women with breast cancer}
+    \item{Controls}{number of women without breast cancer}
   }
 }
 \source{

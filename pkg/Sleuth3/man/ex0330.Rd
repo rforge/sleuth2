@@ -11,9 +11,9 @@
 \format{
   A data frame with 1,426 observations on the following 3 variables.
   \describe{
-    \item{\code{Subject}}{a subject identification number}
-    \item{\code{Educ}}{number of years of education--either 12 or 16}
-    \item{\code{Income2005}}{income, in dollars}
+    \item{Subject}{a subject identification number}
+    \item{Educ}{number of years of education--either 12 or 16}
+    \item{Income2005}{income, in dollars}
   }
 }
 \source{

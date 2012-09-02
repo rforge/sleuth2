@@ -11,13 +11,13 @@
 \format{
   A data frame with 32 observations on the following 5 variables.
   \describe{
-    \item{\code{Subject}}{subject number in the study}
-    \item{\code{Metabol}}{first--pass metabolism of alcohol in the stomach (in
+    \item{Subject}{subject number in the study}
+    \item{Metabol}{first--pass metabolism of alcohol in the stomach (in
       mmol/liter-hour)}
-    \item{\code{Gastric}}{gastric alcohol dehydrogenase activity in the stomach
+    \item{Gastric}{gastric alcohol dehydrogenase activity in the stomach
     (in \eqn{\mu}{mu}mol/min/g of tissue)}
-    \item{\code{Sex}}{sex of the subject}
-    \item{\code{Alcohol}}{whether the subject is alcoholic or not}
+    \item{Sex}{sex of the subject}
+    \item{Alcohol}{whether the subject is alcoholic or not}
   }
 }
 \source{

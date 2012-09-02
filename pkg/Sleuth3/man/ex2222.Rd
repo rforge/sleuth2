@@ -15,10 +15,10 @@
 \format{
   A data frame with 24 observations on the following 3 variables.
   \describe{
-    \item{\code{Count}}{Number of occurrences of a word in various chapters of
+    \item{Count}{Number of occurrences of a word in various chapters of
       books written by Jane Austen and the ghost writer}
-    \item{\code{Book}}{Title of books used}
-    \item{\code{Word}}{Words used}
+    \item{Book}{Title of books used}
+    \item{Word}{Words used}
   }
 }
 \source{

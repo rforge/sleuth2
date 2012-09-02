@@ -12,10 +12,10 @@
 \format{
   A data frame with 88 observations on the following 3 variables.
   \describe{
-    \item{\code{Week}}{week after the start of the study}
-    \item{\code{Patch}}{natural logarithm of nitrate level (ppm) in 
+    \item{Week}{week after the start of the study}
+    \item{Patch}{natural logarithm of nitrate level (ppm) in 
        the logged watershed (ppm)} 
-    \item{\code{NoCut}}{natural logarithm of nitrate level in the 
+    \item{NoCut}{natural logarithm of nitrate level in the 
        undisturbed watershed (ppm)} 
   }
 }

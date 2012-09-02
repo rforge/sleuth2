@@ -11,11 +11,11 @@
 \format{
   A data frame with 95 observations on the following 5 variables.
   \describe{
-    \item{\code{CommonName}}{the common name of the mammal species}
-    \item{\code{Species}}{the scientific name of the mammal species}
-    \item{\code{Mass}}{the average body mass in kg}
-    \item{\code{Metab}}{the average metabolic rate in kJ per day}
-    \item{\code{Life}}{the average lifespan in years}
+    \item{CommonName}{the common name of the mammal species}
+    \item{Species}{the scientific name of the mammal species}
+    \item{Mass}{the average body mass in kg}
+    \item{Metab}{the average metabolic rate in kJ per day}
+    \item{Life}{the average lifespan in years}
   }
 }
 \source{

@@ -22,9 +22,9 @@
 \format{
   A data frame with 46 observations on the following 2 variables.
   \describe{
-    \item{\code{Percent}}{is the percent of women on the venire's of the Spock
+    \item{Percent}{is the percent of women on the venire's of the Spock
       trial judge and 6 other Boston area judges} 
-    \item{\code{Judge}}{is a factor with levels \code{"Spock's"}, \code{"A"},
+    \item{Judge}{is a factor with levels \code{"Spock's"}, \code{"A"},
       \code{"B"}, \code{"C"}, \code{"D"}, \code{"E"} and \code{"F"}} 
   }
 }

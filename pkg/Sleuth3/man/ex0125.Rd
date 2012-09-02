@@ -7,10 +7,11 @@
 }
 \usage{ex0125}
 \format{
-  A data frame with 39 observations on the following 39 variables.
+  A data frame with 39 observations on the following 2 variables.
   \describe{
-    \item{\code{Group}}{a factor representing the group, with levels "A" for the dietary supplemnt group and "B" for the control group }
-    \item{\code{Zinc}}{measured zinc concentration in mg/ml}
+    \item{Group}{a factor representing the group, with levels \code{"A"}
+      for the dietary supplement group and \code{"B"} for the control group } 
+    \item{Zinc}{measured zinc concentration in mg/ml}
   }
 }
 \source{

@@ -13,10 +13,10 @@
 \format{
   A data frame with 64 observations on the following 4 variables.
   \describe{
-    \item{\code{Species}}{a character vector indicating the species}
-    \item{\code{BodyMass}}{bodymass (kg)}
-    \item{\code{MaxDist}}{maximum dispersal distance (km)}
-    \item{\code{Type}}{a factor with levels \code{"C"}, \code{"H"} and 
+    \item{Species}{a character vector indicating the species}
+    \item{BodyMass}{bodymass (kg)}
+    \item{MaxDist}{maximum dispersal distance (km)}
+    \item{Type}{a factor with levels \code{"C"}, \code{"H"} and 
       \code{"O"} indicating carnivore, herbivore, or omnivore}
   }
 }

@@ -14,15 +14,15 @@
 \format{
   A data frame with 12 observations on the following 5 variables.
   \describe{
-    \item{\code{Stance}}{Catholic church stance, factor with levels \code{"Pro"}
+    \item{Stance}{Catholic church stance, factor with levels \code{"Pro"}
       and \code{"Anti"}} 
-    \item{\code{Country}}{Latin American country}
-    \item{\code{PQLI}}{Physical Quality of Life Index in the mid-1970s; Average
+    \item{Country}{Latin American country}
+    \item{PQLI}{Physical Quality of Life Index in the mid-1970s; Average
       of live expectancy at age 1, infant mortality and literacy at age
       15+.} 
-    \item{\code{Repression}}{Average civil rights score for the period of
+    \item{Repression}{Average civil rights score for the period of
       authoritarian rule until 1979}
-    \item{\code{Competition}}{Percentage increase of competitive religious groups
+    \item{Competition}{Percentage increase of competitive religious groups
       during the period 1900--1970}
   }
 }

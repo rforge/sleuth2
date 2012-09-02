@@ -9,8 +9,8 @@
 \format{
   A data frame with 24 observations on the following 2 variables.
   \describe{
-    \item{\code{Velocity}}{recession velocity (in kilometres per second)}
-    \item{\code{Distance}}{distance from earth (in magaparsec)}
+    \item{Velocity}{recession velocity (in kilometres per second)}
+    \item{Distance}{distance from earth (in magaparsec)}
   }
 }
 \source{

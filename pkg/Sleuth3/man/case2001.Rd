@@ -10,9 +10,9 @@
 \format{
   A data frame with 45 observations on the following 3 variables.
   \describe{
-    \item{\code{Age}}{Age of person}
-    \item{\code{Sex}}{Sex of person}
-    \item{\code{Status}}{Whether the person survived or died}
+    \item{Age}{Age of person}
+    \item{Sex}{Sex of person}
+    \item{Status}{Whether the person survived or died}
   }
 }
 \details{

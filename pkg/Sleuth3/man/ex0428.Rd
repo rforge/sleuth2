@@ -11,8 +11,8 @@
 \format{
   A data frame with 15 observations on the following 2 variables.
   \describe{
-    \item{\code{Cross}}{height (inches) of cross-fertilized plant}
-    \item{\code{Self}}{height (inches) of self-fertilized plant}
+    \item{Cross}{height (inches) of cross-fertilized plant}
+    \item{Self}{height (inches) of self-fertilized plant}
   }
 }
 \source{

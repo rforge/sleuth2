@@ -3,7 +3,6 @@
 \docType{data}
 \title{Respiratory Rates for Children}
 \description{
-
   A high respiratory rate is a potential diagnostic indicator of
   respiratory infection in children.  To judge whether a respiratory
   rate is \dQuote{high} however, a physician must have a clear picture of the
@@ -15,8 +14,8 @@
 \format{
   A data frame with 618 observations on the following 2 variables.
   \describe{
-    \item{\code{Age}}{age in months of child}
-    \item{\code{Rate}}{respiratory rate (breaths per minute)}
+    \item{Age}{age in months of child}
+    \item{Rate}{respiratory rate (breaths per minute)}
   }
 }
 \source{

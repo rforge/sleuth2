@@ -11,9 +11,9 @@
 \format{
   A data frame with 18 observations on the following 3 variables.
   \describe{
-    \item{\code{Country}}{a character vector indicating the country}
-    \item{\code{Wine}}{consumption of wine (liters per person per year)}
-    \item{\code{Mortality}}{heart disease mortality rate (deaths per 1,000)}
+    \item{Country}{a character vector indicating the country}
+    \item{Wine}{consumption of wine (liters per person per year)}
+    \item{Mortality}{heart disease mortality rate (deaths per 1,000)}
   }
 }
 \source{

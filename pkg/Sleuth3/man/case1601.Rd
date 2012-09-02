@@ -16,18 +16,18 @@
 \format{
   A data frame with 18 observations on the following 7 variables.
   \describe{
-    \item{\code{Monkey}}{Monkey name}
-    \item{\code{Treatment}}{a treatment factor with levels \code{"Control"} and
+    \item{Monkey}{Monkey name}
+    \item{Treatment}{a treatment factor with levels \code{"Control"} and
       \code{"Treated"}} 
-    \item{\code{Week2}}{percentage of 20 objects taught 2 weeks prior to
+    \item{Week2}{percentage of 20 objects taught 2 weeks prior to
       treatment that were correctly distinguished in the test} 
-    \item{\code{Week4}}{percentage of 20 objects taught 4 weeks prior to
+    \item{Week4}{percentage of 20 objects taught 4 weeks prior to
       treatment that were correctly distinguished in the test} 
-    \item{\code{Week8}}{percentage of 20 objects taught 8 weeks prior to
+    \item{Week8}{percentage of 20 objects taught 8 weeks prior to
       treatment that were correctly distinguished in the test} 
-    \item{\code{Week12}}{ percentage of 20 objects taught 12 weeks prior to
+    \item{Week12}{ percentage of 20 objects taught 12 weeks prior to
       treatment that were correctly distinguished in the test} 
-    \item{\code{Week16}}{percentage of 20 objects taught 16 weeks prior to
+    \item{Week16}{percentage of 20 objects taught 16 weeks prior to
       treatment that were correctly distinguished in the test} 
   }
 }

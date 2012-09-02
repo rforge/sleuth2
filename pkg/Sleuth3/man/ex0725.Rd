@@ -11,8 +11,8 @@
 \format{
   A data frame with 10 observations on the following 2 variables.
   \describe{
-    \item{\code{Distance}}{distance from earth (in million parsec)}
-    \item{\code{Velocity}}{recession velocity (in kilometres per second)}
+    \item{Distance}{distance from earth (in million parsec)}
+    \item{Velocity}{recession velocity (in kilometres per second)}
   }
 }
 \source{

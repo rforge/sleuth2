@@ -14,14 +14,14 @@
 \format{
   A data frame with 47 observations on the following 8 variables.
   \describe{
-    \item{\code{ZIP}}{last 2 digits of zip code}
-    \item{\code{Fire}}{fires per 1000 housing units}
-    \item{\code{Theft}}{thefts per 1000 population}
-    \item{\code{Age}}{percentage of housing units built prior to 1940}
-    \item{\code{Income}}{median family income}
-    \item{\code{Race}}{percentage minority}
-    \item{\code{Vol}}{number of new policies per 100 housing units}
-    \item{\code{Invol}}{number of FAIR plan policies and renewals per
+    \item{ZIP}{last 2 digits of zip code}
+    \item{Fire}{fires per 1000 housing units}
+    \item{Theft}{thefts per 1000 population}
+    \item{Age}{percentage of housing units built prior to 1940}
+    \item{Income}{median family income}
+    \item{Race}{percentage minority}
+    \item{Vol}{number of new policies per 100 housing units}
+    \item{Invol}{number of FAIR plan policies and renewals per
       100 housing units} 
   }
 }

@@ -14,14 +14,14 @@
 }
 \usage{ex0223}
 \format{
-  A data frame with 51 observations on the following 3 variables.
+  A data frame with 51 observations on the following 5 variables.
   \describe{
-    \item{\code{State}}{US state}
-    \item{\code{Fatalities1995}}{number of traffic fatalities in 1995}
-    \item{\code{Fatalities1996}}{number of traffic fatalities in 1996}
-     \item{\code{PctChange}}{percentage change in interstate traffic
+    \item{State}{US state}
+    \item{Fatalities1995}{number of traffic fatalities in 1995}
+    \item{Fatalities1996}{number of traffic fatalities in 1996}
+     \item{PctChange}{percentage change in interstate traffic
       fatalities between 1995 and 1996}
-    \item{\code{SpeedLimit}}{a factor with levels \code{"Inc"} and \code{"Ret"},
+    \item{SpeedLimit}{a factor with levels \code{"Inc"} and \code{"Ret"},
       indicating whether the state increased or retained its speed limit} 
   }
 }

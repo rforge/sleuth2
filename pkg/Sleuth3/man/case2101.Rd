@@ -1,6 +1,7 @@
 \name{case2101}
 \alias{case2101}
 \docType{data}
+\encoding{latin1}
 \title{Island Size and Bird Extinctions}
 \description{
   In a study of the Krunnit Islands archipelago, researchers presented
@@ -15,10 +16,10 @@
 } \usage{case2101} \format{
   A data frame with 18 observations on the following 4 variables.
   \describe{
-    \item{\code{Island}}{Name of Island}
-    \item{\code{Area}}{Area of Island}
-    \item{\code{AtRisk}}{Number of species at risk}
-    \item{\code{Extinct}}{Number of extinctions}
+    \item{Island}{Name of Island}
+    \item{Area}{Area of Island}
+    \item{AtRisk}{Number of species at risk}
+    \item{Extinct}{Number of extinctions}
   }
 }
 \details{
@@ -36,7 +37,7 @@
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \references{
-  V\"ais\"anen, R.A. and J\"arvinen, O. (1977).  Dynamics of
+  Väisänen, R.A. and Järvinen, O. (1977).  Dynamics of
   Protected Bird Communities in a Finnish Archipelago, \emph{Journal of
     Animal Ecology} \bold{46}: 891--908.
 }

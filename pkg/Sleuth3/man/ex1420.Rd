@@ -11,15 +11,15 @@
 }
 \usage{ex1420}
 \format{
-  A data frame with 12 observations on the following 12 variables.
+  A data frame with 272 observations on the following 6 variables.
   \describe{
-    \item{\code{Subject}}{a subject identification number}
-    \item{\code{Diet}}{a factor with levels \code{"Low-Carbohydrate"},  
+    \item{Subject}{a subject identification number}
+    \item{Diet}{a factor with levels \code{"Low-Carbohydrate"},  
       \code{"Low-Fat"}and \code{"Mediterranean"}  }
-    \item{\code{Sex}}{a factor with levels \code{"F"} and \code{"M"}}
-    \item{\code{Age}}{subject's age in years}
-    \item{\code{BMI}}{body mass index in kg/squared meter}
-    \item{\code{WtLoss24}}{weight at the end of the 24 month study minus 
+    \item{Sex}{a factor with levels \code{"F"} and \code{"M"}}
+    \item{Age}{subject's age in years}
+    \item{BMI}{body mass index in kg/squared meter}
+    \item{WtLoss24}{weight at the end of the 24 month study minus 
       initial weight, in kg}   
   }
 }
@@ -28,7 +28,8 @@
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \seealso{
-  \code{\link{ex0623}}
+  \code{\link{ex0623}}, \code{\link{ex1921}},
+  \code{\link{ex1922}}
 }
 \examples{                 
 str(ex1420)

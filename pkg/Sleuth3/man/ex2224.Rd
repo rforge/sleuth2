@@ -11,14 +11,14 @@
 \format{
   A data frame with 90 observations on the following 7 variables.
   \describe{
-    \item{\code{System}}{System, factor with 5 levels}
-    \item{\code{Operator}}{Operator type, factor with 4 levels}
-    \item{\code{Valve}}{Valve type, factor with 6 levels}
-    \item{\code{Size}}{Head size, factor with 3 levels (less than 2 inches,
+    \item{System}{System, factor with 5 levels}
+    \item{Operator}{Operator type, factor with 4 levels}
+    \item{Valve}{Valve type, factor with 6 levels}
+    \item{Size}{Head size, factor with 3 levels (less than 2 inches,
       2--10 inches and 10--30 inches)}
-    \item{\code{Mode}}{Operation mode, factor with 2 levels}
-    \item{\code{Failures}}{Number of failures observed}
-    \item{\code{Time}}{Lengths of observation time}
+    \item{Mode}{Operation mode, factor with 2 levels}
+    \item{Failures}{Number of failures observed}
+    \item{Time}{Lengths of observation time}
   }
 }
 \source{

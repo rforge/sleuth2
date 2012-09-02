@@ -10,9 +10,9 @@
 \format{
   A data frame with 114 observations on the following 3 variables.
   \describe{
-    \item{\code{Year}}{year}
-    \item{\code{Lynx}}{number of lynx trapped}
-    \item{\code{Sunspots}}{number of sunspots}
+    \item{Year}{year}
+    \item{Lynx}{number of lynx trapped}
+    \item{Sunspots}{number of sunspots}
   }
 }
 \source{

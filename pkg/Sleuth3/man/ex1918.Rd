@@ -11,13 +11,13 @@
 \format{
   A data frame with 12 observations on the following 4 variables.
   \describe{
-    \item{\code{AgeCat}}{a factor with six levels: \code{"15-19"},
+    \item{AgeCat}{a factor with six levels: \code{"15-19"},
       \code{"20-29"}, \code{"30-39"}, \code{"40-49"}, \code{"50-59"} and
       \code{"60-69"}} 
-    \item{\code{Sex}}{a factor with levels \code{"female"} and
+    \item{Sex}{a factor with levels \code{"female"} and
       \code{"male"}} 
-    \item{\code{Lived}}{number that lived}
-    \item{\code{Died}}{number that died}
+    \item{Lived}{number that lived}
+    \item{Died}{number that died}
   }
 }
 \source{

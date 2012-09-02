@@ -11,9 +11,9 @@
 \format{
   A data frame with 25 observations on the following 3 variables.
   \describe{
-    \item{\code{Copper}}{amount of copper received (in ppm)}
-    \item{\code{Zinc}}{amount of zinc received (in ppm)}
-    \item{\code{Protein}}{protein in minnow larvae exposed to copper and
+    \item{Copper}{amount of copper received (in ppm)}
+    \item{Zinc}{amount of zinc received (in ppm)}
+    \item{Protein}{protein in minnow larvae exposed to copper and
       zinc (\eqn{\mu}{mu}g/larva)}
   }
 }

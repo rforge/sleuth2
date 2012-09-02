@@ -12,10 +12,10 @@
 \format{
   A data frame with 2 observations on the following 3 variables.
   \describe{
-    \item{\code{Treatment}}{a factor with levels \code{"Placebo"} and 
+    \item{Treatment}{a factor with levels \code{"Placebo"} and 
       \code{"VitC"}} 
-    \item{\code{Cold}}{the number of who got colds}
-    \item{\code{NoCold}}{the number that did not get any colds} 
+    \item{Cold}{the number of who got colds}
+    \item{NoCold}{the number that did not get any colds} 
   }
 }
 \source{

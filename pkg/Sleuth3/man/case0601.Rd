@@ -16,8 +16,8 @@
 \format{
   A data frame with 70 observations on the following 2 variables.
   \describe{
-    \item{\code{Score}}{is the score each student gave to the applicant}
-    \item{\code{Handicap}}{is a factor variable with 5
+    \item{Score}{is the score each student gave to the applicant}
+    \item{Handicap}{is a factor variable with 5
       levels---\code{"None"}, \code{"Amputee"}, \code{"Crutches"},
       \code{"Hearing"} and  \code{"Wheelchair"}} 
   }

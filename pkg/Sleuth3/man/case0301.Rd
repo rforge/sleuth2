@@ -13,9 +13,9 @@
 \format{
   A data frame with 52 observations on the following 2 variables.
   \describe{
-    \item{\code{Rainfall}}{the volume of rainfall in the target area (in
+    \item{Rainfall}{the volume of rainfall in the target area (in
       acre-feet)} 
-    \item{\code{Treatment}}{a factor with levels \code{"Unseeded"} and
+    \item{Treatment}{a factor with levels \code{"Unseeded"} and
       \code{"Seeded"} indicating whether the clouds were unseeded or seeded.}
   }
 }

@@ -11,9 +11,9 @@
 \format{
   A data frame with 780 observations on the following 3 variables.
   \describe{
-    \item{\code{Subject}}{a subject identification number}
-    \item{\code{Educ}}{factor with levels \code{"16"} and \code{">16"}}
-    \item{\code{Income2005}}{income, in dollars}
+    \item{Subject}{a subject identification number}
+    \item{Educ}{factor with levels \code{"16"} and \code{">16"}}
+    \item{Income2005}{income, in dollars}
   }
 }
 \source{

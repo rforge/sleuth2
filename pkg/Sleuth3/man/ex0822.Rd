@@ -10,8 +10,8 @@
 \format{
   A data frame with 16 observations on the following 2 variables.
   \describe{
-    \item{\code{Area}}{area (ha) of forest patch}
-    \item{\code{Species}}{number of butterfly species}
+    \item{Area}{area (ha) of forest patch}
+    \item{Species}{number of butterfly species}
   }
 }
 \source{

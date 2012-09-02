@@ -12,9 +12,9 @@
 \format{
   A data frame with 47 observations on the following 3 variables.
   \describe{
-    \item{\code{PollenRemoved}}{proportion of pollen removed}
-    \item{\code{DurationOfVisit}}{duration of visit (in seconds)}
-    \item{\code{BeeType}}{factor variable with levels \code{"Queen"} and
+    \item{PollenRemoved}{proportion of pollen removed}
+    \item{DurationOfVisit}{duration of visit (in seconds)}
+    \item{BeeType}{factor variable with levels \code{"Queen"} and
       \code{"Worker"} }
   }
 }

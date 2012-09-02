@@ -15,10 +15,10 @@
 \format{
   A data frame with 28 observations on the following 3 variables.
   \describe{
-    \item{\code{Iridium}}{Iridium in samples (ppt)}
-    \item{\code{Strata}}{a factor with levels \code{"Limestone"} and
+    \item{Iridium}{Iridium in samples (ppt)}
+    \item{Strata}{a factor with levels \code{"Limestone"} and
       \code{"Shale"}}
-    \item{\code{DepthCat}}{a factor with six levels: \code{"1"}, \code{"2"},
+    \item{DepthCat}{a factor with six levels: \code{"1"}, \code{"2"},
       \dots, \code{"6"}}
   }
 }

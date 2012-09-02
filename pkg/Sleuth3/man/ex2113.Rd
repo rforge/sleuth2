@@ -10,10 +10,10 @@
 \format{
   A data frame with 4 observations on the following 4 variables.
   \describe{
-    \item{\code{Dose}}{the daily dose of vitamin C, in g}
-    \item{\code{Number}}{the number of subjects given that dose of vitamin C}
-    \item{\code{WithoutIllness}}{the number of subjects who did not become ill}
-    \item{\code{ProportionWithout}}{the proportion of subjects who did not become
+    \item{Dose}{the daily dose of vitamin C, in g}
+    \item{Number}{the number of subjects given that dose of vitamin C}
+    \item{WithoutIllness}{the number of subjects who did not become ill}
+    \item{ProportionWithout}{the proportion of subjects who did not become
       ill}
   }
 }

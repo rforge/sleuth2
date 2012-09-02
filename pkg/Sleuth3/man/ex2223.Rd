@@ -17,8 +17,8 @@
 \format{
   A data frame with 24 observations on the following 2 variables.
   \describe{
-    \item{\code{Temp}}{Launch temperatures (in degrees Fahrenheit)}
-    \item{\code{Incidents}}{Numbers of O-ring incidents}
+    \item{Temp}{Launch temperatures (in degrees Fahrenheit)}
+    \item{Incidents}{Numbers of O-ring incidents}
   }
 }
 \source{

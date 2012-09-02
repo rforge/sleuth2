@@ -18,12 +18,12 @@
 \format{
   A data frame with 84 observations on the following 3 variables.
   \describe{
-    \item{\code{Proportion}}{The proportion of courtship time spent by 84
+    \item{Proportion}{The proportion of courtship time spent by 84
       females with the yellow-sword males} 
-    \item{\code{Pair}}{Factor variable with 6 levels---\code{"Pair1"},
+    \item{Pair}{Factor variable with 6 levels---\code{"Pair1"},
       \code{"Pair2"}, \code{"Pair3"}, \code{"Pair4"}, \code{"Pair5"} and
       \code{"Pair6"}} 
-    \item{\code{Length}}{Body size of the males}
+    \item{Length}{Body size of the males}
   }
 }
 \source{

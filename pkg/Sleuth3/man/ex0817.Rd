@@ -16,8 +16,8 @@
 \format{
   A data frame with 15 observations on the following 2 variables.
   \describe{
-    \item{\code{Load}}{flee beetle load (in beetles/gram of ragwort dry mass)}
-    \item{\code{Mass}}{dry mass of ragwort weed}
+    \item{Load}{flee beetle load (in beetles/gram of ragwort dry mass)}
+    \item{Mass}{dry mass of ragwort weed}
   }
 }
 \source{

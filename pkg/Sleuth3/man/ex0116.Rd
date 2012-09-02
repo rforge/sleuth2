@@ -9,9 +9,9 @@
 \format{
   A data frame with 228 observations on the following 3 variables.
   \describe{
-    \item{\code{Rank}}{rank order of country from highest to lowest GDP}
-    \item{\code{Country}}{name of country}
-    \item{\code{PerCapitaGDP}}{per capita GDP in \$US}
+    \item{Rank}{rank order of country from highest to lowest GDP}
+    \item{Country}{name of country}
+    \item{PerCapitaGDP}{per capita GDP in \eqn{\$}{$}US}
   }
 }
 \source{

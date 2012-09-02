@@ -11,13 +11,13 @@
 \format{
   A data frame with 93 observations on the following 7 variables.
   \describe{
-    \item{\code{Bsal}}{Annual salary at time of hire}
-    \item{\code{Sal77}}{Salary as of March 1975}
-    \item{\code{Sex}}{Sex of employee}
-    \item{\code{Senior}}{Seniority (months since first hired)}
-    \item{\code{Age}}{Age of employee (in months)}
-    \item{\code{Educ}}{Education (in years)}
-    \item{\code{Exper}}{Work experience prior to employment with the bank (months)}
+    \item{Bsal}{Annual salary at time of hire}
+    \item{Sal77}{Salary as of March 1975}
+    \item{Sex}{Sex of employee}
+    \item{Senior}{Seniority (months since first hired)}
+    \item{Age}{Age of employee (in months)}
+    \item{Educ}{Education (in years)}
+    \item{Exper}{Work experience prior to employment with the bank (months)}
   }
 }
 \source{

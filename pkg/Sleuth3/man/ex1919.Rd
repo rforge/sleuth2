@@ -12,12 +12,12 @@
 \format{
   A data frame with 8 observations on the following 4 variables.
   \describe{
-    \item{\code{SpeedCat}}{a factor with levels \code{"0-40"},
+    \item{SpeedCat}{a factor with levels \code{"0-40"},
       \code{"41-55"}, \code{"56-65"} and \code{">65"}}
-    \item{\code{Make}}{a factor with levels \code{"Ford"} and
+    \item{Make}{a factor with levels \code{"Ford"} and
       \code{"Other"}} 
-    \item{\code{Other}}{cause of accident was other than tire-related}
-    \item{\code{Tire}}{cause of accident was tire-related}
+    \item{Other}{cause of accident was other than tire-related}
+    \item{Tire}{cause of accident was tire-related}
   }
 }
 \source{

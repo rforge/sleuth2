@@ -13,22 +13,22 @@
 \format{
   A data frame with 9,835 observations on the following 9 variables.
   \describe{
-    \item{\code{Region}}{a factor with levels \code{"Midwest"}, \code{"Northeast"}, 
+    \item{Region}{a factor with levels \code{"Midwest"}, \code{"Northeast"}, 
       \code{"South"}, and \code{"West"}}
-    \item{\code{MetropolitanStatus}}{a a factor with levels \code{"Metropolitan"}, 
+    \item{MetropolitanStatus}{a a factor with levels \code{"Metropolitan"}, 
       \code{"Not Identified"}, and \cr
       \code{"Not Metropolitan"}}
-    \item{\code{Age}}{age in years}
-    \item{\code{Sex}}{a factor with levels \code{"Female"} and \code{"Male"}}
-    \item{\code{MaritalStatus}}{a factor with levels \code{"Married"} and 
+    \item{Age}{age in years}
+    \item{Sex}{a factor with levels \code{"Female"} and \code{"Male"}}
+    \item{MaritalStatus}{a factor with levels \code{"Married"} and 
       \code{"NotMarried"}}
-    \item{\code{EdCode}}{a numerical variable representing educational 
+    \item{EdCode}{a numerical variable representing educational 
       attainment, with higher numbers corresponding to higher educational
       categories}
-    \item{\code{Education}}{a factor with 16 levels of educational category}
-    \item{\code{JobClass}}{a a factor with levels \code{"FedGov"}, 
+    \item{Education}{a factor with 16 levels of educational category}
+    \item{JobClass}{a a factor with levels \code{"FedGov"}, 
       \code{"LocalGov"}, \code{"Private"},and \code{"StateGov"}}
-    \item{\code{WeeklyEarnings}}{weekly wages in U.S. dollars}
+    \item{WeeklyEarnings}{weekly wages in U.S. dollars}
   }
 }
 \source{

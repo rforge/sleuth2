@@ -15,28 +15,28 @@
 \format{
   A data frame with 67 observations on the following 13 variables.
   \describe{
-    \item{\code{County}}{a character vector indicating the county}
-    \item{\code{Buchanan2000}}{votes cast for Buchanan in 2000
+    \item{County}{a character vector indicating the county}
+    \item{Buchanan2000}{votes cast for Buchanan in 2000
       presidential election }
-    \item{\code{Gore2000}}{votes cast for Gore in 2000 presidential
+    \item{Gore2000}{votes cast for Gore in 2000 presidential
       election} 
-    \item{\code{Bush2000}}{votes cast for Bush in 2000 presidential
+    \item{Bush2000}{votes cast for Bush in 2000 presidential
       election} 
-    \item{\code{Nader2000}}{votes cast for Nader in 2000 presidential
+    \item{Nader2000}{votes cast for Nader in 2000 presidential
       election} 
-    \item{\code{Browne2000}}{votes cast for Browne in 2000 presidential
+    \item{Browne2000}{votes cast for Browne in 2000 presidential
       election} 
-    \item{\code{Total2000}}{total vostes cast in 2000 presidential election}
-    \item{\code{Clinton96}}{votes cast for Clinton in 1996 presidential
+    \item{Total2000}{total vostes cast in 2000 presidential election}
+    \item{Clinton96}{votes cast for Clinton in 1996 presidential
       election}
-    \item{\code{Dole96}}{votes cast for Dole in 1996 presidential
+    \item{Dole96}{votes cast for Dole in 1996 presidential
       election}
-    \item{\code{Perot96}}{votes cast for Perot in 1996 presidential
+    \item{Perot96}{votes cast for Perot in 1996 presidential
       election}
-    \item{\code{Buchanan96p}}{votes cast for Buchanan in 1996 Republican
+    \item{Buchanan96p}{votes cast for Buchanan in 1996 Republican
       primary} 
-    \item{\code{ReformReg}}{the registration in Buchanan's Reform party}
-    \item{\code{TotalReg}}{the total political party registration}
+    \item{ReformReg}{the registration in Buchanan's Reform party}
+    \item{TotalReg}{the total political party registration}
   }
 }
 \source{

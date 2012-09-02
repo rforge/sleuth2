@@ -18,11 +18,11 @@
 \format{
   A data frame with 29 observations on the following 3 variables.
   \describe{
-    \item{\code{Company}}{a factor indicating company identification,
+    \item{Company}{a factor indicating company identification,
       with levels \code{"C1"}, \code{"C2"}, \dots, \code{"C10"}}
-    \item{\code{Treat}}{a factor indicating treatment with two levels,
+    \item{Treat}{a factor indicating treatment with two levels,
       \code{"Pygmalion"} and \code{"Control"}}
-    \item{\code{Score}}{average score on practical specialty test of all
+    \item{Score}{average score on practical specialty test of all
       soldiers in the platoon} 
   }
 }

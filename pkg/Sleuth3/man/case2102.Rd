@@ -15,10 +15,10 @@
 \format{
   A data frame with 14 observations on the following 4 variables.
   \describe{
-    \item{\code{Morph}}{Morph, a factor with levels \code{"light"} and \code{"dark"}}
-    \item{\code{Distance}}{Distance from Liverpool (in km)}
-    \item{\code{Placed}}{Number of moths placed}
-    \item{\code{Removed}}{Number of moths removed}
+    \item{Morph}{Morph, a factor with levels \code{"light"} and \code{"dark"}}
+    \item{Distance}{Distance from Liverpool (in km)}
+    \item{Placed}{Number of moths placed}
+    \item{Removed}{Number of moths removed}
   }
 }
 \details{

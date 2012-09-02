@@ -11,10 +11,10 @@
 \format{
   A data frame with 37 observations on the following 3 variables.
   \describe{
-    \item{\code{Year}}{year}
-    \item{\code{Melanoma}}{male melanoma incidence in number of cases
+    \item{Year}{year}
+    \item{Melanoma}{male melanoma incidence in number of cases
       per 100,000 population} 
-    \item{\code{Sunspot}}{sunspot relative number}
+    \item{Sunspot}{sunspot relative number}
   }
 }
 \source{

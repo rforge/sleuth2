@@ -4,29 +4,29 @@
 \title{Quantifying Evidence for Outlierness}
 \description{
   The data are Democratic and Republican vote counts, by (a) absentee ballot and 
-  (b) voting machine, for 21 elections in Philadelphia's senatorial districts  
-  between 1982 and 1992.
+  (b) voting machine, for 22 elections in Philadelphia's senatorial districts  
+  between 1982 and 1993.
 }
 \usage{ex0820}
 \format{
-  A data frame with 21 observations on the following 2 variables.
+  A data frame with 22 observations on the following 2 variables.
   \describe{
-    \item{\code{Year}}{Year of election}
-    \item{\code{District}}{a factor with levels \code{"D1"}, \code{"D2"},
-      \code{"D3"}, \code{"D4"}, \code{"D5"}, \code{"D6"}, and \code{"D7"}} 
-    \item{\code{DemAbsenteeVotes}}{Number of absentee ballots indicating a
+    \item{Year}{Year of election}
+    \item{District}{a factor with levels \code{"D1"}, \code{"D2"},
+      \code{"D3"}, \code{"D4"}, \code{"D5"}, \code{"D7"}, and \code{"D8"}} 
+    \item{DemAbsenteeVotes}{Number of absentee ballots indicating a
       vote for the Democratic candidate} 
-    \item{\code{RepubAbsenteeVotes}}{Number of absentee ballots indicating a
+    \item{RepubAbsenteeVotes}{Number of absentee ballots indicating a
       vote for the Republican candidate} 
-    \item{\code{DemMachineVotes}}{Number of machine-counted ballots 
+    \item{DemMachineVotes}{Number of machine-counted ballots 
       indicating a vote for the Democratic candidate}  
-    \item{\code{RepubMachineVotes}}{Number of machine-coutned ballots 
+    \item{RepubMachineVotes}{Number of machine-coutned ballots 
       indicating a vote for the Republican candidate}
-    \item{\code{DemPctOfAbsenteeVotes}}{Percentage of absentee ballots 
+    \item{DemPctOfAbsenteeVotes}{Percentage of absentee ballots 
       indicating a vote for the Democratic candidate}
-    \item{\code{DemPctOfMachineVotes}}{Percentage of machine-counted ballots 
+    \item{DemPctOfMachineVotes}{Percentage of machine-counted ballots 
       indicating a vote for the Democratic candidate} 
-    \item{\code{Disputed}}{a factor taking on the value \code{"yes"} for the
+    \item{Disputed}{a factor taking on the value \code{"yes"} for the
       disputed election and \code{"no"} for all other elections}  
   }
 }

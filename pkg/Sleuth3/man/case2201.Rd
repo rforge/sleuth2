@@ -18,8 +18,8 @@
 \format{
   A data frame with 41 observations on the following 2 variables.
   \describe{
-    \item{\code{Age}}{Age of elephant at beginning of study}
-    \item{\code{Matings}}{Number of successful matings}
+    \item{Age}{Age of elephant at beginning of study}
+    \item{Matings}{Number of successful matings}
   }
 }
 \source{

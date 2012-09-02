@@ -10,8 +10,8 @@
 \format{
   A data frame with 5 observations on the following 2 variables.
   \describe{
-    \item{\code{Year}}{year}
-    \item{\code{Prevalence}}{the number of autism cases per 10,000 ten-year old 
+    \item{Year}{year}
+    \item{Prevalence}{the number of autism cases per 10,000 ten-year old 
       children}
   }
 }

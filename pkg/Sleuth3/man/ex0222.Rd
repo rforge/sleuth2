@@ -10,15 +10,14 @@
 }
 \usage{ex0222}
 \format{
-  A data frame with 2,584 observations on the following 2 variables.
+  A data frame with 2,584 observations on the following 6 variables.
   \describe{
-    \item{\code{Gender}}{a factor with levels \code{"female"} and \code{"male"}}
-    \item{\code{Arith}}{score on the arithmetic reasoning component of the AFQT test}
-    \item{\code{Word}}{score on the word knowledge component}
-    \item{\code{Parag}}{score on the paragraph comprehension component}
-    \item{\code{Math}}{score on the mathematical knowledge component }
-    \item{\code{AFQT}}{percentile score on the AFQT test}
-      
+    \item{Gender}{a factor with levels \code{"female"} and \code{"male"}}
+    \item{Arith}{score on the arithmetic reasoning component of the AFQT test}
+    \item{Word}{score on the word knowledge component}
+    \item{Parag}{score on the paragraph comprehension component}
+    \item{Math}{score on the mathematical knowledge component }
+    \item{AFQT}{percentile score on the AFQT test}
   }
 }
 \source{

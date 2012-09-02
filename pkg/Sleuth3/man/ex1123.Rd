@@ -11,14 +11,14 @@
 \format{
   A data frame with 60 observations on the following 7 variables.
   \describe{
-    \item{\code{City}}{a character vector indicating the city}
-    \item{\code{Mort}}{total age-adjusted mortality from all causes}
-    \item{\code{Precip}}{mean annual precipitation (inches)} 
-    \item{\code{Educ}}{median number of school years completed for
+    \item{City}{a character vector indicating the city}
+    \item{Mort}{total age-adjusted mortality from all causes}
+    \item{Precip}{mean annual precipitation (inches)} 
+    \item{Educ}{median number of school years completed for
       persons 25 years or older} 
-    \item{\code{NonWhite}}{percentage of population that is nonwhite}
-    \item{\code{NOX}}{relative pollution potential of oxides of nitrogen}
-    \item{\code{SO2}}{relative pollution potential of sulfur dioxide}
+    \item{NonWhite}{percentage of population that is nonwhite}
+    \item{NOX}{relative pollution potential of oxides of nitrogen}
+    \item{SO2}{relative pollution potential of sulfur dioxide}
   }
 }
 \source{

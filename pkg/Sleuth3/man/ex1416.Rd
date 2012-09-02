@@ -11,16 +11,16 @@
 \format{
   A data frame with 36 observations on the following 6 variables.
   \describe{
-    \item{\code{Agent}}{a factor with levels \code{"AIB"}, \code{"DEX7"}
+    \item{Agent}{a factor with levels \code{"AIB"}, \code{"DEX7"}
       and \code{"MTX"}}
-    \item{\code{Treatment}}{a factor with levels \code{"BD"} and
+    \item{Treatment}{a factor with levels \code{"BD"} and
       \code{"NS"}} 
-    \item{\code{Route}}{a factor with levels \code{"IA"} and
+    \item{Route}{a factor with levels \code{"IA"} and
       \code{"IV"}} 
-    \item{\code{DaysPost}}{days after inoculation}
-    \item{\code{BAT}}{concentration of antibody in the part of the brain
+    \item{DaysPost}{days after inoculation}
+    \item{BAT}{concentration of antibody in the part of the brain
       around the tumor} 
-    \item{\code{LH}}{concentration of antibody in the unaffected part of
+    \item{LH}{concentration of antibody in the unaffected part of
       the brain} 
   }
 }

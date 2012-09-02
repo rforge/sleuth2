@@ -14,9 +14,9 @@
 \format{
   A data frame with 2 observations on the following 3 variables.
   \describe{
-    \item{\code{Gender}}{ a factor with levels \code{"Female"} and \code{"Male"}} 
-    \item{\code{Promoted}}{the number of managers who promoted the applicant}
-    \item{\code{NotPromoted}}{the number of managers who did not promote the
+    \item{Gender}{ a factor with levels \code{"Female"} and \code{"Male"}} 
+    \item{Promoted}{the number of managers who promoted the applicant}
+    \item{NotPromoted}{the number of managers who did not promote the
       applicant} 
   }
 }

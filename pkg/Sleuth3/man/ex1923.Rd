@@ -21,9 +21,9 @@
 \format{
   A data frame with 29 observations on the following 3 variables.
   \describe{
-    \item{\code{Order}}{a character variable with the name of the order}
-    \item{\code{N}}{the known number of species in the order} 
-    \item{\code{n}}{the number of sampled species from the order} 
+    \item{Order}{a character variable with the name of the order}
+    \item{N}{the known number of species in the order} 
+    \item{n}{the number of sampled species from the order} 
   }
 }
 \source{

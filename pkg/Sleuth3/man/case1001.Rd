@@ -13,8 +13,8 @@
 \format{
   A data frame with 7 observations on the following 2 variables.
   \describe{
-    \item{\code{Distance}}{horizontal distances (in punti)}
-    \item{\code{Height}}{initial height (in punti)}
+    \item{Distance}{horizontal distances (in punti)}
+    \item{Height}{initial height (in punti)}
   }
 }
 \source{

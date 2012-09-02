@@ -9,19 +9,19 @@
 }
 \usage{ex0920}
 \format{
-  A data frame with 116 observations on the following 4 variables.
+  A data frame with 116 observations on the following 8 variables.
   \describe{
-    \item{\code{Year}}{year of Kentucky Derby}
-    \item{\code{Winner}}{a character vector with the name of the winning
+    \item{Year}{year of Kentucky Derby}
+    \item{Winner}{a character vector with the name of the winning
       horse}
-    \item{\code{Starters}}{number of horses that started the race}
-    \item{\code{NetToWinner}}{the net winnings of the winner, in U.S. dollars}
-    \item{\code{Time}}{the winning time in seconds}
-    \item{\code{Speed}}{the winning average speed, n miles per hour}
-    \item{\code{Track}}{a factor indicating track condition with levels 
+    \item{Starters}{number of horses that started the race}
+    \item{NetToWinner}{the net winnings of the winner, in U.S. dollars}
+    \item{Time}{the winning time in seconds}
+    \item{Speed}{the winning average speed, n miles per hour}
+    \item{Track}{a factor indicating track condition with levels 
       \code{"Fast"}, \code{"Good"}, \code{"Dusty"}, \code{"Slow"}, \code{"Heavy"},
       \code{"Muddy"}, and \code{"Sloppy"}}
-    \item{\code{Conditions}}{a factor with with 2 levels of track condition,
+    \item{Conditions}{a factor with with 2 levels of track condition,
       with levels \code{"Fast"} and \code{"Slow"}}
   }
 }

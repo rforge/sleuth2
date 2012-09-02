@@ -18,21 +18,21 @@
 \format{
   A data frame with 122 observations on the following 12 variables.
   \describe{
-    \item{\code{Year}}{year of observed wildflower season}
-    \item{\code{Region}}{a factor variable with 4 levels: \code{"baja"},
+    \item{Year}{year of observed wildflower season}
+    \item{Region}{a factor variable with 4 levels: \code{"baja"},
         \code{"colorado"}, \code{"mojave"}, and \code{"upland"}}
-    \item{\code{Sep}}{the September rainfall, in inches} 
-    \item{\code{Oct}}{the October rainfall, in inches} 
-    \item{\code{Nov}}{the November rainfall, in inches} 
-    \item{\code{Dec}}{the December rainfall, in inches} 
-    \item{\code{Jan}}{the January rainfall, in inches} 
-    \item{\code{Feb}}{the February rainfall, in inches} 
-    \item{\code{Mar}}{the March rainfall, in inches} 
-    \item{\code{Total}}{the total rainfall from September through March, in inches} 
-    \item{\code{Rating}}{a factor with a subjective assessment of the quality of
-      wildflower bloom with levels \code{"FAIR"}, \code{"Good"}, \code{"Great"}, 
-      \code{"Poor"}, and \code{"Spectacular"}}
-    \item{\code{Score}}{a numerical variable corresponding to the order of
+    \item{Sep}{the September rainfall, in inches} 
+    \item{Oct}{the October rainfall, in inches} 
+    \item{Nov}{the November rainfall, in inches} 
+    \item{Dec}{the December rainfall, in inches} 
+    \item{Jan}{the January rainfall, in inches} 
+    \item{Feb}{the February rainfall, in inches} 
+    \item{Mar}{the March rainfall, in inches} 
+    \item{Total}{the total rainfall from September through March, in inches} 
+    \item{Rating}{a factor with a subjective assessment of the quality of
+      wildflower bloom with levels \code{"FAIR"}, \code{"GOOD"}, \code{"GREAT"}, 
+      \code{"POOR"}, and \code{"SPECTACULAR"}}
+    \item{Score}{a numerical variable corresponding to the order of
       rating categories, with Poor=0, Fair=1, Good=2, Great=3, and Spectacular=4}
   }
 }

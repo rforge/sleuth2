@@ -12,13 +12,13 @@
 \format{
   A data frame with 11 observations on the following 4 variables.
   \describe{
-    \item{\code{ComBOD}}{biochemical oxygen demand measurements from
+    \item{ComBOD}{biochemical oxygen demand measurements from
       commercial laboratory} 
-    \item{\code{ComSS}}{suspended solids measurements from commercial
+    \item{ComSS}{suspended solids measurements from commercial
       laboratory} 
-    \item{\code{StaBOD}}{biochemical oxygen demand measurements from
+    \item{StaBOD}{biochemical oxygen demand measurements from
       state laboratory} 
-    \item{\code{StaSS}}{suspended solids measurements from state
+    \item{StaSS}{suspended solids measurements from state
       laboratory} 
   }
 }

@@ -14,10 +14,10 @@
 \format{
   A data frame with 272 observations on the following 3 variables.
   \describe{
-    \item{\code{Subject}}{subject identification number}
-    \item{\code{Group}}{a factor with levels \code{"Low-Carbohydrate"}, 
+    \item{Subject}{subject identification number}
+    \item{Group}{a factor with levels \code{"Low-Carbohydrate"}, 
       \code{"Low-Fat"}, and \code{"Meditrranean"}}
-    \item{\code{WtLoss24}}{weight at the end of the 24 month study minus 
+    \item{WtLoss24}{weight at the end of the 24 month study minus 
       initial weight, in kg} 
   }
 }

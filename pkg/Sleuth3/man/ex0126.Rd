@@ -9,16 +9,16 @@
 \format{
   A data frame with 492 observations on the following 10 variables.
   \describe{
-    \item{\code{State}}{the state that the member represented}
-    \item{\code{Representative}}{name of the representative}
-    \item{\code{Party}}{a factor representing political party, with levels R for Republican and D for Democratic}
-    \item{\code{Pro05}}{the number of pro-environmental votes in 2005}
-    \item{\code{Anti05}}{the number of anti-environmental votes in 2005}
-    \item{\code{Pro06}}{the number of pro-environmental votes in 2006}
-    \item{\code{Anti06}}{the number of anti-environmental votes in 2006}
-    \item{\code{Pro07}}{the number of pro-environmental votes in 2007}
-    \item{\code{Anti07}}{the number of anti-environmental votes in 2007}
-    \item{\code{PctPro}}{the total percentage of a representative's votes between 2005 and 2007 that were deemd to be pro-environmental}
+    \item{State}{the state that the member represented}
+    \item{Representative}{name of the representative}
+    \item{Party}{a factor representing political party, with levels \code{"R"} for Republican and \code{"D"} for Democratic}
+    \item{Pro05}{the number of pro-environmental votes in 2005}
+    \item{Anti05}{the number of anti-environmental votes in 2005}
+    \item{Pro06}{the number of pro-environmental votes in 2006}
+    \item{Anti06}{the number of anti-environmental votes in 2006}
+    \item{Pro07}{the number of pro-environmental votes in 2007}
+    \item{Anti07}{the number of anti-environmental votes in 2007}
+    \item{PctPro}{the total percentage of a representative's votes between 2005 and 2007 that were deemd to be pro-environmental}
   }
 }
 \source{

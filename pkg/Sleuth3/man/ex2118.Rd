@@ -20,13 +20,13 @@
 \format{
   A data frame with 4 observations on the following 5 variables.
   \describe{
-    \item{\code{Contact}}{Whether men had single or multiple contact with prostitutes}
-    \item{\code{Circumcised}}{Whether the men are circumcised, factor with
-      levels \code{"no"} and \code{"yes"}}
-    \item{\code{HIV}}{Number of men that tested positive for HIV}
-    \item{\code{Number}}{Number of men}
-    \item{\code{NoHIV}}{Number of men that did not test positive for HIV
-      (should be \code{Number}-\code{HIV})}
+    \item{Contact}{Whether men had single or multiple contact with prostitutes}
+    \item{Circumcised}{Whether the men are circumcised, factor with
+      levels \code{"No"} and \code{"Yes"}}
+    \item{HIV}{Number of men that tested positive for HIV}
+    \item{Number}{Number of men}
+    \item{NoHIV}{Number of men that did not test positive for HIV
+      (should be Number-HIV)}
   }
 }
 \source{

@@ -13,8 +13,8 @@
 \format{
   A data frame with 6 observations on the following 2 variables.
   \describe{
-    \item{\code{Age}}{age of the exit poll interviewer, years}
-    \item{\code{Refusal}}{average proportion of voters refusing to be 
+    \item{Age}{age of the exit poll interviewer, years}
+    \item{Refusal}{average proportion of voters refusing to be 
       interviewed}
   }
 }

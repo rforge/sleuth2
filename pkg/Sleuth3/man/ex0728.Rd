@@ -21,8 +21,8 @@
 \format{
   A data frame with 15 observations on the following 2 variables.
   \describe{
-    \item{\code{Years}}{years that the individual has been playing}
-    \item{\code{Activity}}{neuronal activity index}
+    \item{Years}{years that the individual has been playing}
+    \item{Activity}{neuronal activity index}
   }
 }
 \source{

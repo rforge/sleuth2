@@ -14,10 +14,10 @@
 \format{
   A data frame with 2 observations on the following 3 variables.
   \describe{
-    \item{\code{Obesity}}{ a factor with levels \code{"NotObese"} and 
+    \item{Obesity}{ a factor with levels \code{"NotObese"} and 
       \code{"obese"}} 
-    \item{\code{Deaths}}{the number of women who died from CVD}
-    \item{\code{NonDeaths}}{the number that died from other causes} 
+    \item{Deaths}{the number of women who died from CVD}
+    \item{NonDeaths}{the number that died from other causes} 
   }
 }
 \source{

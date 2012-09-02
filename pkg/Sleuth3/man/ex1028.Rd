@@ -13,17 +13,17 @@
 \format{
   A data frame with 48 observations on the following 7 variables.
   \describe{
-    \item{\code{Year}}{year}
-    \item{\code{ElNino}}{a factor with levels \code{"cold"},
+    \item{Year}{year}
+    \item{ElNino}{a factor with levels \code{"cold"},
       \code{"neutral"} and \code{"warm"}}
-    \item{\code{Temperature}}{numeric variable with values -1 if
+    \item{Temperature}{numeric variable with values -1 if
       \code{ElNino} is \code{"cold"}, 0 if \code{"neutral"} and 1 if
       \code{"warm"}}
-    \item{\code{WestAfrica}}{numeric variable indicating whether West
+    \item{WestAfrica}{numeric variable indicating whether West
       Africa was wet (1) or dry (0)}
-    \item{\code{Storms}}{number of storms}
-    \item{\code{Hurricanes}}{number of hurricanes}
-    \item{\code{StormIndex}}{index of overall intensity of hurricane season}
+    \item{Storms}{number of storms}
+    \item{Hurricanes}{number of hurricanes}
+    \item{StormIndex}{index of overall intensity of hurricane season}
   }
 }
 \source{

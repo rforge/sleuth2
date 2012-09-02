@@ -13,10 +13,10 @@
 \format{
   A data frame with 21 observations on the following 4 variables.
   \describe{
-    \item{\code{Country}}{a character vector indicating the country}
-    \item{\code{PctCatholic}}{percent Catholics in the population}
-    \item{\code{PriestParishRatio}}{priest to parishioner ratio}
-    \item{\code{PctIndigenous}}{percent clergy indigenous}
+    \item{Country}{a character vector indicating the country}
+    \item{PctCatholic}{percent Catholics in the population}
+    \item{PriestParishRatio}{priest to parishioner ratio}
+    \item{PctIndigenous}{percent clergy indigenous}
   }
 }
 \source{

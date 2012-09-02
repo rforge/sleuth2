@@ -9,11 +9,11 @@
 }
 \usage{ex0915}
 \format{
-  
+  A data frame with 38 observations on the following 3 variables.
   \describe{
-    \item{\code{Year}}{year of observation (1890--1927)}
-    \item{\code{Yield}}{average corn yield for the six states (in bu/acre)}
-    \item{\code{Rainfall}}{average rainfall in the six states (in in/year)}
+    \item{Year}{year of observation (1890--1927)}
+    \item{Yield}{average corn yield for the six states (in bu/acre)}
+    \item{Rainfall}{average rainfall in the six states (in in/year)}
   }
 }
 \source{
@@ -22,7 +22,7 @@
 }
 \references{
   Ezekiel, M. and Fox, K.A. (1959). \emph{Methods of Correlation and
-    Regression Analysis}, John Wiley \& Sons, New York.
+    Regression Analysis}, John Wiley & Sons, New York.
 }
 \examples{
 str(ex0915)

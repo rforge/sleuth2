@@ -20,23 +20,23 @@
 \format{
   A data frame with 12 observations on the following 12 variables.
   \describe{
-    \item{\code{Student}}{a student identification number}
-    \item{\code{PriorExp}}{the student's prior expectation of rat-training
+    \item{Student}{a student identification number}
+    \item{PriorExp}{the student's prior expectation of rat-training
       success, on a scale from -10 to 10} 
-    \item{\code{Block}}{a numerical variable for pairs of students grouped
+    \item{Block}{a numerical variable for pairs of students grouped
       according to their values of PriorExp} 
-    \item{\code{Treatment}}{a factor with levels \code{"bright"} and \code{"dull"}
+    \item{Treatment}{a factor with levels \code{"bright"} and \code{"dull"}
       corresponding to whether students were told (falsely) that their rats were
       bright or not}
-    \item{\code{Day1}}{the number of successful rat mazed runs on day 1}
-    \item{\code{Day2}}{the number of successful rat mazed runs on day 2}
-    \item{\code{Day3}}{the number of successful rat mazed runs on day 3}
-    \item{\code{Day4}}{the number of successful rat mazed runs on day 4}
-    \item{\code{Day5}}{the number of successful rat mazed runs on day 5}
-    \item{\code{Relax}}{degree of relaxation students felt in handling their
+    \item{Day1}{the number of successful rat mazed runs on day 1}
+    \item{Day2}{the number of successful rat mazed runs on day 2}
+    \item{Day3}{the number of successful rat mazed runs on day 3}
+    \item{Day4}{the number of successful rat mazed runs on day 4}
+    \item{Day5}{the number of successful rat mazed runs on day 5}
+    \item{Relax}{degree of relaxation students felt in handling their
       rats, on a scale from 0 to 10}
-    \item{\code{Success}}{the total proportion of successful maze runs in 5 days}
-    \item{\code{Slope}}{the slope in the least squares regression of mean daily 
+    \item{Success}{the total proportion of successful maze runs in 5 days}
+    \item{Slope}{the slope in the least squares regression of mean daily 
       success as a function of day, estimated for each student individually}   
   }
 }

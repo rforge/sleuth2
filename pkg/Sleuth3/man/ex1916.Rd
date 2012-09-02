@@ -16,11 +16,11 @@
 \format{
   A data frame with 4 observations on the following 4 variables.
   \describe{
-    \item{\code{Knew}}{a factor with levels \code{"no"} and \code{"yes"}}
-    \item{\code{Treatment}}{a factor with levels \code{"placebo"} and
+    \item{Knew}{a factor with levels \code{"no"} and \code{"yes"}}
+    \item{Treatment}{a factor with levels \code{"placebo"} and
       \code{"vitC"}} 
-    \item{\code{Cold}}{number of people who got a cold}
-    \item{\code{NoCold}}{number of people who did not get a cold}
+    \item{Cold}{number of people who got a cold}
+    \item{NoCold}{number of people who did not get a cold}
   }
 }
 \source{

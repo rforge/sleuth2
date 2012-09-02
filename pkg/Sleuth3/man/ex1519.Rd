@@ -10,10 +10,10 @@
 \format{
   A data frame with 732 observations on the following 4 variables.
   \describe{
-    \item{\code{Year}}{year}
-    \item{\code{Month}}{a numerical variable for month, with 1 = January}
-    \item{\code{SOI}}{the Southern Oscillation Index)}
-    \item{\code{SST}}{the Sea Surfact Temperature)}
+    \item{Year}{year}
+    \item{Month}{a numerical variable for month, with 1 = January}
+    \item{SOI}{the Southern Oscillation Index)}
+    \item{SST}{the Sea Surfact Temperature)}
   }
 }
 \source{

@@ -16,15 +16,15 @@
 }
 \usage{ex1033}
 \format{
-  A data frame with 36 observations on the following 4 variables.
+  A data frame with 2,584 observations on the following 7 variables.
   \describe{
-    \item{\code{Subject}}{the subject identification number}
-    \item{\code{Arith}}{score on the Arithmetic Reasoning test in 1981}
-    \item{\code{Word}}{score on the Word Knowledge Test in 1981}
-    \item{\code{Parag}}{score on the Paragraph Comprehension test in 1981}
-    \item{\code{Math}}{score on the Mathematics Knowledge test in 1981}
-    \item{\code{AFQT}}{percentile score on the AFQT intelligence test in 1981}
-    \item{\code{Income2005}}{annual income in 2005}
+    \item{Subject}{the subject identification number}
+    \item{Arith}{score on the Arithmetic Reasoning test in 1981}
+    \item{Word}{score on the Word Knowledge Test in 1981}
+    \item{Parag}{score on the Paragraph Comprehension test in 1981}
+    \item{Math}{score on the Mathematics Knowledge test in 1981}
+    \item{AFQT}{percentile score on the AFQT intelligence test in 1981}
+    \item{Income2005}{annual income in 2005}
   }
 }
 \source{

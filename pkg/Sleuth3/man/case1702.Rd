@@ -21,18 +21,18 @@
 \format{
   A data frame with 30 observations on the following 9 variables.
   \describe{
-    \item{\code{Couple}}{couple identification number}
-    \item{\code{HP}}{level of passionate love husband feels for spouse}
-    \item{\code{WP}}{level of passionate love wife feels for spouse}
-    \item{\code{HC}}{level of compassionate love husband feels for spouse}
-    \item{\code{WC}}{level of compassionate love wife feels for spouse}
-    \item{\code{PW}}{level of passionate love husband perceives spouse
+    \item{Couple}{couple identification number}
+    \item{HP}{level of passionate love husband feels for spouse}
+    \item{WP}{level of passionate love wife feels for spouse}
+    \item{HC}{level of compassionate love husband feels for spouse}
+    \item{WC}{level of compassionate love wife feels for spouse}
+    \item{PW}{level of passionate love husband perceives spouse
       to have for him} 
-    \item{\code{PH}}{level of passionate love wife perceives spouse to
+    \item{PH}{level of passionate love wife perceives spouse to
       have for her} 
-    \item{\code{CW}}{level of compassionate love husband perceives
+    \item{CW}{level of compassionate love husband perceives
       spouse to have for him} 
-    \item{\code{CH}}{level of compassionate love husband perceives
+    \item{CH}{level of compassionate love husband perceives
       spouse to have for her} 
   }
 }

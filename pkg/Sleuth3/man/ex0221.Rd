@@ -17,8 +17,8 @@
 \format{
   A data frame with 59 observations on the following 2 variables.
   \describe{
-    \item{\code{Humerus}}{humerus length of adult male sparrows (inches)}
-    \item{\code{Status}}{factor variable indicating whether the sparrow
+    \item{Humerus}{humerus length of adult male sparrows (inches)}
+    \item{Status}{factor variable indicating whether the sparrow
       perished or survived in a winter storm, with levels \code{Perished} 
       and \code{Survived}}
   }

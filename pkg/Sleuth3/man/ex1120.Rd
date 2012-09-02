@@ -15,8 +15,8 @@
 \format{
   A data frame with 18 observations on the following 2 variables.
   \describe{
-    \item{\code{Carbonate}}{isotopic composition of bone carbonate}
-    \item{\code{Calcite}}{isotopic composition of calcite cements}
+    \item{Carbonate}{isotopic composition of bone carbonate}
+    \item{Calcite}{isotopic composition of calcite cements}
   }
 }
 \source{

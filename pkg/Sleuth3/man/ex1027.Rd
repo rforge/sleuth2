@@ -14,11 +14,11 @@
 \format{
   A data frame with 62 observations on the following 5 variables.
   \describe{
-    \item{\code{Species}}{a character vector indicating the species}
-    \item{\code{Time}}{average extinction time in years}
-    \item{\code{Pairs}}{average number of nesting pairs}
-    \item{\code{Size}}{a factor with levels \code{"L"} and \code{"S"}}
-    \item{\code{Status}}{a factor with levels \code{"M"} and \code{"R"}}
+    \item{Species}{a character vector indicating the species}
+    \item{Time}{average extinction time in years}
+    \item{Pairs}{average number of nesting pairs}
+    \item{Size}{a factor with levels \code{"L"} and \code{"S"}}
+    \item{Status}{a factor with levels \code{"M"} and \code{"R"}}
   }
 }
 \source{

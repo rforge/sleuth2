@@ -11,10 +11,10 @@
 \format{
   A data frame with 11 observations on the following 4 variables.
   \describe{
-    \item{\code{Country}}{a character vector indicating the country}
-    \item{\code{Debt}}{debt (millions of dollars)}
-    \item{\code{Deforest}}{deforestation (thousands of ha)}
-    \item{\code{Pop}}{population (thousands of people)}
+    \item{Country}{a character vector indicating the country}
+    \item{Debt}{debt (millions of dollars)}
+    \item{Deforest}{deforestation (thousands of ha)}
+    \item{Pop}{population (thousands of people)}
   }
 }
 \source{

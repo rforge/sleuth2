@@ -14,11 +14,11 @@
 }
 \usage{ex1620}
 \format{
-  A data frame with 20,246 observations on the following 6 variables.
+  A data frame with 20,246 observations on the following 3 variables.
   \describe{
-    \item{\code{Gene}}{an identification number for genes}
-    \item{\code{GeneName}}{a character variable with the name of the gene} 
-    \item{\code{pValue}}{the p-value from a test that the mean expression level
+    \item{Gene}{an identification number for genes}
+    \item{GeneName}{a character variable with the name of the gene} 
+    \item{pValue}{the p-value from a test that the mean expression level
       for the gene differs in the two groups (ignoring multiple testing)} 
   }
 }

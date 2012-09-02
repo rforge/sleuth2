@@ -10,8 +10,8 @@
 \format{
   A data frame with 7 observations on the following 2 variables.
   \describe{
-    \item{\code{Area}}{area of island (in square miles)}
-    \item{\code{Species}}{number of reptile and amphibian species on island}
+    \item{Area}{area of island (in square miles)}
+    \item{Species}{number of reptile and amphibian species on island}
   }
 }
 \source{
@@ -19,7 +19,7 @@
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \references{
-  Wilson, E.O., 1992, \bold{The Diversity of Life}, W. W. norton, N.Y.
+  Wilson, E.O., 1992, \emph{The Diversity of Life}, W. W. Norton, N.Y.
 }
 \examples{
 str(case0801)

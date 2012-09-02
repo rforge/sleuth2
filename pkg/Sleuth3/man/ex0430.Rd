@@ -10,9 +10,9 @@
 \format{
   A data frame with 13 observations on the following 2 variables.
   \describe{
-    \item{\code{PreTreatment}}{tolerance to sunlight (minutes) prior to
+    \item{PreTreatment}{tolerance to sunlight (minutes) prior to
       sunscreen application} 
-    \item{\code{Sunscreen}}{tolerance to sunlight (minutes) after
+    \item{Sunscreen}{tolerance to sunlight (minutes) after
       sunscreen application} 
   }
 }

@@ -12,12 +12,12 @@
 \format{
   A data frame with 16 observations on the following 5 variables.
   \describe{
-    \item{\code{Plot}}{an identification code for plot}
-    \item{\code{Action}}{a factor with levels \code{"L"} for logged and \code{"U"}
+    \item{Plot}{an identification code for plot}
+    \item{Action}{a factor with levels \code{"L"} for logged and \code{"U"}
       for unlogged}
-    \item{\code{Seedlings2004}}{the number of seedlings in the plot in 2004}
-    \item{\code{Seedlings2005}}{the number of seedlings in the plot in 2005}
-    \item{\code{PercentLost}}{the percentage of 2004 seedlngs that were lost}    
+    \item{Seedlings2004}{the number of seedlings in the plot in 2004}
+    \item{Seedlings2005}{the number of seedlings in the plot in 2005}
+    \item{PercentLost}{the percentage of 2004 seedlngs that were lost}    
   }
 }
 \source{

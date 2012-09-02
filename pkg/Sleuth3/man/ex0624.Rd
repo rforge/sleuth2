@@ -12,22 +12,22 @@
 \format{
   A data frame with 41 observations on the following 5 variables.
   \describe{
-    \item{\code{Volume}}{volumes of INAH3 (1000 \eqn{\times}{x}
+    \item{Volume}{volumes of INAH3 (1000 \eqn{\times}{x}
       mm\eqn{^3}) cell clusters from 41 humans} 
-    \item{\code{Group}}{a factor with levels
+    \item{Group}{a factor with levels
       \tabular{ll}{%
         \code{"Group1"} \tab heterosexual male with AIDS death\cr
         \code{"Group2"} \tab heterosexual male with Non-AIDS death\cr
         \code{"Group3"} \tab homosexual male with AIDS death\cr
         \code{"Group4"} \tab heterosexual female with AIDS death\cr
         \code{"Group5"} \tab heterosexual female with Non-AIDS death
-        }
       }
-      \item{\code{Sex}}{a factor with levels \code{"Female"} and \code{"Male"}}
-      \item{\code{Orientation}}{a factor with levels \code{"Heterosexual"} and
-        \code{"Homosexual"}}
-      \item{\code{Death}}{a factor with levels \code{"AIDS"} and \code{"Non-Aids"}}
     }
+    \item{Sex}{a factor with levels \code{"Female"} and \code{"Male"}}
+    \item{Orientation}{a factor with levels \code{"Heterosexual"} and
+      \code{"Homosexual"}}
+    \item{Death}{a factor with levels \code{"AIDS"} and \code{"Non-AIDS"}}
+  }
 }
 \source{
   Ramsey, F.L. and Schafer, D.W. (2013). \emph{The Statistical Sleuth: A

@@ -10,10 +10,10 @@
 \format{
   A data frame with 50 observations on the following 4 variables.
   \describe{
-    \item{\code{College}}{name of the college}
-    \item{\code{Type}}{a factor with levels \code{"Private"} and \code{"Public"}}
-    \item{\code{InState}}{in-state tuition in dollars}
-    \item{\code{OutOfState}}{out-of-state tuition in dollars} 
+    \item{College}{name of the college}
+    \item{Type}{a factor with levels \code{"Private"} and \code{"Public"}}
+    \item{InState}{in-state tuition in dollars}
+    \item{OutOfState}{out-of-state tuition in dollars} 
   }
 }
 \source{

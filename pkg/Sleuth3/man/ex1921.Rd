@@ -4,7 +4,7 @@
 \title{Diet Wars II}
 \description{
   In the study of different diets for losing weight
-  (\code{\link{ex0623}} and \code{\link{ex1922}}),  
+  (\code{\link{ex0623}}, \code{\link{ex1420}} and \code{\link{ex1922}}),  
   there appear to have been many more experimental subjects that dropped out 
   from the low carbohydrate diet group than from the other two diet groups. This 
   data set contains the numbers who did and didn't drop out in each diet group. 
@@ -12,12 +12,12 @@
 }
 \usage{ex1921}
 \format{
-  A data frame with 8 observations on the following 4 variables.
+  A data frame with 3 observations on the following 4 variables.
   \describe{
-    \item{\code{Diet}}{a factor with levels \code{"LowCarb"},
+    \item{Diet}{a factor with levels \code{"LowCarb"},
       \code{"LowFat"}, and \code{"Medit"}}
-    \item{\code{DroppedOut}}{the number of subjects who dropped out of the study} 
-    \item{\code{Completed}}{the number of subjects who completed the study}
+    \item{DroppedOut}{the number of subjects who dropped out of the study} 
+    \item{Completed}{the number of subjects who completed the study}
   }
 }
 \source{
@@ -25,7 +25,7 @@
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
 \seealso{
-  \code{\link{ex0623}}, \code{\link{ex1922}}
+  \code{\link{ex0623}}, \code{\link{ex1420}}, \code{\link{ex1922}}
 }
 \examples{
 str(ex1921)

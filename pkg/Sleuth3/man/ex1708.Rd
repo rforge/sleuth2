@@ -10,20 +10,20 @@
 \format{
   A data frame with 12 observations on the following 14 variables.
   \describe{
-    \item{\code{Fat}}{actual pig fat (in percent)}
-    \item{\code{M1}}{magnetic resonance image at location 1}
-    \item{\code{M2}}{magnetic resonance image at location 2}
-    \item{\code{M3}}{magnetic resonance image at location 3}
-    \item{\code{M4}}{magnetic resonance image at location 4}
-    \item{\code{M5}}{magnetic resonance image at location 5}
-    \item{\code{M6}}{magnetic resonance image at location 6}
-    \item{\code{M7}}{magnetic resonance image at location 7}
-    \item{\code{M8}}{magnetic resonance image at location 8}
-    \item{\code{M9}}{magnetic resonance image at location 9}
-    \item{\code{M10}}{magnetic resonance image at location 10}
-    \item{\code{M11}}{magnetic resonance image at location 11}
-    \item{\code{M12}}{magnetic resonance image at location 12}
-    \item{\code{M13}}{magnetic resonance image at location 13}
+    \item{Fat}{actual pig fat (in percent)}
+    \item{M1}{magnetic resonance image at location 1}
+    \item{M2}{magnetic resonance image at location 2}
+    \item{M3}{magnetic resonance image at location 3}
+    \item{M4}{magnetic resonance image at location 4}
+    \item{M5}{magnetic resonance image at location 5}
+    \item{M6}{magnetic resonance image at location 6}
+    \item{M7}{magnetic resonance image at location 7}
+    \item{M8}{magnetic resonance image at location 8}
+    \item{M9}{magnetic resonance image at location 9}
+    \item{M10}{magnetic resonance image at location 10}
+    \item{M11}{magnetic resonance image at location 11}
+    \item{M12}{magnetic resonance image at location 12}
+    \item{M13}{magnetic resonance image at location 13}
   }
 }
 \source{

@@ -16,13 +16,13 @@
 \format{
   A data frame with 12 observations on the following 4 variables.
   \describe{
-    \item{\code{Aggravation}}{the aggravation level of the crime, a
+    \item{Aggravation}{the aggravation level of the crime, a
       numerical variable ranging from 1 to 6} 
-    \item{\code{Victim}}{a factor indicating race of murder victim, with
+    \item{Victim}{a factor indicating race of murder victim, with
       levels \code{"White"} and \code{"Black"}}
-    \item{\code{Death}}{number in the aggravation and victim category
+    \item{Death}{number in the aggravation and victim category
       who received the death penalty} 
-    \item{\code{NoDeath}}{number in the aggravation and victim category
+    \item{NoDeath}{number in the aggravation and victim category
       who did not receive the death penalty} 
   }
 }

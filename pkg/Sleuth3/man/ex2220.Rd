@@ -18,10 +18,10 @@
 \format{
   A data frame with 42 observations on the following 4 variables.
   \describe{
-    \item{\code{Exposure}}{radiation exposure, in rads}
-    \item{\code{YearsAfter}}{years after the exposure}
-    \item{\code{AtRisk}}{number of survivors in the group}
-    \item{\code{Deaths}}{number of survivors in the group who died of Cancer }
+    \item{Exposure}{radiation exposure, in rads}
+    \item{YearsAfter}{years after the exposure}
+    \item{AtRisk}{number of survivors in the group}
+    \item{Deaths}{number of survivors in the group who died of Cancer}
   }
 }
 \source{

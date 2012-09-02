@@ -15,8 +15,8 @@
 \format{
   A data frame with 17 observations on the following 2 variables.
   \describe{
-    \item{\code{Mushroom}}{the cesium concentration in mushrooms, Bq/kg} 
-    \item{\code{Soil}}{the cesium concentration in soil, Bq/kg} 
+    \item{Mushroom}{the cesium concentration in mushrooms, Bq/kg} 
+    \item{Soil}{the cesium concentration in soil, Bq/kg} 
   }
 }
 \source{

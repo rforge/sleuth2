@@ -12,9 +12,9 @@
 \format{
   A data frame with 161 observations on the following 2 variables.
   \describe{
-    \item{\code{Year}}{year in which yearly average temperature was computed,
+    \item{Year}{year in which yearly average temperature was computed,
       from 1850 to 2010} 
-    \item{\code{Temperature}}{northern hemisphere temperature minus the 161-year
+    \item{Temperature}{northern hemisphere temperature minus the 161-year
       average (degrees Celsius)} 
   }
 }

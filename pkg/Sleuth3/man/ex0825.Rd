@@ -11,9 +11,9 @@
 \format{
   A data frame with 67 observations on the following 3 variables.
   \describe{
-    \item{\code{County}}{a character vector indicating the county}
-    \item{\code{Buchanan2000}}{votes cast for P. Buchanan}
-    \item{\code{Bush2000}}{votes cast for G.W. Bush}
+    \item{County}{a character vector indicating the county}
+    \item{Buchanan2000}{votes cast for P. Buchanan}
+    \item{Bush2000}{votes cast for G.W. Bush}
   }
 }
 \source{

@@ -11,17 +11,17 @@
 }
 \usage{ex1029}
 \format{
-  A data frame with 25437 observations on the following 6 variables.
+  A data frame with 25,437 observations on the following 6 variables.
   \describe{
-    \item{\code{Region}}{a factor with levels \code{"Midwest"}, 
+    \item{Region}{a factor with levels \code{"Midwest"}, 
       \code{"Northeast"}, \code{"South"} and \code{"West"}}
-    \item{\code{MetropolitanStatus}}{a factor with levels 
+    \item{MetropolitanStatus}{a factor with levels 
       \code{"MetopolitanArea"} and \code{"NotMetropolitanArea"}}
-    \item{\code{Exper}}{experience in years}
-    \item{\code{Educ}}{education in years}
-    \item{\code{Race}}{a factor with levels \code{"Black"} and
+    \item{Exper}{experience in years}
+    \item{Educ}{education in years}
+    \item{Race}{a factor with levels \code{"Black"} and
       \code{"NotBlack"}}
-    \item{\code{WeeklyEarnings}}{weekly wage in dollars}    
+    \item{WeeklyEarnings}{weekly wage in dollars}    
   }
 }
 \source{

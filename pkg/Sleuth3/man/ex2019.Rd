@@ -15,10 +15,10 @@
 \format{
   A data frame with 17 observations on the following 3 variables.
   \describe{
-    \item{\code{Date}}{date of an ABM test} 
-    \item{\code{Months}}{number of months after March 1983}
-    \item{\code{Result}}{a factor with levels \code{"Failure"} and 
-      \code{"success"}}
+    \item{Date}{date of an ABM test} 
+    \item{Months}{number of months after March 1983}
+    \item{Result}{a factor with levels \code{"Failure"} and 
+      \code{"Success"}}
   }
 }
 \source{

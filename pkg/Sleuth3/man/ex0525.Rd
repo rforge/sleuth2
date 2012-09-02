@@ -17,10 +17,10 @@
 \format{
   A data frame with 2,584 observations on the following 3 variables.
   \describe{
-    \item{\code{Subject}}{subject identification number}
-    \item{\code{Educ}}{a factor for years of education category with levels 
+    \item{Subject}{subject identification number}
+    \item{Educ}{a factor for years of education category with levels 
       \code{"<12"}, \code{"12"}, \code{"13-15"}, \code{"16"} and \code{">16"}}
-    \item{\code{Income2005}}{Annual income in 2005, in U.S. dollars}
+    \item{Income2005}{Annual income in 2005, in U.S. dollars}
   }
 }
 \source{

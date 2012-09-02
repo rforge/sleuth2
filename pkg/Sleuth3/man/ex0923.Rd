@@ -14,13 +14,13 @@
 }
 \usage{ex0923}
 \format{
-  A data frame with 36 observations on the following 4 variables.
+  A data frame with 2,584 observations on the following 5 variables.
   \describe{
-    \item{\code{Subject}}{the subject identification number}
-    \item{\code{Gender}}{a factor with levels \code{"female"} and \code{"male"}}
-    \item{\code{AFQT}}{percentile score on the AFQT intelligence test}
-    \item{\code{Educ}}{years of education achieved by 2005}
-    \item{\code{Income2005}}{annual income in 2005}
+    \item{Subject}{the subject identification number}
+    \item{Gender}{a factor with levels \code{"female"} and \code{"male"}}
+    \item{AFQT}{percentile score on the AFQT intelligence test}
+    \item{Educ}{years of education achieved by 2005}
+    \item{Income2005}{annual income in 2005}
   }
 }
 \source{

@@ -15,11 +15,11 @@
 \format{
   A data frame with 22 observations on the following 5 variables.
   \describe{
-    \item{\code{Species}}{a character variable with the name of the species}
-    \item{\code{Weight}}{the dry weight of the species, in mg}
-    \item{\code{Ingestion}}{ingestion rate in mg per day}
-    \item{\code{Organic}}{percentage of organic matter in the food}
-    \item{\code{Bivalve}}{a factor with levels \code{"no"} and \code{"yes"} to
+    \item{Species}{a character variable with the name of the species}
+    \item{Weight}{the dry weight of the species, in mg}
+    \item{Ingestion}{ingestion rate in mg per day}
+    \item{Organic}{percentage of organic matter in the food}
+    \item{Bivalve}{a factor with levels \code{"no"} and \code{"yes"} to
       indicate whether a species is a bivalve}
   }
 }

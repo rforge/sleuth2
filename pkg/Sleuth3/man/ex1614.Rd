@@ -18,12 +18,12 @@
 \format{
   A data frame with 12 observations on the following 3 variables.
   \describe{
-    \item{\code{Subject}}{subject identification number} 
-    \item{\code{PhaseA}}{Interleukin-1 levels (counts per minute) from
+    \item{Subject}{subject identification number} 
+    \item{PhaseA}{Interleukin-1 levels (counts per minute) from
       blood samples taken during activity A} 
-    \item{\code{PhaseB}}{Interleukin-1 levels (counts per minute) from
+    \item{PhaseB}{Interleukin-1 levels (counts per minute) from
       blood samples taken during activity B} 
-    \item{\code{PhaseC}}{Interleukin-1 levels (counts per minute) from
+    \item{PhaseC}{Interleukin-1 levels (counts per minute) from
       blood samples taken during activity C} 
   }
 }

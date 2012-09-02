@@ -12,10 +12,10 @@
 \format{
   A data frame with 38 observations on the following 3 variables.
   \describe{
-    \item{\code{IQ}}{IQ scores of adopted children}
-    \item{\code{Adoptive}}{a factor with levels \code{"High"} and
+    \item{IQ}{IQ scores of adopted children}
+    \item{Adoptive}{a factor with levels \code{"High"} and
       \code{"Low"}; the socioeconomic status of the adoptive parents} 
-    \item{\code{Biological}}{a factor with levels \code{"High"} and
+    \item{Biological}{a factor with levels \code{"High"} and
       \code{"Low"}; the socioeconomic status of the biological parents} 
   }
 }

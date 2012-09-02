@@ -13,9 +13,9 @@
 \format{
   A data frame with 76 observations on the following 3 variables.
   \describe{
-    \item{\code{Time}}{times until breakdown (in minutes)}
-    \item{\code{Voltage}}{voltage applied (in kV)}
-    \item{\code{Group}}{factor variable (group number)}
+    \item{Time}{times until breakdown (in minutes)}
+    \item{Voltage}{voltage applied (in kV)}
+    \item{Group}{factor variable (group number)}
   }
 }
 \source{

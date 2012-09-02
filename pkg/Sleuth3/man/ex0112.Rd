@@ -12,9 +12,9 @@
 \format{
   A data frame with 14 observations on the following 2 variables.
   \describe{
-    \item{\code{BP}}{reduction in diastolic blood pressure (in mm of mercury)}
-    \item{\code{Diet}}{factor variable indicating the diet that the subject 
-        followed, with levels "FishOil" and "RegularOil"}
+    \item{BP}{reduction in diastolic blood pressure (in mm of mercury)}
+    \item{Diet}{factor variable indicating the diet that the subject 
+        followed, with levels \code{"FishOil"} and \code{"RegularOil"}}
   }
 }
 \source{

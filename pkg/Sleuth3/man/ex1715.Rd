@@ -10,17 +10,17 @@
 \format{
   A data frame with 18 observations on the following 6 variables.
   \describe{
-    \item{\code{Denomination}}{a character vector indicating the
+    \item{Denomination}{a character vector indicating the
       church denomination} 
-    \item{\code{Distinct}}{distinctiveness (strictness of discipline on
+    \item{Distinct}{distinctiveness (strictness of discipline on
       a seven point scale) } 
-    \item{\code{Attend}}{average percentage of weeks that individuals
+    \item{Attend}{average percentage of weeks that individuals
       attended a church meeting (\% weekly)}
-    \item{\code{NonChurch}}{average number of secular organisations to
+    \item{NonChurch}{average number of secular organisations to
       which members belong}
-    \item{\code{PctStrong}}{average percentage of members that describe
+    \item{PctStrong}{average percentage of members that describe
       themselves as being strong church members (\%)} 
-    \item{\code{AnnInc}}{average income of members (US\eqn{\$}{$})}
+    \item{AnnInc}{average income of members (US\eqn{\$}{$})}
   }
 }
 \source{

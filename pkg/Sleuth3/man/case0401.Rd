@@ -12,8 +12,8 @@
 \format{
   A data frame with 24 observations on the following 2 variables.
   \describe{
-    \item{\code{Incidents}}{the number of O-ring incidents}
-    \item{\code{Launch}}{factor variable with two levels---\code{"Cool"} and
+    \item{Incidents}{the number of O-ring incidents}
+    \item{Launch}{factor variable with two levels---\code{"Cool"} and
       \code{"Warm"}} 
   }
 }

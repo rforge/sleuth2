@@ -10,20 +10,20 @@
 \format{
   A data frame with 50 observations on the following 8 variables.
   \describe{
-    \item{\code{State}}{US state}
-    \item{\code{SAT}}{state averages of the total SAT (verbal + quantitative)
+    \item{State}{US state}
+    \item{SAT}{state averages of the total SAT (verbal + quantitative)
       scores}
-    \item{\code{Takers}}{the percentage of the total eligible students (high
+    \item{Takers}{the percentage of the total eligible students (high
       school seniors) in the state who took the exam}
-    \item{\code{Income}}{the median income of families of test--takers (in
+    \item{Income}{the median income of families of test--takers (in
       hundreds of dollars)}
-    \item{\code{Years}}{the average number of years that the test--takers had
+    \item{Years}{the average number of years that the test--takers had
       formal studies in social sciences, natural sciences and humanities}
-    \item{\code{Public}}{the percentage of the test--takers who attended public
+    \item{Public}{the percentage of the test--takers who attended public
       secondary schools}
-    \item{\code{Expend}}{the total state expenditure on secondary schools (in
+    \item{Expend}{the total state expenditure on secondary schools (in
       hundreds of dollars per student)}
-    \item{\code{Rank}}{the median percentile ranking of the test--takers within
+    \item{Rank}{the median percentile ranking of the test--takers within
       their secondary school classes}
   }
 }

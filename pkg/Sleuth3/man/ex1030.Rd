@@ -22,25 +22,25 @@
 \format{
   A data frame with 4,952 observations on the following 7 variables.
   \describe{
-    \item{\code{Region}}{a factor with levels \code{"Midwest"}, 
+    \item{Region}{a factor with levels \code{"Midwest"}, 
       \code{"Northeast"}, \code{"South"} and \code{"West"}}
-    \item{\code{MetropolitanStatus}}{a factor with levels 
+    \item{MetropolitanStatus}{a factor with levels 
       \code{"Metopolitan"}, \code{"Not Metropolitan "} and 
       \code{"Not Identified"}}
-    \item{\code{Age}}{age in years}
-    \item{\code{EducationCategory}}{a factor with 16 levels: 
+    \item{Age}{age in years}
+    \item{EducationCategory}{a factor with 16 levels: 
       \code{"SomeCollegeButNoDegree"}, \code{"AssocDegAcadem"}, 
       \code{"NinthGrade"}, \code{"BachelorsDegree"}, \code{"TenthGrade"},
       \code{"HighSchoolDiploma"}, \cr
       \code{"AssocDegOccupVocat"}, \code{"DoctorateDegree"}, \code{"TwelthButNoDiploma"},\cr
       \code{"LessThanFirstGrade"}, \code{"EleventhGrade"}, \code{"ProfSchoolDegree"},\cr 
       \code{"FifthorSixthGrade"},\code{"SeventhOrEighthGrade"}, \code{"FirstSecondThirdOrFourthGrade"}}
-    \item{\code{EducationCode}}{a numerical variable indicating the approximate
+    \item{EducationCode}{a numerical variable indicating the approximate
       ordering of EducationCategory, with higher numbers indicating more 
       education}
-    \item{\code{Race}}{a factor with levels \code{"Black"} and
+    \item{Race}{a factor with levels \code{"Black"} and
       \code{"White"}}
-    \item{\code{WeeklyEarnings}}{weekly wage in dollars}    
+    \item{WeeklyEarnings}{weekly wage in dollars}    
   }
 }
 \source{

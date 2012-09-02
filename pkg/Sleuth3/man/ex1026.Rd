@@ -13,10 +13,10 @@
 \format{
   A data frame with 17 observations on the following 3 variables.
   \describe{
-    \item{\code{Inhibit}}{percent inhibition of primary phytoplankton
+    \item{Inhibit}{percent inhibition of primary phytoplankton
       production in water} 
-    \item{\code{UVB}}{UVB exposure}
-    \item{\code{Surface}}{a factor with levels \code{"Deep"} and
+    \item{UVB}{UVB exposure}
+    \item{Surface}{a factor with levels \code{"Deep"} and
       \code{"Surface"} }
   }
 }

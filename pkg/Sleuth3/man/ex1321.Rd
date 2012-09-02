@@ -16,14 +16,14 @@
 \format{
   A data frame with 320 observations on the following 5 variables.
   \describe{
-    \item{\code{Student}}{a student identification number}
-    \item{\code{Grade}}{the student's grade, 1 through 6} 
-    \item{\code{Class}}{a factor with 17 levels \code{"1a"}, \code{"1b"}, and 
+    \item{Student}{a student identification number}
+    \item{Grade}{the student's grade, 1 through 6} 
+    \item{Class}{a factor with 17 levels \code{"1a"}, \code{"1b"}, and 
       so on, to indicate the 17 distinct teacher/classrooms.} 
-    \item{\code{Treatment}}{a factor with levels \code{"pygmalion"} and 
+    \item{Treatment}{a factor with levels \code{"pygmalion"} and 
       \code{"control"} corresponding to whether the researchers had told the
-      teacher that the student was "likely to succeed" or not} 
-    \item{\code{Gain}}{the intelligence test score taken at the end of the school
+      teacher that the student was \dQuote{likely to succeed} or not} 
+    \item{Gain}{the intelligence test score taken at the end of the school
       year minus the intelligence test score taken at the begging of the school 
       year}   
   }

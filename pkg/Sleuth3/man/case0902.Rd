@@ -11,16 +11,19 @@
 \format{
   A data frame with 96 observations on the following 5 variables.
   \describe{
-    \item{\code{Species}}{species}
-    \item{\code{Brain}}{average brain weight (in grams)}
-    \item{\code{Body}}{average body weight (in kilograms)}
-    \item{\code{Gestation}}{gestation period (in days)}
-    \item{\code{Litter}}{average litter size}
+    \item{Species}{species}
+    \item{Brain}{average brain weight (in grams)}
+    \item{Body}{average body weight (in kilograms)}
+    \item{Gestation}{gestation period (in days)}
+    \item{Litter}{average litter size}
   }
 }
 \source{
   Ramsey, F.L. and Schafer, D.W. (2013). \emph{The Statistical Sleuth: A
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
+}
+\seealso{
+  \code{\link{ex0333}}
 }
 \examples{
 str(case0902)

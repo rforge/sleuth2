@@ -11,9 +11,9 @@
 \format{
   A data frame with 38 observations on the following 3 variables.
   \describe{
-    \item{\code{Force}}{closing strength of claw of the crab}
-    \item{\code{Height}}{propodus height of claw of the crab}
-    \item{\code{Species}}{species to which the crab belongs}
+    \item{Force}{closing strength of claw of the crab}
+    \item{Height}{propodus height of claw of the crab}
+    \item{Species}{species to which the crab belongs}
   }
 }
 \source{

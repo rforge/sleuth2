@@ -14,10 +14,10 @@
 \format{
   A data frame with 28 observations on the following 3 variables.
   \describe{
-    \item{\code{Time}}{the time (in seconds) that the student worked on the problem}
-    \item{\code{Treatment}}{factor variable with two
+    \item{Time}{the time (in seconds) that the student worked on the problem}
+    \item{Treatment}{factor variable with two
       levels---\code{"Modified"} and \code{"Conventional"}} 
-    \item{\code{Censored}}{1 if the individual did not complete the problem in 5
+    \item{Censored}{1 if the individual did not complete the problem in 5
       minutes, 0 if they did} 
   }
 }

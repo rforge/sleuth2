@@ -14,8 +14,8 @@
 \format{
   A data frame with 129 observations on the following 2 variables.
   \describe{
-    \item{\code{Year}}{year}
-    \item{\code{S.P500Return}}{Value of Stock at the end of the year}
+    \item{Year}{year}
+    \item{S.P500Return}{Value of Stock at the end of the year}
   }
 }
 \source{

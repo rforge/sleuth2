@@ -18,8 +18,8 @@
 \format{
   A data frame with 21 observations on the following 2 variables.
   \describe{
-    \item{\code{Mass}}{average mass of stones carried by bird (in g)}
-    \item{\code{Tcell}}{T-cell response measurement (in mm)}
+    \item{Mass}{average mass of stones carried by bird (in g)}
+    \item{Tcell}{T-cell response measurement (in mm)}
   }
 }
 \source{

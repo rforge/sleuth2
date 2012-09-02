@@ -10,19 +10,18 @@
 \usage{case1701}
 \format{
   A data frame with 44 observations on the following 14 variables.
-  \tabular{rl}{
-    Name \tab Description\cr
-    \code{L1}, \code{L2},\dots, \code{L11} \tab the magnetic force at
-      each of the equally-spaces positions 1, 2, \dots, 11 on the
-      printer rod\cr 
-    \code{Current} \tab electric current passing through the rod, with
-      three levels \code{"0"}, \code{"250"} and \code{"500"}\cr
-      (milliamperes) 
-    \code{Configur} \tab a factor identifying the configuration, with
-      two levels \code{"0"} and \code{"1"}\cr
-    \code{Material}\tab a factor identifying the type of metal from
-      which the rod was made, with four levels\cr
-      \code{"1"}, \code{"2"}, \code{"3"} and \code{"4"} 
+  \describe{
+    \item{L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L11}{the magnetic
+      force at each of the equally-spaces 
+      positions 1, 2, \dots, 11 on the printer rod}
+    \item{Current}{electric current passing through the rod, with
+      three levels \code{"0"}, \code{"250"} and \code{"500"}
+      (milliamperes)} 
+    \item{Config}{a factor identifying the configuration, with
+      two levels \code{"0"} and \code{"1"}}
+    \item{Material}{a factor identifying the type of metal from
+      which the rod was made, with four levels
+      \code{"1"}, \code{"2"}, \code{"3"} and \code{"4"}} 
   }
 }
 \source{

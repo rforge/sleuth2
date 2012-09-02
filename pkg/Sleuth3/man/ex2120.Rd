@@ -15,14 +15,14 @@
 \format{
   A data frame with 60 observations on the following 5 variables.
   \describe{
-    \item{\code{Student}}{a student identification number}
-    \item{\code{PriorExp}}{the student's prior expectation of rat-training
+    \item{Student}{a student identification number}
+    \item{PriorExp}{the student's prior expectation of rat-training
       success, on a scale from -10 to 10} 
-    \item{\code{Treatment}}{a factor with levels \code{"bright"} and \code{"dull"}
+    \item{Treatment}{a factor with levels \code{"bright"} and \code{"dull"}
       corresponding to whether students were told (falsely) that their rats were
       bright or not}
-    \item{\code{Day}}{day of the study, ranging from 1 to 5}  
-    \item{\code{Success}}{the number of successful maze runs on a day, out of 50}
+    \item{Day}{day of the study, ranging from 1 to 5}  
+    \item{Success}{the number of successful maze runs on a day, out of 50}
   }
 }
 \source{

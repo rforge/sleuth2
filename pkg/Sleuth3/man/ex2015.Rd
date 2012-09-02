@@ -14,21 +14,21 @@
 \format{
   A data frame with 60 observations on the following 8 variables.
   \describe{
-    \item{\code{Site}}{Site, a factor with levels \code{"Random"} and
+    \item{Site}{Site, a factor with levels \code{"Random"} and
       \code{"Nest"}} 
-    \item{\code{PctRing1}}{Percentage of mature forest in ring with outer
+    \item{PctRing1}{Percentage of mature forest in ring with outer
       radius 0.91 km}
-    \item{\code{PctRing2}}{Percentage of mature forest in ring with outer
+    \item{PctRing2}{Percentage of mature forest in ring with outer
       radius 1.18 km}
-    \item{\code{PctRing3}}{Percentage of mature forest in ring with outer
+    \item{PctRing3}{Percentage of mature forest in ring with outer
       radius 1.40 km}
-    \item{\code{PctRing4}}{Percentage of mature forest in ring with outer
+    \item{PctRing4}{Percentage of mature forest in ring with outer
       radius 1.60 km}
-    \item{\code{PctRing5}}{Percentage of mature forest in ring with outer
+    \item{PctRing5}{Percentage of mature forest in ring with outer
       radius 1.77 km}
-    \item{\code{PctRing6}}{Percentage of mature forest in ring with outer
+    \item{PctRing6}{Percentage of mature forest in ring with outer
       radius 2.41 km}
-    \item{\code{PctRing7}}{Percentage of mature forest in ring with outer
+    \item{PctRing7}{Percentage of mature forest in ring with outer
       radius 3.38 km}
   }
 }

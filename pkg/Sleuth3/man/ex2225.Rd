@@ -11,8 +11,8 @@
 \format{
   A data frame with 38 observations on the following 2 variables.
   \describe{
-    \item{\code{BodySize}}{Body size (in mm)}
-    \item{\code{Mates}}{Number of mates}
+    \item{BodySize}{Body size (in mm)}
+    \item{Mates}{Number of mates}
   }
 }
 \source{

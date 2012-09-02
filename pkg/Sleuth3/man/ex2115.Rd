@@ -11,8 +11,7 @@
   the questions asked concerning continuing U.S. aid to the Nicaraguan
   Contra rebels.  Eight different versions of the interview were given,
   representing all possible combinations of three factors at each of two
-  levels.  The experimental factors were \code{Context}, \code{Mode} and
-  \code{Level}.
+  levels.  The experimental factors were Context, Mode and Level.
 
   \code{Context} refers to the type of context questions preceding the
   question about Nicaraguan aid.  Some subjects received a context
@@ -33,18 +32,18 @@
 \format{
   A data frame with 8 observations on the following 7 variables.
   \describe{
-    \item{\code{Context}}{Factor referring to the context of the question
+    \item{Context}{Factor referring to the context of the question
       preceding the target question about U.S. aid to the Nicaraguan
       Contra rebels}
-    \item{\code{Mode}}{Factor with levels \code{"not"} and
+    \item{Mode}{Factor with levels \code{"not"} and
       \code{"scattered"}, \code{"scattered"} is used if the target question
       was not asked directly after the context question}
-    \item{\code{Level}}{Factor with levels \code{"low"} and
+    \item{Level}{Factor with levels \code{"low"} and
       \code{"high"}, refers to the wording of the question}
-    \item{\code{Number}}{Number of people interviewed}
-    \item{\code{InFavor}}{Number of people in favor of Contra Aid}
-    \item{\code{NotInFavor}}{Number of people not in favor of Contra Aid}
-    \item{\code{PercentInFavor}}{Percentage in favour of Contra aid}
+    \item{Number}{Number of people interviewed}
+    \item{InFavor}{Number of people in favor of Contra Aid}
+    \item{NotInFavor}{Number of people not in favor of Contra Aid}
+    \item{PercentInFavor}{Percentage in favour of Contra aid}
   }
 }
 \details{

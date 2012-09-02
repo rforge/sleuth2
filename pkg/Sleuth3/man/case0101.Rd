@@ -12,9 +12,9 @@
 \format{
   A data frame with 47 observations on the following 2 variables.
   \describe{
-    \item{\code{Score}}{creativity score}
-    \item{\code{Treatment}}{factor denoting the treatment group, with
-      levels "Extrinsic" and "Intrinsic"}
+    \item{Score}{creativity score}
+    \item{Treatment}{factor denoting the treatment group, with
+      levels \code{"Extrinsic"} and \code{"Intrinsic"}}
   }
 }
 \source{

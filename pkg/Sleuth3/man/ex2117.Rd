@@ -27,10 +27,10 @@
 \format{
   A data frame with 5 observations on the following 4 variables.
   \describe{
-    \item{\code{Group}}{Indicator for groups to which mothers belong}
-    \item{\code{Time}}{Indicator for time at which severe life event occurred}
-    \item{\code{Number}}{Number of births}
-    \item{\code{PctBoys}}{Percentage of boys born}
+    \item{Group}{Indicator for groups to which mothers belong}
+    \item{Time}{Indicator for time at which severe life event occurred}
+    \item{Number}{Number of births}
+    \item{PctBoys}{Percentage of boys born}
   }
 }
 \source{

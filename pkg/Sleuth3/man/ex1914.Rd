@@ -10,12 +10,12 @@
 \format{
   A data frame with 34 observations on the following 4 variables.
   \describe{
-    \item{\code{Months}}{months after diagnosis}
-    \item{\code{Group}}{a factor with levels \code{"no"} and
+    \item{Months}{months after diagnosis}
+    \item{Group}{a factor with levels \code{"no"} and
       \code{"radiation"}} 
-    \item{\code{Survived}}{number of patients known to survive beyond
+    \item{Survived}{number of patients known to survive beyond
       this month}
-    \item{\code{Died}}{number of patients known to die after this many
+    \item{Died}{number of patients known to die after this many
       months} 
   }
 }

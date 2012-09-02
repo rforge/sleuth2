@@ -11,8 +11,8 @@
 \format{
   A data frame with 52 observations on the following 2 variables.
   \describe{
-    \item{\code{Oxygen}}{oxygen isotopic composition}
-    \item{\code{Bone}}{a factor with levels \code{"Bone1"},
+    \item{Oxygen}{oxygen isotopic composition}
+    \item{Bone}{a factor with levels \code{"Bone1"},
       \code{"Bone2"}, \dots, \code{"Bone12"}}
   }
 }

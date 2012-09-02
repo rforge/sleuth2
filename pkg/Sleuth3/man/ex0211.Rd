@@ -11,9 +11,9 @@
 \format{
   A data frame with 122 observations on the following 2 variables.
   \describe{
-    \item{\code{Lifetime}}{survival time of guinea pig (in days)}
-    \item{\code{Group}}{a factor with levels \code{"bacilli"} and
-      \code{"control"}, indicating the group to which the guinea pig was
+    \item{Lifetime}{survival time of guinea pig (in days)}
+    \item{Group}{a factor with levels \code{"Bacilli"} and
+      \code{"Control"}, indicating the group to which the guinea pig was
       assigned} 
   }
 }

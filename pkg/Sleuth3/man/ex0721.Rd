@@ -12,12 +12,12 @@
 \format{
   A data frame with observations on the following 6 variables.
   \describe{
-    \item{\code{Name}}{name of object in solar system, 9 objects}
-    \item{\code{Order}}{order of object's distance from the sun}
-    \item{\code{Distance}}{distance of object from sun, with earth = 1}
-    \item{\code{Name2}}{name of object in solar system, including asteroid belt}
-    \item{\code{Order2}}{order of object's distance from the sun}
-    \item{\code{Distance2}}{distance of object from sun, with earth = 1}
+    \item{Name}{name of object in solar system, 9 objects}
+    \item{Order}{order of object's distance from the sun}
+    \item{Distance}{distance of object from sun, with earth = 1}
+    \item{Name2}{name of object in solar system, including asteroid belt}
+    \item{Order2}{order of object's distance from the sun}
+    \item{Distance2}{distance of object from sun, with earth = 1}
   }
 }
 \source{

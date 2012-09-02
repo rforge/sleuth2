@@ -13,8 +13,8 @@
 \format{
   A data frame with 743 observations on the following 2 variables.
   \describe{
-    \item{\code{Dioxin}}{the concentration of TCDD, in parts per trillion}
-    \item{\code{Veteran}}{factor variable with two levels,
+    \item{Dioxin}{the concentration of TCDD, in parts per trillion}
+    \item{Veteran}{factor variable with two levels,
       \code{"Vietnam"} and \code{"Other"}, to indicate the type of veteran}
   }
 }

@@ -14,9 +14,9 @@
 \format{
   A data frame with 24 observations on the following 3 variables.
   \describe{
-    \item{\code{Flowers}}{average number of flowers per meadowfoam plant}
-    \item{\code{Time}}{time light intensity regiments started; 1=Late, 2=Early}
-    \item{\code{Intensity}}{light intensity (in \eqn{\mu}{mu}mol/m\eqn{^2}/sec)}
+    \item{Flowers}{average number of flowers per meadowfoam plant}
+    \item{Time}{time light intensity regiments started; 1=Late, 2=Early}
+    \item{Intensity}{light intensity (in \eqn{\mu}{mu}mol/m\eqn{^2}/sec)}
   }
 }
 \source{

@@ -11,13 +11,13 @@
 \format{
   A data frame with 71 observations on the following 4 variables.
   \describe{
-    \item{\code{Percent}}{percentage of frog eggs failing to hatch}
-    \item{\code{Treatment}}{factor variable with levels \code{"NoFilter"},
+    \item{Percent}{percentage of frog eggs failing to hatch}
+    \item{Treatment}{factor variable with levels \code{"NoFilter"},
       \code{"UV-BTransmitting"} and \code{"UV-BBlocking"}}
-    \item{\code{Location}}{factor variable with levels
+    \item{Location}{factor variable with levels
       \code{"ThreeCreeks"}, \code{"SparksLake"}, \code{"SmallLake"} and
       \code{"LostLake"}} 
-    \item{\code{Photolyase}}{Photolyase activity}
+    \item{Photolyase}{Photolyase activity}
   }
 }
 \source{

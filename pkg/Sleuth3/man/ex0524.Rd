@@ -16,10 +16,10 @@
 \format{
   A data frame with 2,584 observations on the following 3 variables.
   \describe{
-    \item{\code{Subject}}{subject identification number}
-    \item{\code{IQquartile}}{a factor with levels \code{"1stQuartile"},
+    \item{Subject}{subject identification number}
+    \item{IQquartile}{a factor with levels \code{"1stQuartile"},
       \code{"2ndQuartile"}, \code{"3rdQuartile"} and \code{"4thQuartile"}}
-    \item{\code{Income2005}}{annual income in U.S. dollars, 2005}
+    \item{Income2005}{annual income in U.S. dollars, 2005}
   }
 }
 \source{

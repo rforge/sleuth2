@@ -17,9 +17,9 @@
 \format{
   A data frame with 17 observations on the following 2 variables.
   \describe{
-    \item{\code{Index}}{Index for the amount of newspaper coverage given the
+    \item{Index}{Index for the amount of newspaper coverage given the
       murder--suicide} 
-    \item{\code{Crashes}}{Multiple-fatality crashes in the week following a
+    \item{Crashes}{Multiple-fatality crashes in the week following a
       murder--suicide by plane crash}
   }
 }

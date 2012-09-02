@@ -9,11 +9,11 @@
 }
 \usage{ex1518}
 \format{
-  A data frame with 59 observations on the following 4 variables.
+  A data frame with 59 observations on the following 3 variables.
   \describe{
-    \item{\code{Year}}{year}
-    \item{\code{Cases}}{number of measles cases}
-    \item{\code{Vaccine}}{a factor with levels \code{"no"} and \code{"yes"}
+    \item{Year}{year}
+    \item{Cases}{number of measles cases}
+    \item{Vaccine}{a factor with levels \code{"no"} and \code{"yes"}
       indicating whether the measles vaccine had been licensed or not (yes for
       every year starting with 1963)}
   }

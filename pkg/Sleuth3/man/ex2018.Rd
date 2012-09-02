@@ -11,14 +11,14 @@
 }
 \usage{ex2018}
 \format{
-  A data frame with 2321 observations on the following 4 variables.
+  A data frame with 2,321 observations on the following 4 variables.
   \describe{
-    \item{\code{Make}}{Type of sports utility vehicle, factor with levels
+    \item{Make}{Type of sports utility vehicle, factor with levels
       \code{"Other"} and \code{"Ford"}}
-    \item{\code{VehicleAge}}{Vehicle age (in years); surrogate for age of tires}
-    \item{\code{Passengers}}{Number of passengers}
-    \item{\code{Cause}}{Cause of fatal accident, factor with levels
-      \code{"Not_Tire"} and \code{"Tire"}}
+    \item{VehicleAge}{Vehicle age (in years); surrogate for age of tires}
+    \item{Passengers}{Number of passengers}
+    \item{Cause}{Cause of fatal accident, factor with levels
+      \code{"NotTire"} and \code{"Tire"}}
   }
 }
 \details{

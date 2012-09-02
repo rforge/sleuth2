@@ -11,16 +11,16 @@
 \format{
   A data frame with 51 observations on the following 6 variables.
   \describe{
-    \item{\code{State}}{a character vector indicating the state}
-    \item{\code{M.V.89}}{average MATH SAT scores divided by average
+    \item{State}{a character vector indicating the state}
+    \item{M.V.89}{average MATH SAT scores divided by average
       VERBAL SAT score in 1989} 
-    \item{\code{M.V.96}}{average MATH SAT scores divided by average
+    \item{M.V.96}{average MATH SAT scores divided by average
       VERBAL SAT score in 1996} 
-    \item{\code{M.V.97}}{average MATH SAT scores divided by average
+    \item{M.V.97}{average MATH SAT scores divided by average
       VERBAL SAT score in 1997} 
-    \item{\code{M.V.98}}{average MATH SAT scores divided by average
+    \item{M.V.98}{average MATH SAT scores divided by average
       VERBAL SAT score in 1998} 
-    \item{\code{M.V.99}}{average MATH SAT scores divided by average
+    \item{M.V.99}{average MATH SAT scores divided by average
       VERBAL SAT score in 1999} 
   }
 }

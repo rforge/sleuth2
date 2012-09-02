@@ -16,10 +16,10 @@
 \format{
   A data frame with 20 observations on the following 4 variables.
   \describe{
-    \item{\code{Baseline}}{total serum cholesterol before treatment}
-    \item{\code{HiFiber}}{total serum cholesterol after the high fiber diet}
-    \item{\code{LoFiber}}{total serum cholesterol after the low fiber diet}
-    \item{\code{Order}}{factor to identify order of treatment, with two
+    \item{Baseline}{total serum cholesterol before treatment}
+    \item{HiFiber}{total serum cholesterol after the high fiber diet}
+    \item{LoFiber}{total serum cholesterol after the low fiber diet}
+    \item{Order}{factor to identify order of treatment, with two
       levels \code{"HL"} and \code{"LH"}}
   }
 }

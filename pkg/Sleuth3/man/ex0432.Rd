@@ -14,10 +14,10 @@
 \format{
   A data frame with 15 observations on the following 3 variables.
   \describe{
-    \item{\code{Subject}}{subject number 1--15}
-    \item{\code{Marijuana}}{total number of vomiting and retching
+    \item{Subject}{subject number 1--15}
+    \item{Marijuana}{total number of vomiting and retching
       episodes under marijuana treatment} 
-    \item{\code{Placebo}}{total number of vomiting and retching episodes
+    \item{Placebo}{total number of vomiting and retching episodes
       under placebo treatment} 
   }
 }

@@ -26,8 +26,8 @@
 \format{
   A data frame with 349 observations on the following 2 variables.
   \describe{
-    \item{\code{Lifetime}}{the lifetime of the mice (in months)}
-    \item{\code{Diet}}{factor variable with six levels---\code{"NP"},
+    \item{Lifetime}{the lifetime of the mice (in months)}
+    \item{Diet}{factor variable with six levels---\code{"NP"},
       \code{"N/N85"}, \code{"lopro"}, \code{"N/R50"}, \code{"R/R50"} and
       \code{"N/R40"}}
   }

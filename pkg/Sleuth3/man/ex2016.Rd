@@ -18,19 +18,19 @@
 \format{
   A data frame with 87 observations on the following 11 variables.
   \describe{
-    \item{\code{Status}}{Survival status, factor with levels
+    \item{Status}{Survival status, factor with levels
       \code{"Perished"} and \code{"Survived"}}
-    \item{\code{AG}}{Age, factor with levels \code{"adult"} and
+    \item{AG}{Age, factor with levels \code{"adult"} and
       \code{"juvenile"}}
-    \item{\code{TL}}{total length (in mm)}
-    \item{\code{AE}}{alar extent (in mm)}
-    \item{\code{WT}}{weight (in grams)}
-    \item{\code{BH}}{length of beak and head (in mm)}
-    \item{\code{HL}}{length of humerus (in inches)}
-    \item{\code{FL}}{length of femur (in inches)}
-    \item{\code{TT}}{length of tibio--tarsus (in inches)}
-    \item{\code{SK}}{width of skull (in inches)}
-    \item{\code{KL}}{length of keel of sternum (in inches)}
+    \item{TL}{total length (in mm)}
+    \item{AE}{alar extent (in mm)}
+    \item{WT}{weight (in grams)}
+    \item{BH}{length of beak and head (in mm)}
+    \item{HL}{length of humerus (in inches)}
+    \item{FL}{length of femur (in inches)}
+    \item{TT}{length of tibio--tarsus (in inches)}
+    \item{SK}{width of skull (in inches)}
+    \item{KL}{length of keel of sternum (in inches)}
   }
 }
 \source{

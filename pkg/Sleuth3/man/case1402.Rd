@@ -13,15 +13,15 @@
 \format{
   A data frame with 30 observations on the following 5 variables.
   \describe{
-    \item{\code{Stress}}{a factor indicating treatment, with two levels
+    \item{Stress}{a factor indicating treatment, with two levels
       \code{"Well-watered"} and \code{"Stressed"}}
-    \item{\code{SO2}}{a quantitative treatment with three levels 0, 0.02
+    \item{SO2}{a quantitative treatment with three levels 0, 0.02
       and 0.06} 
-    \item{\code{O3}}{a quantitative treatment with five levels 0.02, 0.05,
+    \item{O3}{a quantitative treatment with five levels 0.02, 0.05,
       0.07, 0.08 and 0.10}
-    \item{\code{Forrest}}{the yield of the Forrest cultivar of soybean
+    \item{Forrest}{the yield of the Forrest cultivar of soybean
       (in kg/ha)} 
-    \item{\code{William}}{the yield of the Williams cultivar of soybean
+    \item{William}{the yield of the Williams cultivar of soybean
       (in kg/ha)} 
   }
 }

@@ -12,9 +12,9 @@
 \format{
   A data frame with 35 observations on the following 3 variables.
   \describe{
-    \item{\code{Year}}{year}
-    \item{\code{CancerRate}}{skin cancer rate per 100,000 people}
-    \item{\code{SunspotActivity}}{a factor with levels \code{"High"} and
+    \item{Year}{year}
+    \item{CancerRate}{skin cancer rate per 100,000 people}
+    \item{SunspotActivity}{a factor with levels \code{"High"} and
       \code{"Low"}}
   }
 }

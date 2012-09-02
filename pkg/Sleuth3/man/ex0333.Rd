@@ -11,9 +11,9 @@
 \format{
   A data frame with 96 observations on the following 2 variables.
   \describe{
-    \item{\code{BrainSize}}{relative brain sizes (1000 * Brain
+    \item{BrainSize}{relative brain sizes (1000 * Brain
       weight/Body weight) for 96 species of mammals} 
-    \item{\code{LitterSize}}{factor variable with levels \code{"Small"}
+    \item{LitterSize}{factor variable with levels \code{"Small"}
       and \code{"Large"}}
   }
 }

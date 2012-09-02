@@ -10,11 +10,11 @@
 \format{
   A data frame with 933 observations on the following 5 variables.
   \describe{
-    \item{\code{Gender}}{a factor with levels \code{"female"} and \code{"male"}}
-    \item{\code{Family}}{an identification number for family, 1,2,...,205  )}
-    \item{\code{Height}}{adult height of the child, inches}
-    \item{\code{Father}}{height of the child's father, inches )} 
-    \item{\code{Mother}}{height of the child's mother, inches )}    
+    \item{Gender}{a factor with levels \code{"female"} and \code{"male"}}
+    \item{Family}{an identification number for family, 1, 2,\dots, 205}
+    \item{Height}{adult height of the child, inches}
+    \item{Father}{height of the child's father, inches} 
+    \item{Mother}{height of the child's mother, inches}    
   }
 }
 \source{

@@ -12,14 +12,14 @@
 \format{
   A data frame with 30 observations on the following 8 variables.
   \describe{
-    \item{\code{Island}}{a character vector indicating the island}
-    \item{\code{Total}}{total number of observed species}
-    \item{\code{Native}}{number of native species}
-    \item{\code{Area}}{area (km\eqn{^2})}
-    \item{\code{Elev}}{elevation (m)}
-    \item{\code{DistNear}}{distance from nearest island (km)}
-    \item{\code{DistSc}}{distance from Santa Cruz (km)}
-    \item{\code{AreaNear}}{area of nearest island (km\eqn{^2})}
+    \item{Island}{a character vector indicating the island}
+    \item{Total}{total number of observed species}
+    \item{Native}{number of native species}
+    \item{Area}{area (km\eqn{^2})}
+    \item{Elev}{elevation (m)}
+    \item{DistNear}{distance from nearest island (km)}
+    \item{DistSc}{distance from Santa Cruz (km)}
+    \item{AreaNear}{area of nearest island (km\eqn{^2})}
   }
 }
 \source{

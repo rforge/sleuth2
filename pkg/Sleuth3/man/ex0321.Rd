@@ -14,12 +14,12 @@
 \format{
   A data frame with 227 observations on the following 3 variables.
   \describe{
-    \item{\code{Lifelength}}{observed lifetime for those umpires who had
+    \item{Lifelength}{observed lifetime for those umpires who had
       died by the time of the study or current age of those still
       living} 
-    \item{\code{Censored}}{0 for those who had died by the time of the
+    \item{Censored}{0 for those who had died by the time of the
       study or 1 for those who were still living} 
-    \item{\code{Expected}}{length from actuarial life tables for
+    \item{Expected}{length from actuarial life tables for
       individuals who were alive at the time the person first became an
       umpire} 
   }

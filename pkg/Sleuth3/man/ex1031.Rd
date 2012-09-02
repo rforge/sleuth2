@@ -16,15 +16,15 @@
 \format{
   A data frame with 443 observations on the following 6 variables.
   \describe{
-    \item{\code{CommonName}}{the common name of the species}
-    \item{\code{Genus}}{species genus}
-    \item{\code{Species}}{species name}
-    \item{\code{Group}}{a factor with 6 levels corresponding to the 6 groups of
+    \item{CommonName}{the common name of the species}
+    \item{Genus}{species genus}
+    \item{Species}{species name}
+    \item{Group}{a factor with 6 levels corresponding to the 6 groups of
       animals: \code{"BiP"}, \code{"Croc"}, \code{"Mani"}, \code{"Mat"}, 
       \code{"Othr"}, and \code{"Pat"}}
-    \item{\code{BodyMass}}{the average body mass of individuals in the species
+    \item{BodyMass}{the average body mass of individuals in the species
       (kg)}
-    \item{\code{ClutchVolume}}{the total volume of all eggs in a clutch (average
+    \item{ClutchVolume}{the total volume of all eggs in a clutch (average
       value for the species)}
   }
 }

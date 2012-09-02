@@ -10,8 +10,8 @@
 \format{
   A data frame with 12 observations on the following 2 variables.
   \describe{
-    \item{\code{Time}}{time after slaughter (hours)}
-    \item{\code{pH}}{pH level in postmortem muscle}
+    \item{Time}{time after slaughter (hours)}
+    \item{pH}{pH level in postmortem muscle}
   }
 }
 \source{

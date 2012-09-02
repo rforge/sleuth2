@@ -11,10 +11,10 @@
 \format{
   A data frame with 36 observations on the following 4 variables.
   \describe{
-    \item{\code{Bank}}{bank clerk speed}
-    \item{\code{Walk}}{pedestrian walking speed}
-    \item{\code{Talk}}{postal clerk talking speed}
-    \item{\code{Heart}}{age adjusted death rate due to heart disease}
+    \item{Bank}{bank clerk speed}
+    \item{Walk}{pedestrian walking speed}
+    \item{Talk}{postal clerk talking speed}
+    \item{Heart}{age adjusted death rate due to heart disease}
   }
 }
 \source{
