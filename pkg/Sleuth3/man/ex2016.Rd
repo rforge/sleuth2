@@ -20,8 +20,8 @@
   \describe{
     \item{Status}{Survival status, factor with levels
       \code{"Perished"} and \code{"Survived"}}
-    \item{AG}{Age, factor with levels \code{"adult"} and
-      \code{"juvenile"}}
+    \item{AG}{a numerical code corresponding to two categories of age, with 1 = \code{"adult"} and
+      2 = \code{"juvenile"}}
     \item{TL}{total length (in mm)}
     \item{AE}{alar extent (in mm)}
     \item{WT}{weight (in grams)}

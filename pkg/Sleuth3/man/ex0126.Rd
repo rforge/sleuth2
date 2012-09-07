@@ -11,7 +11,9 @@
   \describe{
     \item{State}{the state that the member represented}
     \item{Representative}{name of the representative}
-    \item{Party}{a factor representing political party, with levels \code{"R"} for Republican and \code{"D"} for Democratic}
+    \item{Party}{a factor representing political party, with levels
+      \code{"R"} for Republican, \code{"D"} for Democratic, and
+      \code{"I"} for Independent} 
     \item{Pro05}{the number of pro-environmental votes in 2005}
     \item{Anti05}{the number of anti-environmental votes in 2005}
     \item{Pro06}{the number of pro-environmental votes in 2006}

@@ -28,6 +28,9 @@
   Ramsey, F.L. and Schafer, D.W. (2013). \emph{The Statistical Sleuth: A
     Course in Methods of Data Analysis (3rd ed)}, Cengage Learning.
 }
+\seealso{
+  \code{\link{ex1416}}, \code{\link{ex1417}}
+}
 \examples{
 str(case1102)
 attach(case1102)

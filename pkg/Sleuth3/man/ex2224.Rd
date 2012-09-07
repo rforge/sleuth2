@@ -11,12 +11,12 @@
 \format{
   A data frame with 90 observations on the following 7 variables.
   \describe{
-    \item{System}{System, factor with 5 levels}
-    \item{Operator}{Operator type, factor with 4 levels}
-    \item{Valve}{Valve type, factor with 6 levels}
-    \item{Size}{Head size, factor with 3 levels (less than 2 inches,
-      2--10 inches and 10--30 inches)}
-    \item{Mode}{Operation mode, factor with 2 levels}
+    \item{System}{a numerical code corresponding to 5 categories of system (1 = containment, 2 = nuclear, 3 = power conversion, 4 = safety, 5 = process auxiliary)}
+    \item{Operator}{a numerical code corresponding to 4 different operator types (1 = air, 2 = solenoid, 3 = motor=driven, 4 = manual)}
+    \item{Valve}{a numerical code corresponding to 6 different valve types (1 = ball, 2 = butterfly, 3 = diaphram, 4 = gate, 5 = globe, 6 = directional control) }
+    \item{Size}{a numerical code corresponding to 3 head size categories (1 = less than 2 inches,
+      2 = 2--10 inches, 3 = 10--30 inches)}
+    \item{Mode}{a numerical code corresponding to two categories of operation mode (1 = normally closed, 2 = normally open)}
     \item{Failures}{Number of failures observed}
     \item{Time}{Lengths of observation time}
   }

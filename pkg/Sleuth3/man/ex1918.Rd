@@ -11,9 +11,9 @@
 \format{
   A data frame with 12 observations on the following 4 variables.
   \describe{
-    \item{AgeCat}{a factor with six levels: \code{"15-19"},
-      \code{"20-29"}, \code{"30-39"}, \code{"40-49"}, \code{"50-59"} and
-      \code{"60-69"}} 
+    \item{AgeCat}{a numerical code corresponding to six age categories, with 1 = \code{"15-19"},
+      2 = \code{"20-29"}, 3 = \code{"30-39"}, 4 = \code{"40-49"}, 5 = \code{"50-59"} and
+      6 = \code{"60-69"}} 
     \item{Sex}{a factor with levels \code{"female"} and
       \code{"male"}} 
     \item{Lived}{number that lived}

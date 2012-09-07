@@ -12,8 +12,8 @@
 \format{
   A data frame with 8 observations on the following 4 variables.
   \describe{
-    \item{SpeedCat}{a factor with levels \code{"0-40"},
-      \code{"41-55"}, \code{"56-65"} and \code{">65"}}
+    \item{SpeedCat}{a numerical code corresponding to 4 categories of speed (in miles per hour), with 1 = \code{"0-40"},
+      2 = \code{"41-55"}, 3 = \code{"56-65"} and 4 = \code{">65"}}
     \item{Make}{a factor with levels \code{"Ford"} and
       \code{"Other"}} 
     \item{Other}{cause of accident was other than tire-related}
