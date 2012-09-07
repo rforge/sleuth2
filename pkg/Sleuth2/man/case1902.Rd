@@ -1,4 +1,4 @@
-n\name{case1902}
+\name{case1902}
 \alias{case1902}
 \docType{data}
 \title{Death Penalty and Race}
