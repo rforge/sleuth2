@@ -14,7 +14,7 @@
 }
 \usage{ex1620}
 \format{
-  A data frame with 20,246 observations on the following 3 variables.
+  A data frame with 20,245 observations on the following 3 variables.
   \describe{
     \item{Gene}{an identification number for genes}
     \item{GeneName}{a character variable with the name of the gene} 
