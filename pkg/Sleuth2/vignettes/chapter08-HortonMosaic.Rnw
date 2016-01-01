@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 08, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -86,7 +89,7 @@
 Chapter 8}
 
 \author{
-Kate Aloisio \and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Kate Aloisio \and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
@@ -100,18 +103,6 @@ Kate Aloisio \and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mat
 %\parindent=0pt
 
 
-\SweaveOpts{
-  dev="pdf",
-	fig.path="figures/",
-	fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
-	}
 
 <<pvalues, echo=FALSE, message=FALSE>>=
 print.pval = function(pval) {
@@ -122,6 +113,21 @@ print.pval = function(pval) {
 }
 @
 
+<<setup0, include=FALSE, cache=FALSE>>=
+require(knitr)
+opts_chunk$set(
+  dev="pdf",
+  fig.path="figures/",
+        fig.height=3,
+        fig.width=4,
+        out.width=".47\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+  )
+@
 <<setup,echo=FALSE,message=FALSE>>=
 require(Sleuth2)
 require(mosaic)
@@ -145,7 +151,7 @@ showNew=TRUE
 This document is intended to help describe how to undertake analyses introduced as examples in the Second Edition of the \emph{Statistical Sleuth} (2002) by Fred Ramsey and Dan Schafer.
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.  This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the 
 \pkg{mosaic} package, which was written to simplify the use of R for introductory statistics courses. A short summary of the R needed to teach introductory statistics can be found in the mosaic package vignette (\url{http://cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf}). 
@@ -194,28 +200,31 @@ A total of \Sexpr{nrow(case0801)} islands are included in this data as displayed
 
 We can then observe the relationship between the area and the number of species for these islands with a scatterplot, akin to the top figure in Display 8.2 (page 208).
 
-<<fig.height=4, fig.width=6>>=
-xyplot(Species ~ Area, data=case0801)
+<<fig.height=6, fig.width=10>>=
+xyplot(Species ~ Area, pch=23, cex=2, data=case0801)
 @
 
-It appears that the relationship with the observed values may not be linear, therefore we need to check the normality assumption to determine if transformations are nessessary.
+It appears that the relationship with the observed values may not be linear.  In addition, 
+we need to verify the normality assumption for the residuals.  Here we also consider a transformation
+for the predictor ({\tt Area}).
 
 <<fig.height=4, fig.width=6>>=
+densityplot(~ residuals(lm(Species ~ Area, data=case0801)), xlab="Residuals")
 densityplot(~ Area, data=case0801)
-densityplot(~ Species, data=case0801)
 @
 
-Since neither of these appear to be approximately normal, we log transformed both the the variables. 
+Since neither of these appear to be approximately normal, both the predictor
+and outcome variables are log-transformed (as suggested by the author). 
 
 <<>>=
-case0801$logarea = with(case0801, log(Area))
-case0801$logspecies = with(case0801, log(Species))
+case0801 = transform(case0801, logarea = log(Area))
+case0801 = transform(case0801, logspecies = log(Species))
 @
 
 Then we can create a log-log-scatterplot for these two variables, akin to the bottom figure in Display 8.2 (page 208).
 
-<<fig.height=4, fig.width=6>>=
-xyplot(logspecies ~ logarea, type = c("p", "r"), data=case0801)
+<<fig.height=4, fig.width=8>>=
+xyplot(logspecies ~ logarea, type = c("p", "r"), pch=23, cex=2, data=case0801)
 @
 
 \subsection{Simple Linear Model}
@@ -246,21 +255,14 @@ Thus for this model the estimated median number of species is \Sexpr{round(2^coe
 
 \subsection{Assessment of Assumptions}
 
-First we will have to assume independence from the information given.  As seen in the above density plots, the observations for each variable were not normally distributed, once we preformed a log transformation the distribution of the values became more approximately normal.
+First we will have to assume independence from the information given.  As seen in the above density plots, the observations for each variable were not normally distributed, once we performed a log transformation the distribution of the values became more approximately normal.
 
-Next we can check for linearity.
+Next we can check for linearity and equal variance.
 
 <<fig.height=4, fig.width=6>>=
 plot(lm1, which=2)
-@
-
-
-Lastly we can assess the assumption of equal variance.
-
-<<fig.height=4, fig.width=6>>=
 plot(lm1, which=1)
 @
-
 
 \section{Breakdown Times for Insulating Fluid Under Different Voltages}
 
@@ -291,15 +293,15 @@ histogram(~ logtime, type='density', density=TRUE, nint=10, data=case0802)
 
 Now the observations are approximately normally distributed.
 
-<<fig.height=6, fig.width=6>>=
+<<fig.height=6, fig.width=10>>=
 histogram(~ Voltage, type='density', density=TRUE, nint=10, data=case0802)
 @
 The distribution of {\tt Voltage} seems to be approximately normal. 
 
-Next we can observe the relationship between log({\tt Time}) and {\tt Voltage}, the following figure is akin to Display 8.4 (page 210).
+Next we can observe the relationship between log({\tt Time}) and {\tt Voltage} (as in Display 8.4 ,page 210).
 
-<<fig.height=6, fig.width=6>>=
-xyplot(logtime ~ Voltage, groups=Group, auto.key=TRUE, data=case0802)
+<<fig.height=6, fig.width=10>>=
+xyplot(logtime ~ Voltage, data=case0802)
 @
 
 \subsection{Simple linear regression models}
@@ -313,7 +315,7 @@ summary(lm1)
 
 Therefore the estimated model is $\hat{\mu}\{\mathrm{log(Time)}|\mathrm{Voltage}\}$ = \Sexpr{round(coef(lm1)["(Intercept)"], 2)} + (\Sexpr{round(coef(lm1)["Voltage"], 2)})* log(Area). The $R^2$ for the model is \Sexpr{round(100*summary(lm1)$r.squared, 2)}\%, as discussed on page 221.
 
-For the interpretation of the model we first exponentiat the estimated coefficients since the response variable is logged as shown on page 215.
+For the interpretation of the model we first exponentiate the estimated coefficients since the response variable is logged as shown on page 215.
 
 <<>>=
 exp(coef(lm1))
@@ -327,7 +329,7 @@ Next we can calculate the 95\% confidence interval for $\beta_0$ and $\beta_1$.
 confint(lm1)
 @
 
-For the interpetation of the model we next need to exponentiat the above 95\% confidence interval. 
+For the interpretation of the model we next need to exponentiate the 95\% confidence interval. 
 
 <<>>=
 exp(confint(lm1))
@@ -366,19 +368,12 @@ anova(lm1, lm2)
 
 First we will have to assume independence for the information given.  As seen in the above density plot the observations for {\tt Time} was not normally distributed, once we preformed a log transformation the distribution of the values became more approximately normal.
 
-Next we can check for linearity, the following figure is akin to the right side graph in Display 8.14 (page 225).
+Next we can check for linearity (as in Display 8.14, page 225) and equal variance.
 
 <<fig.height=4, fig.width=6>>=
 plot(lm1, which=2)
-@
-
-
-Lastly we can assess the assumption of equal variance.
-
-<<fig.height=4, fig.width=6>>=
 plot(lm1, which=1)
 @
-
 
 \subsection{Other transformations}
 

@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 10, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -84,7 +87,7 @@
 Chapter 10}
 
 \author{
-Kate Aloisio \and Ruobing Zhang  \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Kate Aloisio \and Ruobing Zhang  \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
@@ -98,18 +101,6 @@ Kate Aloisio \and Ruobing Zhang  \and Nicholas J. Horton\thanks{Department of Ma
 %\parindent=0pt
 
 
-\SweaveOpts{
-  dev="pdf",
-	fig.path="figures/",
-	fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
-	}
   
 <<pvalues, echo=FALSE, message=FALSE>>=
 print.pval = function(pval) {
@@ -120,6 +111,21 @@ print.pval = function(pval) {
 }
 @
 
+<<setup0, include=FALSE, cache=FALSE>>=
+require(knitr)
+opts_chunk$set(
+  dev="pdf",
+  fig.path="figures/",
+        fig.height=3,
+        fig.width=4,
+        out.width=".67\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+  )
+@
 <<setup,echo=FALSE,message=FALSE>>=
 require(Sleuth2)
 require(mosaic)
@@ -144,7 +150,7 @@ This document is intended to help describe how to undertake analyses introduced 
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.
 This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the 
@@ -208,10 +214,15 @@ We next decrease the polynomial for \emph{Height} by one degree to obtain a quad
 lm2 = lm(Distance ~ Height+I(Height^2), data=case1001); summary(lm2)
 @
 
+We can fit an equivalent model (with different parametrization) using the {\tt poly()} function:
+<<>>=
+lmpoly = lm(Distance ~ poly(Height, 2), data=case1001); summary(lmpoly)
+@
+
 The following figure presents the predicted values from the quadratic model and the original data points akin to Display 10.2 (page 269).
 
 <<>>=
-case1001$pred = predict(lm2)
+case1001 = transform(case1001, pred = predict(lm2))
 xyplot(pred+Distance ~ Height, auto.key=TRUE, data=case1001)
 @
 
@@ -231,7 +242,7 @@ To verify numbers on page 279, an interval for the predicted values , we used th
 predict(lm2, interval="predict", data.frame(Height=c(0, 250)))
 @
 
-Lastly, we produced an ANOVA for the quadratic model interpreted on page 283 (Display 10.11).
+Lastly, we display the ANOVA table for the quadratic model that is interpreted on page 283 (Display 10.11).
 <<>>=
 anova(lm2)
 @
@@ -244,7 +255,8 @@ How do bats make their way about in the dark?  Echolocation requires a lot of en
 
 We begin by reading the data, performing transformations where necessary and summarizing the variables.
 <<>>=
-case1002$logmass = log(case1002$Mass); case1002$logenergy = log(case1002$Energy)
+case1002 = transform(case1002, logmass = log(Mass))
+case1002 = transform(case1002, logenergy = log(Energy))
 summary(case1002)
 favstats(Mass ~ Type, data=case1002)
 favstats(Energy ~ Type, data=case1002)
@@ -255,7 +267,7 @@ A total of \Sexpr{nrow(case1002)} flying vertebrates were included in this study
 
 We can next observe the pattern between log(energy expenditure) as a function of log(body mass) for each group with a scatterplot. The following figure is akin to Display 10.4 (page 271).
 
-<<fig.height=4, fig.width=4>>=
+<<fig.height=4, fig.width=4,tidy=FALSE>>=
 xyplot(Energy ~ Mass, group=Type, scales=list(y=list(log=TRUE), 
     x=list(log=TRUE)), auto.key=TRUE, data=case1002)
 @

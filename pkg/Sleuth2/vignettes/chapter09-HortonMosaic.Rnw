@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 09, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -84,7 +87,7 @@
 Chapter 9}
 
 \author{
-Kate Aloisio\and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Kate Aloisio\and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
@@ -98,18 +101,6 @@ Kate Aloisio\and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Math
 %\parindent=0pt
 
 
-\SweaveOpts{
-  dev="pdf",
-	fig.path="figures/",
-	fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
-	}
 
 <<pvalues, echo=FALSE, message=FALSE>>=
 print.pval = function(pval) {
@@ -120,6 +111,21 @@ print.pval = function(pval) {
 }
 @
 
+<<setup0, include=FALSE, cache=FALSE>>=
+require(knitr)
+opts_chunk$set(
+  dev="pdf",
+  fig.path="figures/",
+        fig.height=3,
+        fig.width=4,
+        out.width=".72\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+  )
+@
 <<setup,echo=FALSE,message=FALSE>>=
 require(Sleuth2)
 require(mosaic)
@@ -144,7 +150,7 @@ This document is intended to help describe how to undertake analyses introduced 
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.
 This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the 
@@ -193,7 +199,7 @@ A total of \Sexpr{nrow(case0901)} meadowfoam plants were included in this data. 
 The following code generates the scatterplot of the average number of flowers per
 plant versus the applied light intensity for each of the 12 experimental units akin to Display 9.3 on page 238.
 
-<<>>=
+<<tidy=FALSE>>=
 xyplot(Flowers ~ Intens, groups=Time, type=c("p", "r", "smooth"), 
        data=case0901, auto.key=TRUE, 
        xlab="light intensity (mu mol/m^2/sec)", ylab="average number of flowers")
@@ -225,17 +231,15 @@ What characteristics predict large brains in mammals? This is the question addre
 We begin by reading the data and summarizing the variables.
 
 <<>>=
-case0902$logbrain = log(case0902$Brain); 
-case0902$logbody = log(case0902$Body);
-case0902$loggest = log(case0902$Gestation); 
-case0902$loglitter = log(case0902$Litter)
-@
-
-<<>>=
+case0902 = transform(case0902, logbrain = log(Brain))
+case0902 = transform(case0902, logbody = log(Body))
+case0902 = transform(case0902, loggest = log(Gestation))
+case0902 = transform(case0902, loglitter = log(Litter))
 summary(case0902)
 @
 
-A total of \Sexpr{nrow(case0902)} mammals were included in this data.  The average values of brain weight, body weight, gestation length, and litter size for each of the species were calculated and presented in Display 9.2 (page 237 of the \emph{Sleuth}).
+A total of \Sexpr{nrow(case0902)} mammals were included in this data.  The average values of brain weight, body weight, gestation length, and litter size for each of the species were calculated and presented in 
+Display 9.4 (page 239 of the \emph{Sleuth}).
 
 
 \subsection{Graphical presentation}
@@ -270,7 +274,7 @@ panel.lm = function(x, y, col=par("col"), bg=NA,
 
 Below is a somewhat fancier pairs plot.
 
-<<fig.height=9, fig.width=9>>=
+<<tidy=FALSE,fig.height=9, fig.width=9>>=
   pairs(~ Brain+Body+Gestation+Litter, 
         lower.panel=panel.smooth, diag.panel=panel.hist, 
         upper.panel=panel.lm, data=case0902)
@@ -279,7 +283,7 @@ Below is a somewhat fancier pairs plot.
 
 Here is an even fancier pairs plot using the log-transformed variables, akin to Display 9.11 on page 253.
 
-<<fig.height=9, fig.width=9>>=
+<<tidy=FALSE, fig.height=9, fig.width=9>>=
   pairs(~ logbrain+logbody+loggest+loglitter, 
               lower.panel=panel.smooth, diag.panel=panel.hist, 
               upper.panel=panel.lm, data=case0902)
@@ -287,7 +291,7 @@ Here is an even fancier pairs plot using the log-transformed variables, akin to 
 
 The following displays a jittered scatterplot of log brain weight as a function of log litter size, akin to Display 9.12 on page 254.
 
-<<fig.height=8, fig.width=8>>=
+<<fig.height=6, fig.width=8>>=
   xyplot(logbrain ~ jitter(loglitter), data=case0902)
 @
 
@@ -303,10 +307,13 @@ Below displays a jittered scatterplot using the original data on a log-transform
 The following displays a jittered scatterplot using the original data stratified by body weight on a log-transformed axis, akin to Display 9.13 on page 255.
 
 
-<<fig.height=8, fig.width=8>>=
-case0902$weightcut = cut(case0902$Body, breaks=c(0, 2.1, 9.1, 100, 4200), labels=c("Body Weight: 0kg to 2.1kg","Body Weight: 2.1kg to 9.1kg", "Body Weight: 9.1kg to 100kg", "Body Weight: 100 to 4,200"))
+<<tidy=FALSE,fig.height=6, fig.width=10>>=
+case0902$weightcut = cut(case0902$Body, breaks=c(0, 2.1, 9.1, 100, 4200), 
+  labels=c("Body Weight: 0kg to 2.1kg","Body Weight: 2.1kg to 9.1kg", 
+  "Body Weight: 9.1kg to 100kg", "Body Weight: 100 to 4,200"))
 xyplot(Brain ~ jitter(Litter) | weightcut, 
-       scales=list(y=list(log=TRUE), x=list(log=TRUE)), type=c("p", "r"), data=case0902)
+   scales=list(y=list(log=TRUE), x=list(log=TRUE)), type=c("p", "r"), 
+   data=case0902)
 @
 
 \subsection{Multiple linear regression model}

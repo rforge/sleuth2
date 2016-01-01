@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 01, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -38,16 +41,16 @@
      {
    \medskip
    \setlength{\tempfmlength}{#1}
-	 \begin{lrbox}{\fmbox}
-	   \begin{minipage}{#1}
-		 \vspace*{.02\tempfmlength}
-		 \hfill
-	   \begin{minipage}{.95 \tempfmlength}}
-		 {\end{minipage}\hfill
-		 \vspace*{.015\tempfmlength}
-		 \end{minipage}\end{lrbox}\fbox{\usebox{\fmbox}}
-	 \medskip
-	 }
+         \begin{lrbox}{\fmbox}
+           \begin{minipage}{#1}
+                 \vspace*{.02\tempfmlength}
+                 \hfill
+           \begin{minipage}{.95 \tempfmlength}}
+                 {\end{minipage}\hfill
+                 \vspace*{.015\tempfmlength}
+                 \end{minipage}\end{lrbox}\fbox{\usebox{\fmbox}}
+         \medskip
+         }
 
 
 \newenvironment{boxedText}[1][.98\textwidth]%
@@ -67,14 +70,14 @@
   \begin{center}
 \begin{fmpage}{.98\textwidth}
   \begin{center}
-	\sf \large Box~\expandafter\thetable. #2
+        \sf \large Box~\expandafter\thetable. #2
 \end{center}
 \medskip
 }%
 {%
 \end{fmpage}
 \end{center}
-\end{table}		% need to do something about exercises that follow boxedTable
+\end{table}             % need to do something about exercises that follow boxedTable
 }
 
 
@@ -84,7 +87,7 @@
 Chapter 1}
 
 \author{
-Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
@@ -99,17 +102,18 @@ Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mat
 
 
 <<setup, include=FALSE, cache=FALSE>>=
+require(knitr)
 opts_chunk$set(
   dev="pdf",
   fig.path="figures/",
-	fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+        fig.height=3,
+        fig.width=4,
+        out.width=".47\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
   )
 @
 
@@ -145,7 +149,7 @@ showNew=TRUE
 This document is intended to help describe how to undertake analyses introduced as examples in the Second Edition of the \emph{Statistical Sleuth} (2002) by Fred Ramsey and Dan Schafer.
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.  This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the 
 \pkg{mosaic} package, which was written to simplify the use of R for introductory statistics courses. A short summary of the R needed to teach introductory statistics can be found in the mosaic package vignette (\url{http://cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf}).
@@ -202,10 +206,10 @@ with(subset(case0101, Treatment=="Intrinsic"), stem(Score, scale=5))
 
 Similar output can be generated using the following code:
 <<eval=FALSE>>=
-maggregate(Score ~ Treatment, data=case0101, FUN=stem)
+maggregate(Score ~ Treatment, FUN=stem, data=case0101)
 @
 
-The extrinsic group (n=\Sexpr{nrow(subset(case0101, Treatment=="Extrinsic"))}) has an average creativity score that is \Sexpr{round(diff(mean(Score ~ Treatment, data=case0101)), 1)} points less than the intrinsic group (n=\Sexpr{nrow(subset(case0101, Treatment=="Intrinsic"))}). The extrinsic group has relatively larger spread than the intrinsic group (sd=\Sexpr{round(sd(Score, data=subset(case0101, Treatment=="Extrinsic")),2)} for extrinsic group and sd=\Sexpr{round(sd(Score, subset(case0101, Treatment=="Intrinsic")), 2)} for intrinsic group). Both distributions are approximately normally distributed.
+The extrinsic group (n=\Sexpr{nrow(subset(case0101, Treatment=="Extrinsic"))}) has an average creativity score that is \Sexpr{round(diff(mean(Score ~ Treatment, data=case0101)), 1)} points less than the intrinsic group (n=\Sexpr{nrow(subset(case0101, Treatment=="Intrinsic"))}). The extrinsic group has relatively larger spread than the intrinsic group (sd=\Sexpr{round(sd(Score, data=subset(case0101, Treatment=="Extrinsic")),2)} for extrinsic group and sd=\Sexpr{round(sd(Score, data=subset(case0101, Treatment=="Intrinsic")), 2)} for intrinsic group). Both distributions are approximately normally distributed.
 
 \subsection{Inferential procedures (two-sample t-test)}
  
@@ -255,14 +259,18 @@ bwplot(Salary ~ Sex, data=case0102)
 densityplot(~ Salary, groups=Sex, auto.key=TRUE, data=case0102)
 @
 
-The \Sexpr{nrow(subset(case0102, Sex=="MALE"))} men have an average starting salary that is \$\Sexpr{round(diff(mean(Salary ~ Sex, data=case0102)), 1)} more than the \Sexpr{nrow(subset(case0102, Sex=="Female"))} women (\$\Sexpr{round(mean(Salary, data=subset(case0102, Sex=="Male")),0)} vs \$\Sexpr{round(mean(Salary, data=subset(case0102, Sex=="Female")),0)}).  Both distributions have similar spread (sd=\$\Sexpr{round(sd(Salary, subset(case0102, Sex=="Female")), 2)} for women and sd=\$\Sexpr{round(sd(Salary, subset(case0102, Sex=="Male")), 2)} for men) and distributions that are approximately normally distributed (see density plot). The key difference between the groups is the shift (as indicated by the parallel boxplots).
+The \Sexpr{nrow(subset(case0102, Sex=="MALE"))} men have an average starting salary that is \$\Sexpr{round(diff(mean(Salary ~ Sex, data=case0102)), 1)} more than the \Sexpr{nrow(subset(case0102, Sex=="Female"))} women (\$\Sexpr{round(mean(Salary, data=subset(case0102, Sex=="Male")),0)} vs \$\Sexpr{round(mean(Salary, data=subset(case0102, Sex=="Female")),0)}).  Both distributions have similar spread (sd=\$\Sexpr{round(sd(Salary, data=subset(case0102, Sex=="Female")), 2)} for women and sd=\$\Sexpr{round(sd(Salary, data=subset(case0102, Sex=="Male")), 2)} for men) and distributions that are approximately normally distributed (see density plot). The key difference between the groups is the shift (as indicated by the parallel boxplots).
 
 To show Display 1.13
 <<>>=
-histogram(rnorm(1000))  # Normal
-histogram(rexp(1000))   # Long-tailed 
-histogram(runif(1000))  # Short-tailed
-histogram(rchisq(1000, df=15)) # Skewed
+x = rnorm(1000)
+histogram(~ x)  # Normal
+x = rexp(1000)
+histogram(~ x)   # Long-tailed 
+x = runif(1000)
+histogram(~ x)  # Short-tailed
+x = rchisq(1000, df=15)
+histogram(~ x) # Skewed
 @
 
 \subsection{Inferential procedures (two-sample t-test)}
@@ -283,12 +291,13 @@ numsim = 1000
 res = do(numsim) * diff(mean(Salary~shuffle(Sex), data=case0102))
 densityplot(~ Male, data=res)
 confint(res)
+favstats(~ Male, data=res)
 p = sum(abs(res$Male) >= abs(obsdiff))/numsim; p
 @
 
-Through the permutation test, we observe that the mean starting salary for males is estimated to be \$\Sexpr{round(confint(res)["lower"]+obsdiff, 2)} to \$\Sexpr{round(confint(res)["upper"]+obsdiff, 2)} larger than the mean starting salary  for females (95\% confidence interval). We never see a permuted difference in means close to our observed value. Therefore, we reject the null hypothesis ($p<0.001$) and conclude that the salaries of the men are higher than that of the women.
+Through the permutation test, we observe that the mean starting salary for males is estimated to be \$\Sexpr{as.numeric(round(confint(res)["lower"]+obsdiff, 2))} to \$\Sexpr{as.numeric(round(confint(res)["upper"]+obsdiff, 2))} larger than the mean starting salary  for females (95\% confidence interval). We never see a permuted difference in means close to our observed value. Therefore, we reject the null hypothesis ($p<0.001$) and conclude that the salaries of the men are significantly higher than that of the women.
 
-<<eval=TRUE>>=
+<<>>=
 t.test(Salary ~ Sex, alternative="less", data=case0102) 
 @
 

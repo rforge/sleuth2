@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 06, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -84,7 +87,7 @@
 Chapter 6}
 
 \author{
-Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
@@ -98,19 +101,6 @@ Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mat
 %\parindent=0pt
 
 
-\SweaveOpts{
-  dev="pdf",
-	fig.path="figures/",
-	fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
-	}
-
 <<pvalues, echo=FALSE, message=FALSE>>=
 print.pval = function(pval) {
   threshold = 0.0001
@@ -120,6 +110,21 @@ print.pval = function(pval) {
 }
 @
 
+<<setup0, include=FALSE, cache=FALSE>>=
+require(knitr)
+opts_chunk$set(
+  dev="pdf",
+  fig.path="figures/",
+        fig.height=3,
+        fig.width=4,
+        out.width=".47\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+  )
+@
 <<setup,echo=FALSE,message=FALSE>>=
 require(Sleuth2)
 require(mosaic)
@@ -144,7 +149,7 @@ This document is intended to help describe how to undertake analyses introduced 
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.
 This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the mosaic package, which was written to simplify the use of R for introductory statistics courses. A short summary of the R needed to teach introductory statistics can be found in the mosaic package vignette (\url{http://cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf}). 
@@ -198,11 +203,11 @@ with(subset(case0601, Handicap=="Crutches"), stem(Score, scale=1))
 with(subset(case0601, Handicap=="Hearing"), stem(Score, scale=2))
 with(subset(case0601, Handicap=="Wheelchair"), stem(Score, scale=2))
 
-<<fig.height=8, fig.width=8>>=
+<<fig.height=6, fig.width=10>>=
 bwplot(Handicap ~ Score, data=case0601)
 @
 
-<<fig.height=8, fig.width=8>>=
+<<fig.height=6, fig.width=10>>=
 densityplot(~ Score, groups=Handicap, auto.key=TRUE, data=case0601)
 @
 
@@ -216,8 +221,7 @@ This corresponds to the interpretations on page 151.
 anova(lm(Score ~ Handicap, data=case0601))
 @
 
-The p-value of
-$\Sexpr{print.pval(anova(lm(Score ~ Handicap, data=case0601))["Handicap","Pr(>F)"])}$,
+The p-value of $p=0.03$
 provides some evidence that subjects rate qualifications differently according to handicap status.
 
 By default, the use of the linear model (regression) function displays the pairwise differences between the first group and each of the other groups.  Note that the overall test of the model is the same.
@@ -246,11 +250,16 @@ The Tukey-Kramer test is a reasonable method for these data.  We can
 use this to verify the
 calculation on page 151.
 <<>>=
-TukeyHSD(aov(lm(Score ~ Handicap, data=case0601)), "Handicap", ordered=TRUE, c(0,1,-1,0,0), conf.level=0.95)
+tuk = TukeyHSD(aov(lm(Score ~ Handicap, data=case0601)), "Handicap", ordered=TRUE, conf.level=0.95)
+tuk
+@
+There is a plot function for a {\tt TukeyHSD} object, which can be displayed by running:
+<<eval=FALSE>>=
+plot(tuk)
 @
 
 <<echo=FALSE>>=
-tuk = TukeyHSD(aov(lm(Score ~ Handicap, data=case0601)), "Handicap", ordered=TRUE, c(0,1,-1,0,0), conf.level=0.95)
+tuk = TukeyHSD(aov(lm(Score ~ Handicap, data=case0601)), "Handicap", ordered=TRUE, conf.level=0.95)
 @
 
 Based on the Tukey-Kramer procedure, the difference is estimated to be \Sexpr{round(tuk$Handicap["Crutches-Hearing", "diff"], 2)} points higher for the \emph{Crutches} tapes, with a 95\% confidence from \Sexpr{round(tuk$Handicap["Crutches-Hearing", "lwr"], 2)} to \Sexpr{round(tuk$Handicap["Crutches-Hearing", "upr"], 2)}.
@@ -293,14 +302,10 @@ summary(case0602)
 favstats(Proportion ~ Pair, data=case0602)
 @
 
-A total of \Sexpr{nrow(case0602)} female fish were involved in this experiment, which shows on page 150.
+A total of \Sexpr{nrow(case0602)} female fish were involved in this experiment, which is displayed on page 150.
 
-<<fig.height=8, fig.width=8>>=
-bwplot(Pair ~ Proportion, data=case0602)
-@
-
-<<fig.height=8, fig.width=8>>=
-densityplot(~ Proportion, groups=Pair, auto.key=TRUE, data=case0602)
+<<fig.height=6, fig.width=10>>=
+bwplot(Proportion ~ Pair, data=case0602)
 @
 
 Besides the distribution of pair 5, all distributions of other pairs are approximately normally distributed. 
@@ -313,7 +318,7 @@ First we fit the one way analysis of variance (ANOVA) model, using all of the gr
 anova(lm(Proportion ~ Pair, data=case0602))
 @
 
-The p-value is $\Sexpr{print.pval(anova(lm(Proportion ~ Pair, data=case0602))["Pair","Pr(>F)"])}$, which doesn't provide much evidence that the mean percentage of time with the yellow-sword male differed from one male pair to another.
+The p-value is 0.56, which doesn't provide much evidence that the mean percentage of time with the yellow-sword male differed from one male pair to another.
 
 By default, the use of the linear model (regression) function displays the pairwise differences between the first group and each of the other groups. Note that the overall test of the model is the same.
 

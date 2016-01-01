@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 12, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -84,13 +87,12 @@
 Chapter 12}
 
 \author{
-Kate Aloisio \and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Kate Aloisio \and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
 
 
 \maketitle
@@ -98,19 +100,20 @@ Kate Aloisio \and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mat
 
 %\parindent=0pt
 
-<<setup, include=FALSE, cache=FALSE, echo=FALSE, message=FALSE>>=
+<<setup0, include=FALSE, cache=FALSE>>=
+require(knitr)
 opts_chunk$set(
   dev="pdf",
   fig.path="figures/",
-  fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
-  )
+        fig.height=4.5,
+        fig.width=6,
+        out.width=".77\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either)
+)
 require(Sleuth2)
 require(mosaic)
 trellis.par.set(theme=col.mosaic())  # get a better color scheme 
@@ -143,7 +146,7 @@ print.pval = function(pval) {
 This document is intended to help describe how to undertake analyses introduced as examples in the Second Edition of the \emph{Statistical Sleuth} (2002) by Fred Ramsey and Dan Schafer.
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.  This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the 
 \pkg{mosaic} package, which was written to simplify the use of R for introductory statistics courses. A short summary of the R needed to teach introductory statistics can be found in the mosaic package vignette (\url{http://cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf}). 
@@ -176,7 +179,7 @@ The specific goal of this document is to demonstrate how to calculate the quanti
 
 \section{State Average SAT Scores}
 
-Which the compositional/demographic and school-structural characteristics are implicated in SAT differences? This is the question addressed in case study 12.1 in the \emph{Sleuth}.
+What variables are associated with state average SAT scores?   This is the question addressed in case study 12.1 in the \emph{Sleuth}.
 
 \subsection{Summary statistics}
 
@@ -191,7 +194,7 @@ The data are shown on page 340 (display 12.1). A total of \Sexpr{nrow(case1201)}
 \subsection{Dealing with Many Explanatory Variables}
 
 The following graph is presented as Display 12.4, page 348.
-<<fig.width=8, fig.height=8>>=
+<<>>=
 pairs(~ Takers+Rank+Years+Income+Public+Expend+SAT, data=case1201)
 @
 
@@ -224,9 +227,10 @@ pairs(~ Takers+Rank+Years+Income+Public+Expend+SAT,
       upper.panel=panel.lm, data=case1201)
 @
 An alternative graph can be generated using the \pkg{car} package.
-<<message=FALSE, fig.height=8, fig.width=8>>=
+<<message=FALSE, fig.height=8, fig.width=8,tidy=FALSE>>=
 require(car)
-scatterplotMatrix(~ Takers+Rank+Years+Income+Public+Expend+SAT, diagonal="histogram", smooth=F, data=case1201)
+scatterplotMatrix(~ Takers+Rank+Years+Income+Public+Expend+SAT, 
+  diagonal="histogram", smooth=FALSE, data=case1201)
 @
 
 Based on the scatterplot, we choose the logarithm of percentage of SAT takers and median class rank to fit our first model (page 349):
@@ -259,20 +263,25 @@ The difference between these two slopes indicates that Alaska is an influential 
 
 \subsection{Sequential Variable Selection}
 
-The book uses F-statistics as the criterion and present the procedures of forward selection and backward elimination on page 351-353. The forward selection required to fit 16 of 64 possible models, and the final model is using Expenditure and log(Takers) to predict SAT. The backward elimination required to fit 3 models, and the final model is using Year, Expenditure, Rank and log(Takers) to predict SAT.
+The book uses F-statistics as the criterion and present the procedures of forward selection and backward elimination on page 351-353. The forward selection requires fitting 16 of 64 possible models. 
+ The final model uses Expenditure and {\tt log(Takers)} to predict SAT. The 
+backward elimination method needs to fit 3 models, and the final model uses Year, Expenditure, Rank and log(Takers) to predict SAT.
 
-To the best of our knowledge, there is no built-in machnism(?) to undertake the procedure using F. Instead, we demonstrate  using AIC criterion and get the final model by following code. Note that we choose log(Taker) as our preliminary predictor for forward selection, because it has the largest F-value when we fitted lm3.
-<<>>=
+To the best of our knowledge, there is no built-in mechanism to undertake the procedure using the F statistic as criterion. Instead, we demonstrate how to use AIC (another 
+criterion) and select the final model. Note that we choose log(Taker) as our preliminary predictor for forward selection, because it has the largest F-value when we 
+fit {\tt lm3}.
+<<tidy=FALSE>>=
 # Forward Selection
 lm4 = lm(SAT ~ log2(Takers), data=case1201r)
-stepAIC(lm4, scope=list(upper=lm3, lower=~1), direction="forward", trace=FALSE)$anova
+stepAIC(lm4, scope=list(upper=lm3, lower=~1), direction="forward", 
+  trace=FALSE)$anova
 # Backward Elimination
 stepAIC(lm3, direction="backward", trace=FALSE)$anova
 # Stepwise Regression
 stepAIC(lm3, direction="both", trace=FALSE)$anova
 @
 
-So the final model includes log(Takers), Expenditure, Years and Rank.
+The final model includes log(Takers), Expenditure, Years and Rank.
 
 <<>>=
 lm5 = lm(SAT ~ log2(Takers) + Expend + Years + Rank, data=case1201r)
@@ -307,7 +316,7 @@ This means that the 27th fitting model includes log(Takers), Years and Expend.
 <<>>=
 with(case1201r, leaps(explanatory, SAT, method="Cp"))$Cp[27]
 @
-The Cp statistic for this model is \Sexpr{with(case1201r, leaps(explanatory, SAT, method="Cp"))$Cp[27]}. This will be the the "tyer" point on the Display 12.9, page 357.
+The Cp statistic for this model is \Sexpr{with(case1201r, leaps(explanatory, SAT, method="Cp"))$Cp[27]}. This will be the ``tyer" point on Display 12.9, page 357.
 
 We use the following code to generate the graph presented as Display 12.14 on page 364.
 <<fig.width=6, fig.height=4>>=

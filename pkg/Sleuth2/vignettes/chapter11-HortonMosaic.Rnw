@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 11, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -84,7 +87,7 @@
 Chapter 11}
 
 \author{
-Kate Aloisio\and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Kate Aloisio\and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
@@ -98,18 +101,6 @@ Kate Aloisio\and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Math
 %\parindent=0pt
 
 
-\SweaveOpts{
-  dev="pdf",
-	fig.path="figures/",
-	fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
-	}
 
 <<pvalues, echo=FALSE, message=FALSE>>=
 print.pval = function(pval) {
@@ -120,6 +111,21 @@ print.pval = function(pval) {
 }
 @
 
+<<setup0, include=FALSE, cache=FALSE>>=
+require(knitr)
+opts_chunk$set(
+  dev="pdf",
+  fig.path="figures/",
+        fig.height=3,
+        fig.width=5,
+        out.width=".72\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+  )
+@
 <<setup,echo=FALSE,message=FALSE>>=
 require(Sleuth2)
 require(mosaic)
@@ -144,7 +150,7 @@ This document is intended to help describe how to undertake analyses introduced 
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.
 This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the 
@@ -201,6 +207,9 @@ xyplot(Metabol ~ Gastric | Sex+Alcohol, data=case1101, auto.key=TRUE,
 
 First we can fit a full model for estimating \emph{metabolism} given a subjects \emph{gastric AD activity}, whether they are \emph{alcoholic} and \emph{gender}.  This first model is summarized on page 315 (Display 11.9).
 <<display11.9>>=
+case1101 = transform(case1101, Sex = factor(Sex, levels = c("Male", "Female")))
+case1101 = transform(case1101, Alcohol = factor(Alcohol, 
+  levels = c("Non-alcoholic", "Alcoholic")))
 lm1 = lm(Metabol ~ Gastric+Sex+Alcohol+Gastric*Sex+Sex*Alcohol+
   Gastric*Alcohol+Gastric*Sex*Alcohol, data=case1101); summary(lm1)
 @
@@ -211,14 +220,15 @@ leverage, studentized resids and Cook's distance (pages 319--320).
 require(MASS)
 @
 <<>>=
-case1101$hat = hatvalues(lm1)
-case1101$studres = studres(lm1)
-case1101$cooks = cooks.distance(lm1)
+case1101 = transform(case1101, hat = hatvalues(lm1))
+case1101 = transform(case1101, studres = studres(lm1))
+case1101 = transform(case1101, cooks = cooks.distance(lm1))
 case1101[31,]
 @
 The following is a residual plot for the full model akin to Display 11.7 (page 313).
 <<>>=
-plot(lm1, which=1)
+xyplot(residuals(lm1) ~ fitted(lm1), xlab="Fitted values", ylab="Residuals",
+  type=c("p", "r", "smooth"))
 @
 
 From these diagnostics it appears that observations 31 and 32 may be influential points.  Therefore, we next re-fit the full model excluding these two observations. The following results are found in Display 11.9 and discussed on page 315.  
@@ -253,15 +263,17 @@ Neuroscientists working to better understand the blood brain barrier have infuse
 We begin by reading the data, performing transformations where needed and summarizing the variables.
 
 <<case1102>>=
-case1102$Y = with(case1102, Brain/Liver)
-case1102$logliver = with(case1102, log(Liver)); case1102$logbrain = with(case1102, log(Brain))
-case1102$SAC = as.factor(case1102$Time)
-case1102$logy = with(case1102, log(Brain/Liver)); case1102$logtime = with(case1102, log(Time))
-case1102$Treat = relevel(case1102$Treat, ref="NS")
+case1102 = transform(case1102, Y = Brain/Liver)
+case1102 = transform(case1102, logliver = log(Liver))
+case1102 = transform(case1102, logbrain = log(Brain))
+case1102 = transform(case1102, SAC = as.factor(Time))
+case1102 = transform(case1102, logy = log(Brain/Liver))
+case1102 = transform(case1102, logtime = log(Time))
+case1102 = transform(case1102, Treat = relevel(Treat, ref="NS"))
 summary(case1102)
 @
 
-A total of \Sexpr{nrow(case1102)} rats were included in this experiment.  Each rat was given either the barrier solution (n = \Sexpr{nrow(subset(case1102, Treat=="BD"))}) or a normal saline solution (n = \Sexpr{nrow(subset(case1102, Treat=="NS"))}). Then variables of interest were calculated and are displayed in Display 9.2 (page 237 of the \emph{Sleuth}).
+A total of \Sexpr{nrow(case1102)} rats were included in this experiment.  Each rat was given either the barrier solution (n = \Sexpr{nrow(subset(case1102, Treat=="BD"))}) or a normal saline solution (n = \Sexpr{nrow(subset(case1102, Treat=="NS"))}). Then variables of interest were calculated and are displayed in Display 11.4 (page 308 of the \emph{Sleuth}).
 
 We can graphically relationships between the variables using a pairs plot. 
 <<fig.height=10, fig.width=10>>=
@@ -282,11 +294,13 @@ xyplot(Y ~ Time, group=Treat, scales=list(y=list(log=TRUE),
 The following graphs are akin to the second and third plots in Display 11.16 on page 326.
 
 <<>>=
-xyplot(logy ~ Sex, data=case1102)
+case1102 = transform(case1102, female = ifelse(Sex=="F", 1, 0))
+xyplot(logy ~ jitter(female), xlab="Sex", type=c("p", "r", "smooth"), 
+  data=case1102)
 @
-
 <<>>=
-xyplot(logy ~ jitter(Days), data=case1102)
+xyplot(logy ~ jitter(Days), type=c("p", "r", "smooth"), 
+  data=case1102)
 @
 
 \subsection{Multiple regression}
@@ -301,7 +315,8 @@ We can then display a residual plot to assess the fit of the above model. This i
 Display 11.6 
 (page 312). 
 <<>>=
-plot(lm1, which=1)
+xyplot(residuals(lm1) ~ fitted(lm1), xlab="Fitted values", ylab="Residuals",
+  type=c("p", "r", "smooth"))
 @
 
 

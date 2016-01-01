@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 02, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -84,7 +87,7 @@
 Chapter 2}
 
 \author{
-Ruobing Zhang\and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Ruobing Zhang\and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
@@ -97,19 +100,21 @@ Ruobing Zhang\and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Math
 
 %\parindent=0pt
 
-
-\SweaveOpts{
+<<setup0, include=FALSE, cache=FALSE>>=
+require(knitr)
+opts_chunk$set(
   dev="pdf",
-	fig.path="figures/",
-	fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
-	}
+  fig.path="figures/",
+        fig.height=3,
+        fig.width=4,
+        out.width=".47\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+  )
+@
 
 <<pvalues, echo=FALSE, message=FALSE>>=
 print.pval = function(pval) {
@@ -144,7 +149,7 @@ This document is intended to help describe how to undertake analyses introduced 
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.
 This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the 
@@ -225,7 +230,7 @@ Y1 = fav["Perished", "mean"]; Y1
 Y2 = fav["Survived", "mean"]; Y2
 Yd = Y2-Y1; Yd
 df = n1+n2-2; df
-qt = qt(0.975, 57); qt
+qt = qt(0.975, df); qt
 hw = qt*SE; hw
 lower = Yd-hw; lower
 upper = Yd+hw; upper

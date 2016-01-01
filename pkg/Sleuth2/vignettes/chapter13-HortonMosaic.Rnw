@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 13, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -84,7 +87,7 @@
 Chapter 13}
 
 \author{
-Kate Aloisio \and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Kate Aloisio \and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
@@ -98,18 +101,6 @@ Kate Aloisio \and Ruobing Zhang \and Nicholas J. Horton\thanks{Department of Mat
 %\parindent=0pt
 
 
-\SweaveOpts{
-  dev="pdf",
-	fig.path="figures/",
-	fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
-	}
 
 <<pvalues, echo=FALSE, message=FALSE>>=
 print.pval = function(pval) {
@@ -120,6 +111,21 @@ print.pval = function(pval) {
 }
 @
 
+<<setup0, include=FALSE, cache=FALSE>>=
+require(knitr)
+opts_chunk$set(
+  dev="pdf",
+  fig.path="figures/",
+        fig.height=3,
+        fig.width=4,
+        out.width=".57\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+  )
+@
 <<setup,echo=FALSE,message=FALSE>>=
 require(Sleuth2)
 require(mosaic)
@@ -144,7 +150,7 @@ This document is intended to help describe how to undertake analyses introduced 
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.
 This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the 
@@ -188,7 +194,7 @@ We begin by reading the data, performing the necessary transformations and summa
 
 <<>>=
 # logit transformation
-case1301$logitcover = with(case1301, log(Cover/(100-Cover)))
+case1301 = transform(case1301, logitcover = log(Cover/(100-Cover)))
 @
 
 
@@ -245,7 +251,7 @@ We will need to assume independence based on the information given.
 Next we will assess the normality assumption for the additive model. 
 
 <<fig.height=8, fig.width=8, message=FALSE>>=
-case1301$resid = predict(aov(logitcover ~ Block+Treat, data=case1301))
+case1301$resid = residuals(aov(logitcover ~ Block+Treat, data=case1301))
 histogram(~ resid, type='density', density=TRUE, data=case1301)
 @
 From this figure normality seems reasonable as well.
@@ -297,7 +303,8 @@ fit.contrast(lm1, "Treat", limpetsLarge, conf.int=.95)
 To attain the confidence intervals discussed in the ``Summary of Statistical Findings" (page 376) we need to exponential the lower and upper bounds of the above 95$\%$ confidence intervals.  Therefore, for the limpets estimation, the corresponding 95$\%$ confidence interval is (\Sexpr{round(exp(fit.contrast(lm1, "Treat", limpets, conf.int=.95)[,"lower CI"]), 3)}, \Sexpr{round(exp(fit.contrast(lm1, "Treat", limpets, conf.int=.95)[,"upper CI"]), 3)}). The resulting large fish 95$\%$ confidence interval is (\Sexpr{round(exp(fit.contrast(lm1, "Treat", large, conf.int=.95)[,"lower CI"]), 3)}, \Sexpr{round(exp(fit.contrast(lm1, "Treat", large, conf.int=.95)[,"upper CI"]), 3)}). Lastly for the estimation of the regeneration ratio for small fish the 95$\%$ confidence interval is (\Sexpr{round(exp(fit.contrast(lm1, "Treat", small, conf.int=.95)[,"lower CI"]), 3)}, \Sexpr{round(exp(fit.contrast(lm1, "Treat", small, conf.int=.95)[,"upper CI"]), 3)}).
 
 \section{Pygmalion effect}
-Does telling a manager that some of the supervisees are superior affect their perceived performance?  This is the question addressed in case study 13.2 in the \emph{Sleuth}.  
+Does expected excellence affect performance?  More specifically, does telling a manager that some of the supervisees are ``superior'' affect the supervisor's perception 
+of their performance (Pygmalion effect)?  This is the question addressed in case study 13.2 in the \emph{Sleuth}.  
 
 \subsection{Statistical summary}
 
@@ -339,10 +346,14 @@ plot(lm2, which=1)
 \subsection{Randomization Methods}
 
 As introduced in Chapter 4, we can construct a randomization distribution by considering the distribution of a test statistic over all possible ways the randomization could have turned out.  For the Pygmalion data we can construct a randomization distribution for the $t$-statistic of the treatment effect as discussed on pages 397-398.   
-<<>>=
-obs = summary(lm(Score ~ Company+newTreat, data=case1302))$coefficients["newTreatPygmalion", "t value"]
-nulldist = do(10000) * summary(lm(Score ~ shuffle(Company)+shuffle(newTreat), data=case1302))$coefficients["shuffle(newTreat)Pygmalion", "t value"]
-histogram(~ result, groups=result >= obs, v=obs, data=nulldist) # akin to Display 13.20 page 398
+<<tidy=FALSE>>=
+mod = lm(Score ~ Company+newTreat, data=case1302)
+obs = summary(mod)$coefficients["newTreatPygmalion", "t value"]
+obs
+nulldist = do(10000) * summary(lm(Score ~ shuffle(Company)+shuffle(newTreat), 
+  data=case1302))$coefficients["shuffle(newTreat)Pygmalion", "t value"]
+histogram(~ result, groups=result >= obs, v=obs, data=nulldist) 
+# akin to Display 13.20 page 398
 tally(~ result >= obs, format="proportion", data=nulldist)
 @
 

@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 03, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -84,7 +87,7 @@
 Chapter 3}
 
 \author{
-Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
@@ -98,19 +101,6 @@ Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mat
 %\parindent=0pt
 
 
-\SweaveOpts{
-  dev="pdf",
-	fig.path="figures/",
-	fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
-	}
-
 <<pvalues, echo=FALSE, message=FALSE>>=
 print.pval = function(pval) {
   threshold = 0.0001
@@ -118,6 +108,21 @@ print.pval = function(pval) {
                 ifelse(pval > 0.1, paste("p=",round(pval, 2), sep=""),
                        paste("p=", round(pval, 3), sep=""))))
 }
+@
+<<setup0, include=FALSE, cache=FALSE>>=
+require(knitr)
+opts_chunk$set(
+  dev="pdf",
+  fig.path="figures/",
+        fig.height=3,
+        fig.width=4,
+        out.width=".47\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+  )
 @
 
 <<setup,echo=FALSE,message=FALSE>>=
@@ -144,7 +149,7 @@ This document is intended to help describe how to undertake analyses introduced 
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.
 This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the 
@@ -208,7 +213,7 @@ According to the boxplot and the density plot, the rainfall from seeded days see
 The skewness suggests there is a need to apply the logarithmic transformation. The transformed data is shown on page 71 (Display 3.9).
 
 <<>>=
-case0301$lograin=log(case0301$Rainfall)
+case0301 = transform(case0301, lograin=log(Rainfall))
 favstats(lograin ~ Treatment, data=case0301)
 @
 
@@ -237,7 +242,7 @@ summary(lm(lograin ~ Treatment, data=case0301))
 ttestlog = t.test(lograin ~ Treatment, data=case0301); ttestlog
 @
 
-The two-sided $p$-value is \Sexpr{print.pval(pval(t.test(lograin ~ Treatment, data=case0301)))} and the 95\% confidence interval is between \Sexpr{round(ttestlog$conf.int[1], 2)} and \Sexpr{round(ttestlog$conf.int[2], 2)}.
+The two-sided $p$-value is $p=0.014$ and the 95\% confidence interval is between \Sexpr{round(ttestlog$conf.int[1], 2)} and \Sexpr{round(ttestlog$conf.int[2], 2)}.
 
 \subsection{Interpretation of log model}
 

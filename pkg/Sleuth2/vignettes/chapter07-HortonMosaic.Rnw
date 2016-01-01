@@ -1,3 +1,6 @@
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{Chapter 07, Horton et al. using mosaic}
+%\VignettePackage{Sleuth2}
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in,bottom=.5in,includehead,includefoot]{geometry}
@@ -42,14 +45,14 @@
    \setlength{\tempfmlength}{#1}
    \begin{lrbox}{\fmbox}
      \begin{minipage}{#1}
-  	 \vspace*{.02\tempfmlength}
-		 \hfill
-	   \begin{minipage}{.95 \tempfmlength}}
-		 {\end{minipage}\hfill
-		 \vspace*{.015\tempfmlength}
-		 \end{minipage}\end{lrbox}\fbox{\usebox{\fmbox}}
-	 \medskip
-	 }
+         \vspace*{.02\tempfmlength}
+                 \hfill
+           \begin{minipage}{.95 \tempfmlength}}
+                 {\end{minipage}\hfill
+                 \vspace*{.015\tempfmlength}
+                 \end{minipage}\end{lrbox}\fbox{\usebox{\fmbox}}
+         \medskip
+         }
 
 
 \newenvironment{boxedText}[1][.98\textwidth]%
@@ -69,14 +72,14 @@
   \begin{center}
 \begin{fmpage}{.98\textwidth}
   \begin{center}
-	\sf \large Box~\expandafter\thetable. #2
+        \sf \large Box~\expandafter\thetable. #2
 \end{center}
 \medskip
 }%
 {%
 \end{fmpage}
 \end{center}
-\end{table}		% need to do something about exercises that follow boxedTable
+\end{table}             % need to do something about exercises that follow boxedTable
 }
 
 
@@ -86,7 +89,7 @@
 Chapter 7}
 
 \author{
-Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mathematics and Statistics, Smith College, nhorton@smith.edu}
+Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mathematics, Amherst College, nhorton@amherst.edu}
 } 
 
 \date{\today}
@@ -100,18 +103,33 @@ Ruobing Zhang \and Kate Aloisio \and Nicholas J. Horton\thanks{Department of Mat
 %\parindent=0pt
 
 
+<<setup0, include=FALSE, cache=FALSE>>=
+require(knitr)
+opts_chunk$set(
+  dev="pdf",
+  fig.path="figures/",
+        fig.height=6,
+        fig.width=8,
+        out.width=".67\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+  )
+@
 <<setup, include=FALSE, cache=FALSE, echo=FALSE, message=FALSE>>=
 opts_chunk$set(
   dev="pdf",
   fig.path="figures/",
   fig.height=3,
-	fig.width=4,
-	out.width=".47\\textwidth",
-	fig.keep="high",
-	fig.show="hold",
-	fig.align="center",
-	prompt=TRUE,  # show the prompts; but perhaps we should not do this 
-	comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
+        fig.width=4,
+        out.width=".47\\textwidth",
+        fig.keep="high",
+        fig.show="hold",
+        fig.align="center",
+        prompt=TRUE,  # show the prompts; but perhaps we should not do this 
+        comment=NA    # turn off commenting of ouput (but perhaps we should not do this either
   )
 require(Sleuth2)
 require(mosaic)
@@ -144,7 +162,7 @@ print.pval = function(pval) {
 This document is intended to help describe how to undertake analyses introduced as examples in the Second Edition of the \emph{Statistical Sleuth} (2002) by Fred Ramsey and Dan Schafer.
 More information about the book can be found at \url{http://www.proaxis.com/~panorama/home.htm}.  This
 file as well as the associated \pkg{knitr} reproducible analysis source file can be found at
-\url{http://www.math.smith.edu/~nhorton/sleuth}.
+\url{http://www.amherst.edu/~nhorton/sleuth}.
 
 This work leverages initiatives undertaken by Project MOSAIC (\url{http://www.mosaic-web.org}), an NSF-funded effort to improve the teaching of statistics, calculus, science and computing in the undergraduate curriculum. In particular, we utilize the 
 \pkg{mosaic} package, which was written to simplify the use of R for introductory statistics courses. A short summary of the R needed to teach introductory statistics can be found in the mosaic package vignette (\url{http://cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf}). 
@@ -197,7 +215,7 @@ histogram(~ Distance, type='density', density=TRUE, nint=10, data=case0701)
 The density plots show that the distributions for the two variables are fairly symmetric, but more uniform than normally
 distributed.
 
-<<>>=
+<<fig.height=6,fig.width=10>>=
 xyplot(Distance ~ Velocity, type=c("p", "r"), data=case0701)
 @
 
@@ -226,7 +244,7 @@ Display 7.8 (page 184) shows the list of fitted values and residuals for this mo
 
 We can also display 95\% confidence bands for the model line and the predicted values, the following graph is akin to Display 7.11 (page 189).
 
-<<fig.width=6, fig.height=4.5>>=
+<<fig.width=10, fig.height=6>>=
 xyplot(Distance ~ Velocity, panel=panel.lmbands, data=case0701)
 @
 
@@ -243,7 +261,7 @@ summary(lm2)
 confint(lm2)
 @
 
-Without the intercept, the new estimate for $\beta_{1}$ is \Sexpr{round(coefficients(lm2)["Velocity"], 4)} megaparsec-second/km. The standard error is \Sexpr{round(summary(lm2)$coefficients["Velocity","Std. Error"], 6)} megaparsecs with 23 degrees of freedom. The 95\% confidence interval is (\Sexpr{confint(lm2)[1]}, \Sexpr{confint(lm2)[2]}). Because 1 megaparsec-second/km = 979.8 billion years, the confidence interval could be written as \Sexpr{round(confint(lm2)[1]*979.8, 2)} to \Sexpr{round(confint(lm2)[2]*979.8, 2)} billion years, and the best estimate is \Sexpr{round(coef(lm2)["Velocity"]*979.8, 2)} billion years (page 186).
+Without the intercept, the new estimate for $\beta_{1}$ is \Sexpr{round(coefficients(lm2)["Velocity"], 4)} megaparsec-second/km. The standard error is $\Sexpr{round(summary(lm2)$coefficients["Velocity","Std. Error"], 6)}$ megaparsecs with 23 degrees of freedom. The 95\% confidence interval is (\Sexpr{confint(lm2)[1]}, \Sexpr{confint(lm2)[2]}). Because 1 megaparsec-second/km = 979.8 billion years, the confidence interval could be written as \Sexpr{round(confint(lm2)[1]*979.8, 2)} to \Sexpr{round(confint(lm2)[2]*979.8, 2)} billion years, and the best estimate is \Sexpr{round(coef(lm2)["Velocity"]*979.8, 2)} billion years (page 186).
 
 \section{Meat Processing and pH}
 
@@ -257,7 +275,8 @@ We begin by reading the data and summarizing the variables.
 summary(case0702)
 @
 
-A total of \Sexpr{nrow(case0702)} steer carcasses are included in this data as shown in Display 7.3, page 117.
+A total of \Sexpr{nrow(case0702)} steer carcasses are included in this data as 
+shown in Display 7.3, page 177.
 
 <<>>=
 logtime = log(case0702$Time)
@@ -284,13 +303,13 @@ The $\hat{\beta_{0}}$ is \Sexpr{beta0} and the $\hat{\beta_{1}}$ is \Sexpr{beta1
 With the previous information, we can calculate the 95\% confidence interval for the estimated mean pH of steers 4 hours after slaughter (Display 7.10, page 187):
 
 <<>>=
-mu = beta0+beta1*log(4); mu
+muhat = beta0+beta1*log(4); muhat
 n = nrow(case0702)
 mean = mean(~logtime, data=case0702)
 sd = sd(~logtime, data=case0702)
 se = sigma*sqrt(1/n+(log(4)-mean)^2/((n-1)*sd)); se
-upper = mu+qt(0.975, df=8)*se; upper
-lower = mu-qt(0.975, df=8)*se; lower
+upper = muhat + qt(0.975, df=8)*se; upper
+lower = muhat - qt(0.975, df=8)*se; lower
 @
 Or we can use the following code to get the same result:
 <<>>=
@@ -314,7 +333,7 @@ predict(lm3, interval="prediction")[5,]
 
 So the 95\% prediction interval is (\Sexpr{round(predlower, 2)}, \Sexpr{round(predupper, 2)}).
 
-<<fig.width=8, fig.height=6, message=FALSE>>=
+<<fig.width=10, fig.height=8, message=FALSE>>=
 xyplot(pH ~ logtime, abline=(h=6), data=case0702, panel=panel.lmbands)
 @
 
