@@ -33,9 +33,9 @@
   Testing of Quantile Regression Models, \emph{Empirical Economics}
   \bold{26}(1): 307--324
 
-  \url{http://econ.la.psu.edu/~hbierens/QUANTILE.PDF}
+  \code{http://econ.la.psu.edu/~hbierens/QUANTILE.PDF}
   
-  \url{http://econ.la.psu.edu/~hbierens/MEDIAN.HTM}
+  \code{http://econ.la.psu.edu/~hbierens/MEDIAN.HTM}
 }
 \examples{
 str(ex1029)
